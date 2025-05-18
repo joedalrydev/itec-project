@@ -1,0 +1,152 @@
+.banner {
+    height: 45vh;
+    background-color: #242538;
+}
+.anime-description {
+    background-color: rgb(21, 31, 46);
+    display: flex;
+    justify-content: center;
+    padding: 20px 50px;
+    color: #a0b1c5;
+    position: relative;
+    height: 43vh;
+}
+.poster {
+    position: absolute;
+    top: -150px;
+    left: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.poster button {
+    background-color: #3db4f2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.description {
+    margin-left: 280px;
+    width: 70%;
+    line-height: 1.5;
+}
+.details {
+    display: flex;
+    min-height: 100vh;
+}
+.side-details {
+    height: 100%;
+    width: 25%;
+}
+.main-details {
+    width: 75%;
+    padding: 20px;
+}
+.characters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.character-wrapper {
+    display: flex;
+    background-color: rgb(21, 31, 46);
+    border-radius: 10px;
+
+    img {
+        border-radius: 10px;
+    }
+}
+.character {
+    display: flex;
+    flex-basis: 50%;
+}
+.va {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-basis: 50%;
+
+    .name {
+        text-align: right;
+    }
+}
+.name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #242538;
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #3db4f2;
+    text-decoration: none;
+    cursor: pointer;
+}
+select {
+    appearance: none;
+    border: none;
+    background-color: rgb(21, 31, 46);
+    color: #c9d7e3;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 150px;
+}
+
+select option {
+    background-color: rgb(21, 31, 46);
+    color: #c9d7e3;
+    font-size: 1.3em;
+}
+#score {
+    background-color: rgb(21, 31, 46);
+    color: #c9d7e3;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+}
+.modal-content button {
+    background-color: #3db4f2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
