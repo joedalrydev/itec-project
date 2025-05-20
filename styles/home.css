@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container {
     height: 100vh;
     display: flex;
@@ -70,4 +71,72 @@
 .card-container .card img {
     width: 225px;
     height: 350px;
+=======
+.container {
+    height: 100vh;
+    display: flex;
+    gap: 2em;
+    padding: 2em;
+}
+.purple-text {
+    color: #af8df4;
+    text-shadow: 0 0 5px #af8df4;
+}
+.blue-text {
+    font-weight: bold;
+}
+.welcome {
+    flex-basis: 50%;
+}
+.welcome h2 {
+    margin-bottom: 1.5em;
+    margin-top: 0.6em;
+    font-family: 'Arimo';
+    font-size: 1.8em;
+}
+.welcome p {
+    margin-left: 1em;
+    text-align: justify;
+    line-height: 1.5;
+    word-spacing: 1.5;
+    font-size: 1.3em;
+}
+.trending {
+    flex-basis: 50%;
+    text-align: center;
+}
+.trending-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.card img {
+    width: 125px;
+    height: 225px;
+}
+.card a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.trending h2,
+.cards h2 {
+    font-family: 'Arimo';
+    color: white;
+    text-shadow: 0 0 5px white;
+    font-size: 2em;
+}
+
+.cards {
+    padding: 2em;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2em 0;
+    text-align: center;
+}
+.card-container .card img {
+    width: 225px;
+    height: 350px;
+>>>>>>> 41f726397fd0129db99b02b14066303beaac1e93
 }

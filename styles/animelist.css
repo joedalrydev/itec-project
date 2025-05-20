@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #anime-list {
     display: flex;
     justify-content: center;
@@ -31,4 +32,94 @@
     transition: all 0.2s ease-in;
     width: 100px;
     height: 100px;
+=======
+.top-nav {
+    background: rgba(35, 38, 67, .5);
+    color: #e5e7ea;
+    transition: all 0.3s ease-in-out;
+}
+.top-nav:hover {
+    background: #152232;
+    a {
+        color: #a0b1c5;
+    }
+}
+
+.profile-banner {
+    background-color: #242538;
+    background-position: 50% 35%;
+    height: 40vh;
+    position: relative;
+}
+.banner-content {
+    height: 55%;
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    right: 100px;
+    display: flex;
+}
+.pfp {
+    height: 100%;
+    width: 20%;
+    background: url(images/logo.svg) no-repeat center center;
+    background-size: cover;
+}
+.name-wrapper {
+    display: flex;
+    align-items: flex-end;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    font-size: 0.7rem;
+}
+
+.profile-nav {
+    background: rgb(21,31,46);
+    color: #728aa1;
+    transition: all 0.3s ease-in-out;
+    font-size: 0.9rem;
+}
+.profile-nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+}
+.profile-nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 20px;
+    font-weight: 600;
+}
+.profile-nav a:hover {
+    color: #3db4f2;
+}
+#active {
+    color: #3db4f2;
+}
+
+#anime-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.anime-table {
+    background-color: rgb(21, 31, 46);
+    border-collapse: collapse;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.anime-table th,
+.anime-table td {
+    padding: 10px;
+    text-align: center;
+}
+.anime-table td:hover {
+    background-color: #3db4f2;
+    color: white;
+>>>>>>> 41f726397fd0129db99b02b14066303beaac1e93
 }
