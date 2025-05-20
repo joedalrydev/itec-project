@@ -15,6 +15,7 @@ body {
     );
     font-family: 'Arimo', sans-serif;
     color: white;
+    width: 100vw;
     overflow-x: hidden;
 }
 h1 {
@@ -46,10 +47,20 @@ nav {
         rgba(0, 0, 0) 85%,
         rgb(46, 21, 109) 100%
     );
-    transition: all 1s ease-in-out;
+    position: relative;
+    z-index: 1;
 }
-nav:hover {
+nav::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
     background: linear-gradient(to right, #281558, #043a42);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+nav:hover::after {
+    opacity: 1;
 }
 nav #logo {
     width: 50px;
@@ -62,7 +73,7 @@ nav ul {
 nav a {
     text-decoration: none;
     padding: 0.3em 2em;
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: bold;
 }
 nav a:hover {
@@ -74,6 +85,7 @@ nav a:hover {
     justify-content: center;
     text-align: center;
     gap: 5px;
+    position: relative;
 }
 
 .avatar img,
@@ -83,28 +95,42 @@ nav a:hover {
 .fa-search {
     background-color: inherit;
     border: none;
-    color: #a0b1c5;
+    color: #67ebff;
     cursor: pointer;
 }
-.fa-search:hover,
-.fa-arrow-down:hover {
+.fa-search:hover{
     color: #e5e7ea;
 }
-.fa-arrow-down {
-    background-color: inherit;
-    border: none;
-    color: #a0b1c5;
-    font-size: 1em;
-    cursor: pointer;
-    text-align: center;
+#avatarHover {
+    display: none;
+    position: absolute;
+    top: 65px;
+    padding: 0.3em 0em;
+    background: linear-gradient(#281558, #043a42);
+    border-radius: 20px;
+    z-index: 100;
+}
+#avatarHover a {
+    text-decoration: none;
+    color: white;
+}
+#avatarHover a:hover {
+    color: #67ebff;
 }
 
 footer {
-    padding: 1em 2em;
+    padding: 0.3em 2em;
     background: linear-gradient(to right, #281558, #043a42);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3em;
+    font-size: 0.8em;
     line-height: 1.5;
+}
+.logo {
+    text-align: center;
+    flex-basis: 15%;
+}
+.footer-content {
+    flex-basis: 85%;
 }

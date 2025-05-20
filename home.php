@@ -2,6 +2,7 @@
 session_start();
 
 $username = $_SESSION['username'];
+$pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : './images/logo.png';
 ?>
 
 <!DOCTYPE html>
@@ -23,20 +24,23 @@ $username = $_SESSION['username'];
         <ul>
             <li><a href="home.php" class="blue-text">Home</a></li>
             <li><a href="profile.php" class="blue-text">Profile</a></li>
-            <li><a href="browse.php" class="blue-text">List</a></li>
-            <li><a href="#" class="blue-text">Reserve</a></li>
+            <li><a href="profile_animeList.php" class="blue-text">List</a></li>
+            <li><a href="browse.php" class="blue-text">Reserve</a></li>
         </ul>
         <div class="avatar">
             <i class="fa fa-search"></i>
-            <img src="images/logo.png" alt="Logo" width="50px" height="50px">
-            <p><i class="fa fa-arrow-down"></i></p>
+            <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" onclick="toggleAvatarHover()">
+            <div id="avatarHover">
+                <a href="settings.php">Settings</a>
+                <a href="index.php">Logout</a>
+            </div>
         </div>
     </nav>
 
     <main>
         <div class="container">
             <div class="welcome">
-                <h1 class="blue-text">Welcome to AniMate, <?php echo $username ?>!</h1>
+                <h1>Welcome to AniMate, <span class="blue-text"><?php echo $username ?></span>!</h1>
                 <h2 class="purple-text">Your Ultimate Anime & Movie Companion</h2>
 
                 <p>
@@ -167,7 +171,7 @@ $username = $_SESSION['username'];
 
     <footer>
         <div class="logo">
-            <img src="./images/logo.png" alt="Logo" width="125px" height="125px">
+            <img src="./images/logo.png" alt="Logo" width="75px" height="75px">
             <p>&copy; JAJ.AniMate</p>
         </div>
         <div class="footer-content">
@@ -179,5 +183,7 @@ $username = $_SESSION['username'];
             </p>
         </div>
     </footer>
+
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

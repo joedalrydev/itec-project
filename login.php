@@ -37,10 +37,10 @@ session_start();
                     }
 
                     if (!$isValid) {
-                        echo "<p>Invalid username or password.</p>";
+                        echo "<script>alert('Invalid username or password.')</script>";
                     }
                 } else {
-                    echo "<p>No registered users found. Please register first.</p>";
+                    echo "<script>alert('No registered users found. Please register first.')</script>";
                 }
             }
         ?>

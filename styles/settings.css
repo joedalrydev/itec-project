@@ -1,0 +1,71 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 7em;
+}
+
+.container {
+    display: flex;
+    gap: 2em;
+    padding: 2em;
+    border-radius: 20px;
+    background-color: rgba(26, 25, 25, 0.4);
+    text-align: justify;
+}
+form {
+    flex-basis: 33%;
+}
+form h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+form input[type="text"] {
+    width: 90%;
+    margin: 15px 0;
+    font-size: 1rem;
+    padding: 10px;
+    background: linear-gradient(
+        to right, rgba(255, 255,255, 0.2) 0%,
+        rgba(59, 59, 59, 0.4) 15%,
+        rgba(59, 59, 59, 0.4) 50%,
+        rgba(50, 50, 50, 0.4) 100%);
+    border: 1px solid #67ebff;
+    color: white;
+}
+form input[type="text"]::placeholder {
+    color: white;
+}
+form button {
+    background: linear-gradient(to right, #0fb5ce, #6d3ee4);
+    color: white;
+    border: none;
+    padding: 0.4em;
+    width: 100%;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 0 0 10px black;
+    margin: 1.5em 0;
+}
+#pfpLabel {
+    font-size: 1.3em;
+}
+form input[type="file"] {
+    padding: 0.4em 0;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 0 0 10px black;
+    margin: 1em 0;
+}
+.text {
+    flex-basis: 34%;
+    font-size: 1.2em;
+    line-height: 1.5;
+    word-spacing: 0.3em;
+}
+

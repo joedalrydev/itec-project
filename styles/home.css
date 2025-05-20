@@ -35,6 +35,12 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .card img {
     width: 125px;
     height: 225px;

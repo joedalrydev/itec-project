@@ -20,7 +20,15 @@ function displayModal() {
   const form = document.getElementById("addToListForm");
   form.onsubmit = function (event) {
     modal.style.display = "none";
-
-    alert("Anime added to your list!");
   };
+}
+
+function toggleAvatarHover() {
+  const popup = document.getElementById("avatarHover");
+
+  if (popup.style.display === "none") {
+    popup.style.display = "block";
+  } else {
+    popup.style.display = "none";
+  }
 }

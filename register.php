@@ -30,14 +30,14 @@ session_start();
                 if (isset($_SESSION['users'])) {
                     foreach ($_SESSION['users'] as $user) {
                         if ($user['username'] === $username) {
-                            echo "<p>Username is already taken. Please choose another one.</p>";
+                            echo "<script>alert('Username is already taken. Please choose another one.')</script>";
                             exit;
                         }
                     }
                 }
 
                 if ($password !== $cpassword) {
-                    echo "<p>Passwords do not match.</p>";
+                    echo "<script>alert('Passwords do not match.')</script>";
                     exit;
                 }
 
