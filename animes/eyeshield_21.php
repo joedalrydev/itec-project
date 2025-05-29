@@ -4,12 +4,12 @@ session_start();
 $username = $_SESSION['username'];
 $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : '../images/logo.png';
 
-$title = 'One Piece';
-$genre = 'Action, Adventure, Comedy, Drama, Fantasy';
-$year = '1999';
-$picture = './images/one_piece.jpg';
+$title = 'Eyeshield 21';
+$genre = 'Action, Comedy, Sports';
+$year = '2005';
+$picture = './images/eyeshield_21.png';
 $format = 'tv';
-$pathToReserve = './reserve/one_piece-reserve.php';
+$pathToReserve = './reserve/eyeshield_21-reserve.php';
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ $pathToReserve = './reserve/one_piece-reserve.php';
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/anime.css">
-    <title>One Piece</title>
+    <title>Eyeshield 21</title>
 </head>
 
 <body>
@@ -43,15 +43,15 @@ $pathToReserve = './reserve/one_piece-reserve.php';
     <main>
         <div class="banner"></div>
         <div class="anime-description">
-            <h1>One Piece</h1>
-            <p class="genre">Action, Adventure, Comedy, Drama, Fantasy</p>
+            <h1>Eyeshield 21</h1>
+            <p class="genre">Action, Comedy, Sports</p>
             <p>
-                Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                The capture and death of Roger by the World Government brought a change throughout the world.
-                His last words before his death revealed the location of the greatest treasure in the world, One Piece.
-                It was this revelation that brought about the Grand Age of Pirates,
-                men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame),
-                and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.
+                Welcome To the Gridiron of the Damned! Huge hulking bodies throw themselves at each other, while a tiny lithe body runs between them for the goal! 
+                No, it’s not a game of football, it’s Sena Kobayakawa trying to evade the monstrous Ha-Ha brothers down the halls of Deimon High School! 
+                But wait! Sena’s incredible skills at not getting caught have been spotted by the devilish (possibly actually demonic) captain of the school’s embryonic American style football team, and when Sena asks to be the teams manager, he gets thrust onto the field as a running back instead! 
+                But there are two BIG catches: first, to keep the identity of their new “star” player an absolute secret, Yoichi makes Sena wear an opaque visor on his helmet and gives him the alias of “Eyeshield 21.” 
+                And the second catch? Well, in order to hit his fastest “speed of light” running mode, Sena usually has to be absolutely terrified. 
+                Not that THAT will be a problem with the monstrous players that he’ll soon find himself running from! The insanity hits the streets when the feet meet the cleats in EYESHIELD 21! 
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
@@ -78,9 +78,9 @@ $pathToReserve = './reserve/one_piece-reserve.php';
                         <br><br>
                         <button type="submit">Save</button>
                         <p>
-                            Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                            The capture and death of Roger by the World Government brought a change throughout the world.
-                            His last words before his death revealed the location of the greatest treasure in the world, One Piece.
+                            Welcome To the Gridiron of the Damned! Huge hulking bodies throw themselves at each other, while a tiny lithe body runs between them for the goal! 
+                            No, it’s not a game of football, it’s Sena Kobayakawa trying to evade the monstrous Ha-Ha brothers down the halls of Deimon High School! 
+                            But wait! Sena’s incredible skills at not getting caught have been spotted by the devilish (possibly actually demonic) captain of the school’s embryonic American style football team, and when Sena asks to be the teams manager, he gets thrust onto the field as a running back instead! 
                         </p>
                     </form>
                     <?php

@@ -4,12 +4,12 @@ session_start();
 $username = $_SESSION['username'];
 $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : '../images/logo.png';
 
-$title = 'One Piece';
-$genre = 'Action, Adventure, Comedy, Drama, Fantasy';
-$year = '1999';
-$picture = './images/one_piece.jpg';
-$format = 'tv';
-$pathToReserve = './reserve/one_piece-reserve.php';
+$title = 'Suzume';
+$genre = 'Adventure, Fantasy, Mystery, Supernatural';
+$year = '2022';
+$picture = './images/suzume.jpg';
+$format = 'movie';
+$pathToReserve = './reserve/suzume-reserve.php';
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ $pathToReserve = './reserve/one_piece-reserve.php';
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/anime.css">
-    <title>One Piece</title>
+    <title>Suzume</title>
 </head>
 
 <body>
@@ -43,15 +43,13 @@ $pathToReserve = './reserve/one_piece-reserve.php';
     <main>
         <div class="banner"></div>
         <div class="anime-description">
-            <h1>One Piece</h1>
-            <p class="genre">Action, Adventure, Comedy, Drama, Fantasy</p>
+            <h1>Suzume</h1>
+            <p class="genre">Adventure, Fantasy, Mystery, Supernatural</p>
             <p>
-                Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                The capture and death of Roger by the World Government brought a change throughout the world.
-                His last words before his death revealed the location of the greatest treasure in the world, One Piece.
-                It was this revelation that brought about the Grand Age of Pirates,
-                men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame),
-                and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.
+                The story follows Suzume, a 17-year-old girl from a quiet Kyushu town who meets a young man looking for a door. 
+                They find a door within ruins in the mountain, and Suzume opens it. 
+                Soon, more doors begin to open around Japan, bringing disasters from the other side. 
+                The film depicts Suzume's liberation and growth, as she closes the doors that are causing disaster.
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
@@ -78,9 +76,9 @@ $pathToReserve = './reserve/one_piece-reserve.php';
                         <br><br>
                         <button type="submit">Save</button>
                         <p>
-                            Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                            The capture and death of Roger by the World Government brought a change throughout the world.
-                            His last words before his death revealed the location of the greatest treasure in the world, One Piece.
+                            The story follows Suzume, a 17-year-old girl from a quiet Kyushu town who meets a young man looking for a door. 
+                            They find a door within ruins in the mountain, and Suzume opens it. 
+                            Soon, more doors begin to open around Japan, bringing disasters from the other side. 
                         </p>
                     </form>
                     <?php

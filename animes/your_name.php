@@ -4,12 +4,12 @@ session_start();
 $username = $_SESSION['username'];
 $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : '../images/logo.png';
 
-$title = 'One Piece';
-$genre = 'Action, Adventure, Comedy, Drama, Fantasy';
-$year = '1999';
-$picture = './images/one_piece.jpg';
-$format = 'tv';
-$pathToReserve = './reserve/one_piece-reserve.php';
+$title = 'Your Name.';
+$genre = 'Drama, Romance, Supernatural';
+$year = '2016';
+$picture = './images/your_name.png';
+$format = 'movie';
+$pathToReserve = './reserve/your_name-reserve.php';
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ $pathToReserve = './reserve/one_piece-reserve.php';
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/anime.css">
-    <title>One Piece</title>
+    <title>Your Name.</title>
 </head>
 
 <body>
@@ -43,15 +43,17 @@ $pathToReserve = './reserve/one_piece-reserve.php';
     <main>
         <div class="banner"></div>
         <div class="anime-description">
-            <h1>One Piece</h1>
-            <p class="genre">Action, Adventure, Comedy, Drama, Fantasy</p>
+            <h1>Your Name.</h1>
+            <p class="genre">Drama, Romance, Supernatural</p>
             <p>
-                Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                The capture and death of Roger by the World Government brought a change throughout the world.
-                His last words before his death revealed the location of the greatest treasure in the world, One Piece.
-                It was this revelation that brought about the Grand Age of Pirates,
-                men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame),
-                and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.
+                Mitsuha Miyamizu, a high school girl, yearns to live the life of a boy in the bustling city of Tokyo—a dream that stands in stark contrast to her present life in the countryside. 
+                Meanwhile in the city, Taki Tachibana lives a busy life as a high school student while juggling his part-time job and hopes for a future in architecture.
+
+                One day, Mitsuha awakens in a room that is not her own and suddenly finds herself living the dream life in Tokyo—but in Taki's body! 
+                Elsewhere, Taki finds himself living Mitsuha's life in the humble countryside. 
+                In pursuit of an answer to this strange phenomenon, they begin to search for one another.
+
+                Kimi no Na wa. revolves around Mitsuha and Taki's actions, which begin to have a dramatic impact on each other's lives, weaving them into a fabric held together by fate and circumstance.
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
@@ -78,9 +80,12 @@ $pathToReserve = './reserve/one_piece-reserve.php';
                         <br><br>
                         <button type="submit">Save</button>
                         <p>
-                            Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                            The capture and death of Roger by the World Government brought a change throughout the world.
-                            His last words before his death revealed the location of the greatest treasure in the world, One Piece.
+                            Mitsuha Miyamizu, a high school girl, yearns to live the life of a boy in the bustling city of Tokyo—a dream that stands in stark contrast to her present life in the countryside. 
+                            Meanwhile in the city, Taki Tachibana lives a busy life as a high school student while juggling his part-time job and hopes for a future in architecture.
+
+                            One day, Mitsuha awakens in a room that is not her own and suddenly finds herself living the dream life in Tokyo—but in Taki's body! 
+                            Elsewhere, Taki finds himself living Mitsuha's life in the humble countryside. 
+                            In pursuit of an answer to this strange phenomenon, they begin to search for one another.
                         </p>
                     </form>
                     <?php

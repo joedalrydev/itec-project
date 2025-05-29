@@ -4,12 +4,12 @@ session_start();
 $username = $_SESSION['username'];
 $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : '../images/logo.png';
 
-$title = 'One Piece';
-$genre = 'Action, Adventure, Comedy, Drama, Fantasy';
-$year = '1999';
-$picture = './images/one_piece.jpg';
+$title = 'Steins;Gate';
+$genre = 'Drama, Psychological, Sci-Fi, Thriller';
+$year = '2011';
+$picture = './images/steins_gate.jpg';
 $format = 'tv';
-$pathToReserve = './reserve/one_piece-reserve.php';
+$pathToReserve = './reserve/steins_gate-reserve.php';
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ $pathToReserve = './reserve/one_piece-reserve.php';
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/anime.css">
-    <title>One Piece</title>
+    <title>Steins;Gate</title>
 </head>
 
 <body>
@@ -43,15 +43,14 @@ $pathToReserve = './reserve/one_piece-reserve.php';
     <main>
         <div class="banner"></div>
         <div class="anime-description">
-            <h1>One Piece</h1>
-            <p class="genre">Action, Adventure, Comedy, Drama, Fantasy</p>
+            <h1>Steins;Gate</h1>
+            <p class="genre">Drama, Psychological, Sci-Fi, Thriller</p>
             <p>
-                Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                The capture and death of Roger by the World Government brought a change throughout the world.
-                His last words before his death revealed the location of the greatest treasure in the world, One Piece.
-                It was this revelation that brought about the Grand Age of Pirates,
-                men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame),
-                and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.
+                Self-proclaimed mad scientist Okabe Rintarou lives in a small room in Akihabara, where he invents "future gadgets" with fellow lab members Shiina Mayuri, his air-headed childhood friend, and Hashida Itaru, an otaku hacker. 
+                The three pass the time by tinkering with their latest creation, a "Phone Microwave" that can be controlled through text messages.
+
+                The lab members soon face a string of mysterious incidents that lead to a game-changing discovery: the Phone Microwave can send emails to the past and thus alter history. 
+                Adapted from the critically acclaimed visual novel by 5pb. and Nitroplus, Steins;Gate takes Okabe to the depths of scientific theory and human despair as he faces the dire consequences of changing the past.
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
@@ -78,9 +77,8 @@ $pathToReserve = './reserve/one_piece-reserve.php';
                         <br><br>
                         <button type="submit">Save</button>
                         <p>
-                            Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                            The capture and death of Roger by the World Government brought a change throughout the world.
-                            His last words before his death revealed the location of the greatest treasure in the world, One Piece.
+                            Self-proclaimed mad scientist Okabe Rintarou lives in a small room in Akihabara, where he invents "future gadgets" with fellow lab members Shiina Mayuri, his air-headed childhood friend, and Hashida Itaru, an otaku hacker. 
+                            The three pass the time by tinkering with their latest creation, a "Phone Microwave" that can be controlled through text messages.
                         </p>
                     </form>
                     <?php

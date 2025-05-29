@@ -4,12 +4,12 @@ session_start();
 $username = $_SESSION['username'];
 $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : '../images/logo.png';
 
-$title = 'One Piece';
-$genre = 'Action, Adventure, Comedy, Drama, Fantasy';
-$year = '1999';
-$picture = './images/one_piece.jpg';
+$title = 'Kuroko no Basket';
+$genre = 'Comedy, Sports';
+$year = '2012';
+$picture = './images/kuroko_no_basket.jpg';
 $format = 'tv';
-$pathToReserve = './reserve/one_piece-reserve.php';
+$pathToReserve = './reserve/kuroko_no_basket-reserve.php';
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ $pathToReserve = './reserve/one_piece-reserve.php';
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/anime.css">
-    <title>One Piece</title>
+    <title>Kuroko no Basket</title>
 </head>
 
 <body>
@@ -43,15 +43,17 @@ $pathToReserve = './reserve/one_piece-reserve.php';
     <main>
         <div class="banner"></div>
         <div class="anime-description">
-            <h1>One Piece</h1>
-            <p class="genre">Action, Adventure, Comedy, Drama, Fantasy</p>
+            <h1>Kuroko no Basket</h1>
+            <p class="genre">Comedy, Sports</p>
             <p>
-                Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                The capture and death of Roger by the World Government brought a change throughout the world.
-                His last words before his death revealed the location of the greatest treasure in the world, One Piece.
-                It was this revelation that brought about the Grand Age of Pirates,
-                men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame),
-                and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.
+                Teikou Junior High School's basketball team is crowned champion three years in a row thanks to five outstanding players who, with their breathtaking and unique skills, leave opponents in despair and fans in admiration. 
+                However, after graduating, these teammates, known as "The Generation of Miracles", go their separate ways and now consider each other as rivals.
+
+                At Seirin High School, two newly recruited freshmen prove that they are not ordinary basketball players: Taiga Kagami, a promising player returning from the US, and Tetsuya Kuroko, a seemingly ordinary student whose lack of presence allows him to move around unnoticed. 
+                Although Kuroko is neither athletic nor able to score any points, he was a member of Teikou's basketball team, where he played as the "Phantom Sixth Man," who easily passed the ball and assisted his teammates.
+
+                Kuroko no Basket follows the journey of Seirin's players as they attempt to become the best Japanese high school team by winning the Interhigh Championship. 
+                To reach their goal, they have to cross pathways with several powerful teams, some of which have one of the five players with godlike abilities, whom Kuroko and Taiga make a pact to defeat. 
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
@@ -78,9 +80,8 @@ $pathToReserve = './reserve/one_piece-reserve.php';
                         <br><br>
                         <button type="submit">Save</button>
                         <p>
-                            Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                            The capture and death of Roger by the World Government brought a change throughout the world.
-                            His last words before his death revealed the location of the greatest treasure in the world, One Piece.
+                            Teikou Junior High School's basketball team is crowned champion three years in a row thanks to five outstanding players who, with their breathtaking and unique skills, leave opponents in despair and fans in admiration. 
+                            However, after graduating, these teammates, known as "The Generation of Miracles", go their separate ways and now consider each other as rivals.
                         </p>
                     </form>
                     <?php

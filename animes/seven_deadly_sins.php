@@ -4,12 +4,12 @@ session_start();
 $username = $_SESSION['username'];
 $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : '../images/logo.png';
 
-$title = 'One Piece';
-$genre = 'Action, Adventure, Comedy, Drama, Fantasy';
-$year = '1999';
-$picture = './images/one_piece.jpg';
+$title = 'Seven Deadly Sins';
+$genre = 'Action, Adventure, Comedy, Ecchi, Fantasy, Supernatural';
+$year = '2014';
+$picture = './images/seven_deadly_sins.jpg';
 $format = 'tv';
-$pathToReserve = './reserve/one_piece-reserve.php';
+$pathToReserve = './reserve/seven_deadly_sins-reserve.php';
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ $pathToReserve = './reserve/one_piece-reserve.php';
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/anime.css">
-    <title>One Piece</title>
+    <title>Seven Deadly Sins</title>
 </head>
 
 <body>
@@ -43,15 +43,14 @@ $pathToReserve = './reserve/one_piece-reserve.php';
     <main>
         <div class="banner"></div>
         <div class="anime-description">
-            <h1>One Piece</h1>
-            <p class="genre">Action, Adventure, Comedy, Drama, Fantasy</p>
+            <h1>Seven Deadly Sins</h1>
+            <p class="genre">Action, Adventure, Comedy, Ecchi, Fantasy, Supernatural</p>
             <p>
-                Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                The capture and death of Roger by the World Government brought a change throughout the world.
-                His last words before his death revealed the location of the greatest treasure in the world, One Piece.
-                It was this revelation that brought about the Grand Age of Pirates,
-                men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame),
-                and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.
+                When they were accused of trying to overthrow the monarchy, the feared warriors the Seven Deadly Sins were sent into exile. 
+                Princess Elizabeth discovers the truth - the Sins were framed by the king's guard, the Holy Knights - too late to prevent them from assassinating her father and seizing the throne!
+                Now the princess is on the run, seeking the Sins to help her reclaim the kingdom. 
+                But the first Sin she meets, Meliodas, is a little innkeeper with a talking pig. 
+                He doesn't even have a real sword! Have the legends of the Sins' strength been exaggerated?
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
@@ -78,9 +77,9 @@ $pathToReserve = './reserve/one_piece-reserve.php';
                         <br><br>
                         <button type="submit">Save</button>
                         <p>
-                            Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                            The capture and death of Roger by the World Government brought a change throughout the world.
-                            His last words before his death revealed the location of the greatest treasure in the world, One Piece.
+                            When they were accused of trying to overthrow the monarchy, the feared warriors the Seven Deadly Sins were sent into exile. 
+                            Princess Elizabeth discovers the truth - the Sins were framed by the king's guard, the Holy Knights - too late to prevent them from assassinating her father and seizing the throne!
+                            Now the princess is on the run, seeking the Sins to help her reclaim the kingdom.
                         </p>
                     </form>
                     <?php

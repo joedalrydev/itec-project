@@ -4,12 +4,12 @@ session_start();
 $username = $_SESSION['username'];
 $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : '../images/logo.png';
 
-$title = 'One Piece';
-$genre = 'Action, Adventure, Comedy, Drama, Fantasy';
-$year = '1999';
-$picture = './images/one_piece.jpg';
+$title = 'My Hero Academia';
+$genre = 'Action, Adventure, Comedy';
+$year = '2016';
+$picture = './images/my_hero_academia.jpg';
 $format = 'tv';
-$pathToReserve = './reserve/one_piece-reserve.php';
+$pathToReserve = './reserve/my_hero_academia-reserve.php';
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ $pathToReserve = './reserve/one_piece-reserve.php';
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/anime.css">
-    <title>One Piece</title>
+    <title>My Hero Academia</title>
 </head>
 
 <body>
@@ -43,15 +43,17 @@ $pathToReserve = './reserve/one_piece-reserve.php';
     <main>
         <div class="banner"></div>
         <div class="anime-description">
-            <h1>One Piece</h1>
-            <p class="genre">Action, Adventure, Comedy, Drama, Fantasy</p>
+            <h1>My Hero Academia</h1>
+            <p class="genre">Action, Adventure, Comedy</p>
             <p>
-                Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                The capture and death of Roger by the World Government brought a change throughout the world.
-                His last words before his death revealed the location of the greatest treasure in the world, One Piece.
-                It was this revelation that brought about the Grand Age of Pirates,
-                men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame),
-                and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.
+                What would the world be like if 80 percent of the population manifested extraordinary superpowers called “Quirks” at age four? 
+                Heroes and villains would be battling it out everywhere! 
+                Becoming a hero would mean learning to use your power, but where would you go to study? 
+                U.A. High's Hero Program of course! But what would you do if you were one of the 20 percent who were born Quirkless?
+
+                Middle school student Izuku Midoriya wants to be a hero more than anything, but he hasn't got an ounce of power in him. 
+                With no chance of ever getting into the prestigious U.A. High School for budding heroes, his life is looking more and more like a dead end. 
+                Then an encounter with All Might, the greatest hero of them all gives him a chance to change his destiny…
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
@@ -78,9 +80,8 @@ $pathToReserve = './reserve/one_piece-reserve.php';
                         <br><br>
                         <button type="submit">Save</button>
                         <p>
-                            Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                            The capture and death of Roger by the World Government brought a change throughout the world.
-                            His last words before his death revealed the location of the greatest treasure in the world, One Piece.
+                            What would the world be like if 80 percent of the population manifested extraordinary superpowers called “Quirks” at age four? 
+                            Heroes and villains would be battling it out everywhere!
                         </p>
                     </form>
                     <?php

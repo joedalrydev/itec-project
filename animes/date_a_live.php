@@ -4,12 +4,12 @@ session_start();
 $username = $_SESSION['username'];
 $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : '../images/logo.png';
 
-$title = 'One Piece';
-$genre = 'Action, Adventure, Comedy, Drama, Fantasy';
-$year = '1999';
-$picture = './images/one_piece.jpg';
+$title = 'Date A Live';
+$genre = 'Action, Comedy, Ecchi, Fantasy, Mecha, Romance, Sci-Fi';
+$year = '2013';
+$picture = './images/date_a_live.jpg';
 $format = 'tv';
-$pathToReserve = './reserve/one_piece-reserve.php';
+$pathToReserve = './reserve/date_a_live-reserve.php';
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ $pathToReserve = './reserve/one_piece-reserve.php';
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/anime.css">
-    <title>One Piece</title>
+    <title>Date A Live</title>
 </head>
 
 <body>
@@ -43,15 +43,14 @@ $pathToReserve = './reserve/one_piece-reserve.php';
     <main>
         <div class="banner"></div>
         <div class="anime-description">
-            <h1>One Piece</h1>
-            <p class="genre">Action, Adventure, Comedy, Drama, Fantasy</p>
+            <h1>Date A Live</h1>
+            <p class="genre">Action, Comedy, Ecchi, Fantasy, Mecha, Romance, Sci-Fi</p>
             <p>
-                Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                The capture and death of Roger by the World Government brought a change throughout the world.
-                His last words before his death revealed the location of the greatest treasure in the world, One Piece.
-                It was this revelation that brought about the Grand Age of Pirates,
-                men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame),
-                and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.
+                Thirty years before a strange phenomena called a "spacequake" devastated the center of Eurasia, claiming the lives of at least 150 million people. 
+                Since then, smaller spacequakes plague the world on an irregular basis. 
+                Shidou Itsuka, a seemingly ordinary high schooler comes across a mysterious girl at the ground zero of a spacequake and learns from his sister Kotori she is one of the "Spirits" who are the real cause of the spacequakes that occur when they manifest themselves in the world. 
+                He also learns that Kotori is the captain of the airship Ratatoskr and recruits him to make use of his mysterious ability to seal the Spirits' powers and stop them from being a threat to mankind. 
+                However, there is a catch: to seal a Spirit, he must make her fall in love with him.
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
@@ -78,9 +77,8 @@ $pathToReserve = './reserve/one_piece-reserve.php';
                         <br><br>
                         <button type="submit">Save</button>
                         <p>
-                            Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                            The capture and death of Roger by the World Government brought a change throughout the world.
-                            His last words before his death revealed the location of the greatest treasure in the world, One Piece.
+                            Thirty years before a strange phenomena called a "spacequake" devastated the center of Eurasia, claiming the lives of at least 150 million people. 
+                            Since then, smaller spacequakes plague the world on an irregular basis. 
                         </p>
                     </form>
                     <?php
