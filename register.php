@@ -21,6 +21,7 @@ session_start();
             <input type="password" id="password" name="cpassword" placeholder="Confirm Password" required>
             <button type="submit" id="submit">Register</button>
         </form>
+        <p>Already have an account? <a href="login.php">Login here</a></p>
         <?php
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $username = $_POST['username'];
@@ -49,13 +50,14 @@ session_start();
                     'username' => $username,
                     'password' => $password,
                     'profile' => [
-                        'anime_list' => [],
-                        'manga_list' => [],
+                        'anime_list' => []
                     ]
                 ];
+
+                echo "<script>alert('Registration successful!')</script>";
+                echo "<script>window.location.href = 'login.php'</script>";
             }
         ?>
-        <p>Already have an account? <a href="login.php">Login here</a></p>
     </div>
 </body>
 </html>

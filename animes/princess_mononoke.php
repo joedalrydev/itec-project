@@ -21,6 +21,16 @@ $pathToReserve = './reserve/princess_mononoke-reserve.php';
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/anime.css">
+    <style>
+        body {
+            background:
+                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
+                url(../images/princess_mononoke.jpg) left top no-repeat;
+            background-size: cover, 50% 100%;
+            background-position: center center, left top;
+            background-repeat: no-repeat, no-repeat;
+        }
+    </style>
     <title>Princess Mononoke</title>
 </head>
 
@@ -34,8 +44,8 @@ $pathToReserve = './reserve/princess_mononoke-reserve.php';
             <i class="fa fa-search"></i>
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" onclick="toggleAvatarHover()">
             <div id="avatarHover">
-                <a href="settings.php">Settings</a>
-                <a href="index.php">Logout</a>
+                <a href="../settings.php">Settings</a>
+                <a href="../index.php">Logout</a>
             </div>
         </div>
     </nav>
@@ -48,16 +58,16 @@ $pathToReserve = './reserve/princess_mononoke-reserve.php';
             <p>
                 A calm village residing in the mountains comes under attack from a demon-possessed boar one day.
 
-                Ashitaka, a young man and prince of the tribe, engages the creature in an attempt to save his village. 
-                During the battle, the boar bites him on the arm, leaving it blackened and cursed. 
+                Ashitaka, a young man and prince of the tribe, engages the creature in an attempt to save his village.
+                During the battle, the boar bites him on the arm, leaving it blackened and cursed.
                 Following his village's traditions, Ashitaka is exiled and becomes a wanderer, looking for a solution to the curse before it engulfs him.
 
-                Iron Town is a fortress under the leadership of Lady Eboshi. 
-                Through the clearing of the surrounding forests, Iron Town produces large amounts of Ironsand, used for gunpowder and other machinery. 
+                Iron Town is a fortress under the leadership of Lady Eboshi.
+                Through the clearing of the surrounding forests, Iron Town produces large amounts of Ironsand, used for gunpowder and other machinery.
                 However, because of the forests destruction, nearby animal clans seek revenge led by a human girl of the Wolf clan called San.
 
-                When Ashitaka comes to Iron Town, he discovers the area consumed in battle. 
-                Horrified, he attempts to create peace and befriend the Wolf Clan. 
+                When Ashitaka comes to Iron Town, he discovers the area consumed in battle.
+                Horrified, he attempts to create peace and befriend the Wolf Clan.
                 However, after the forest's eradication and the ongoing war between Human and Beast, will the Spirit of the Forest be forgiving and accept Ashitaka's request to expel his curse?
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
@@ -70,7 +80,7 @@ $pathToReserve = './reserve/princess_mononoke-reserve.php';
                 <div class="setContent">
                     <span class="close">&times;</span>
                     <h2>Add to Your Anime List</h2>
-                    <form id="addToListForm" action="one_piece.php" method="POST">
+                    <form id="addToListForm" action="addToList.php" method="POST">
                         <label for="status">Status:</label>
                         <select id="status" name="status" required>
                             <option value="Watching">Watching</option>
@@ -83,43 +93,21 @@ $pathToReserve = './reserve/princess_mononoke-reserve.php';
                         <label for="score">Score:</label>
                         <input type="number" id="score" name="score" min="1" max="10" placeholder="1-10" required>
                         <br><br>
+                        <input type="hidden" name="title" value="<?php echo htmlspecialchars($title); ?>">
+                        <input type="hidden" name="genre" value="<?php echo htmlspecialchars($genre); ?>">
+                        <input type="hidden" name="year" value="<?php echo htmlspecialchars($year); ?>">
+                        <input type="hidden" name="picture" value="<?php echo htmlspecialchars($picture); ?>">
+                        <input type="hidden" name="format" value="<?php echo htmlspecialchars($format); ?>">
+                        <input type="hidden" name="pathToReserve" value="<?php echo htmlspecialchars($pathToReserve); ?>">
                         <button type="submit">Save</button>
                         <p>
                             A calm village residing in the mountains comes under attack from a demon-possessed boar one day.
 
-                            Ashitaka, a young man and prince of the tribe, engages the creature in an attempt to save his village. 
-                            During the battle, the boar bites him on the arm, leaving it blackened and cursed. 
+                            Ashitaka, a young man and prince of the tribe, engages the creature in an attempt to save his village.
+                            During the battle, the boar bites him on the arm, leaving it blackened and cursed.
                             Following his village's traditions, Ashitaka is exiled and becomes a wanderer, looking for a solution to the curse before it engulfs him.
                         </p>
                     </form>
-                    <?php
-                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                        $status = $_POST['status'];
-                        $score = $_POST['score'];
-
-                        if (!isset($_SESSION['users'][$username]['profile']['anime_list'])) {
-                            $_SESSION['users'][$username]['profile']['anime_list'] = [];
-                        }
-
-                        foreach ($_SESSION['users'][$username]['profile']['anime_list'] as $anime) {
-                            if ($anime['title'] === $title){
-                                echo "<script>alert('This anime is already in your list.')</script>";
-                                exit;
-                            }
-                        }
-                        $_SESSION['users'][$username]['profile']['anime_list'][] = [
-                            'title' => $title,
-                            'genre' => $genre,
-                            'year' => $year,
-                            'status' => $status,
-                            'score' => $score,
-                            'picture' => $picture,
-                            'format' => $format,
-                            'pathToReserve' => $pathToReserve
-                        ];
-                        echo "<script>alert('Anime added to your list!')</script>";
-                    }
-                    ?>
                 </div>
             </div>
         </div>

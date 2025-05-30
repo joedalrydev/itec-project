@@ -21,6 +21,16 @@ $pathToReserve = './reserve/your_name-reserve.php';
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/anime.css">
+    <style>
+        body {
+            background:
+                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
+                url(../images/your_name.png) left top no-repeat;
+            background-size: cover, 50% 100%;
+            background-position: center center, left top;
+            background-repeat: no-repeat, no-repeat;
+        }
+    </style>
     <title>Your Name.</title>
 </head>
 
@@ -34,8 +44,8 @@ $pathToReserve = './reserve/your_name-reserve.php';
             <i class="fa fa-search"></i>
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" onclick="toggleAvatarHover()">
             <div id="avatarHover">
-                <a href="settings.php">Settings</a>
-                <a href="index.php">Logout</a>
+                <a href="../settings.php">Settings</a>
+                <a href="../index.php">Logout</a>
             </div>
         </div>
     </nav>
@@ -65,7 +75,7 @@ $pathToReserve = './reserve/your_name-reserve.php';
                 <div class="setContent">
                     <span class="close">&times;</span>
                     <h2>Add to Your Anime List</h2>
-                    <form id="addToListForm" action="one_piece.php" method="POST">
+                    <form id="addToListForm" action="addToList.php" method="POST">
                         <label for="status">Status:</label>
                         <select id="status" name="status" required>
                             <option value="Watching">Watching</option>
@@ -78,6 +88,12 @@ $pathToReserve = './reserve/your_name-reserve.php';
                         <label for="score">Score:</label>
                         <input type="number" id="score" name="score" min="1" max="10" placeholder="1-10" required>
                         <br><br>
+                        <input type="hidden" name="title" value="<?php echo htmlspecialchars($title); ?>">
+                        <input type="hidden" name="genre" value="<?php echo htmlspecialchars($genre); ?>">
+                        <input type="hidden" name="year" value="<?php echo htmlspecialchars($year); ?>">
+                        <input type="hidden" name="picture" value="<?php echo htmlspecialchars($picture); ?>">
+                        <input type="hidden" name="format" value="<?php echo htmlspecialchars($format); ?>">
+                        <input type="hidden" name="pathToReserve" value="<?php echo htmlspecialchars($pathToReserve); ?>">
                         <button type="submit">Save</button>
                         <p>
                             Mitsuha Miyamizu, a high school girl, yearns to live the life of a boy in the bustling city of Tokyo—a dream that stands in stark contrast to her present life in the countryside. 
@@ -88,34 +104,6 @@ $pathToReserve = './reserve/your_name-reserve.php';
                             In pursuit of an answer to this strange phenomenon, they begin to search for one another.
                         </p>
                     </form>
-                    <?php
-                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                        $status = $_POST['status'];
-                        $score = $_POST['score'];
-
-                        if (!isset($_SESSION['users'][$username]['profile']['anime_list'])) {
-                            $_SESSION['users'][$username]['profile']['anime_list'] = [];
-                        }
-
-                        foreach ($_SESSION['users'][$username]['profile']['anime_list'] as $anime) {
-                            if ($anime['title'] === $title){
-                                echo "<script>alert('This anime is already in your list.')</script>";
-                                exit;
-                            }
-                        }
-                        $_SESSION['users'][$username]['profile']['anime_list'][] = [
-                            'title' => $title,
-                            'genre' => $genre,
-                            'year' => $year,
-                            'status' => $status,
-                            'score' => $score,
-                            'picture' => $picture,
-                            'format' => $format,
-                            'pathToReserve' => $pathToReserve
-                        ];
-                        echo "<script>alert('Anime added to your list!')</script>";
-                    }
-                    ?>
                 </div>
             </div>
         </div>

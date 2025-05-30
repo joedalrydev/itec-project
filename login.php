@@ -4,6 +4,7 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@ session_start();
     <link rel="stylesheet" href="./styles/login.css">
     <title>Login</title>
 </head>
+
 <body>
     <img src="./images/logo.png" alt="logo" id="logo">
     <div class="container">
@@ -20,31 +22,32 @@ session_start();
             <input type="password" id="password" name="password" placeholder="Password">
             <button type="submit" id="submit">SIGN IN</button>
         </form>
-        <?php
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                $username = $_POST['username'];
-                $password = $_POST['password'];
-
-                if (isset($_SESSION['users'])) {
-                    $isValid = false;
-                    foreach ($_SESSION['users'] as $user) {
-                        if ($user['username'] === $username && $user['password'] === $password) {
-                            $isValid = true;
-                            $_SESSION['username'] = $username;
-                            header("Location: home.php");
-                            exit;
-                        }
-                    }
-
-                    if (!$isValid) {
-                        echo "<script>alert('Invalid username or password.')</script>";
-                    }
-                } else {
-                    echo "<script>alert('No registered users found. Please register first.')</script>";
-                }
-            }
-        ?>
         <p>Not registered? <a href="register.php">Create an account</a></p>
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+
+            if (isset($_SESSION['users'])) {
+                $isValid = false;
+                foreach ($_SESSION['users'] as $user) {
+                    if ($user['username'] === $username && $user['password'] === $password) {
+                        $isValid = true;
+                        $_SESSION['username'] = $username;
+                        header("Location: home.php");
+                        exit;
+                    }
+                }
+
+                if (!$isValid) {
+                    echo "<script>alert('Invalid username or password.')</script>";
+                }
+            } else {
+                echo "<script>alert('No registered users found. Please register first.')</script>";
+            }
+        }
+        ?>
     </div>
 </body>
+
 </html>

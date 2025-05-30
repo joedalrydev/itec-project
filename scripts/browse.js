@@ -28,7 +28,7 @@ function filterAnime() {
   container.innerHTML = "";
 
   const filtered = animeList.filter(anime => {
-    const matchGenre = genre === "Any" || anime.genre === genre;
+    const matchGenre = genre === "Any" || anime.genre.includes(genre);
     const matchYear = year === "Any" || anime.year == year;
     const matchFormat = format === "Any" || anime.format === format;
     return matchGenre && matchYear && matchFormat;

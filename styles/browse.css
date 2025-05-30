@@ -55,12 +55,20 @@ select option {
   font-size: 1.7em;
   align-self: flex-start;
 }
-.anime-list-container {
+#anime-list-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
   align-items: center;
   text-align: center;
+  gap: 2em;
+}
+#anime-list-container p {
+  grid-column: 1 / -1;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  width: 100%;
 }
 .card {
   display: flex;
