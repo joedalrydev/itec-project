@@ -3,6 +3,10 @@
   gap: 2em;
   padding: 2em;
 }
+h1 {
+  font-family: 'Lilita One';
+  text-shadow: 0 0 3px white;
+}
 .purple-text {
   color: #af8df4;
   text-shadow: 0 0 5px #af8df4;
@@ -13,6 +17,9 @@
 .welcome {
   flex-basis: 50%;
 }
+.welcome h1 {
+  font-size: 3.6em;
+}
 .welcome h2 {
   margin-bottom: 1.5em;
   margin-top: 0.6em;
@@ -20,12 +27,11 @@
   font-size: 1.8em;
 }
 .welcome p {
-  margin-left: 1em;
+  margin: 1em 0;
   text-align: justify;
   line-height: 1.5;
   word-spacing: 1.5;
-  font-size: 1.3em;
-  margin: 1em;
+  font-size: 1.7em;
 }
 .trending {
   flex-basis: 50%;
@@ -35,6 +41,9 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 1em;
+}
+.cards h1 {
+  margin: 0.5em 0.8em;
 }
 .card {
   display: flex;
@@ -51,6 +60,7 @@
 .card img {
   width: 150px;
   height: 250px;
+  border-radius: 20px;
 }
 .card a {
   text-decoration: none;

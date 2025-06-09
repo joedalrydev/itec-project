@@ -4,18 +4,27 @@ main {
     align-items: center;
     height: 100vh;
     padding: 0 7em;
+    background-image: url(../images/background.png);
+    background-size: cover;
 }
-
+nav {
+    background-color: rgba(26, 25, 25, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px white;
+}
 .container {
     display: flex;
     gap: 2em;
     padding: 2em;
-    border-radius: 20px;
-    background-color: rgba(26, 25, 25, 0.4);
     text-align: justify;
 }
 form {
     flex-basis: 33%;
+    border-radius: 20px;
+    background-color: rgba(26, 25, 25, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px white;
+    padding: 2em;
 }
 form h1 {
     font-size: 2em;
@@ -36,6 +45,27 @@ form input[type="text"] {
 }
 form input[type="text"]::placeholder {
     color: white;
+}
+form input[type="file"] {
+    display: none;
+}
+#pfpLabel {
+    display: inline-block;
+    background: linear-gradient(to right, #0fb5ce, #6d3ee4);
+    color: white;
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 0 0 10px black;
+    margin-bottom: 1em;
+    transition: background 0.3s;
+}
+
+#pfpLabel:hover {
+    background: linear-gradient(to right, #6d3ee4, #0fb5ce);
 }
 form button {
     background: linear-gradient(to right, #0fb5ce, #6d3ee4);

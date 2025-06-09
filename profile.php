@@ -11,6 +11,7 @@ $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Lilita One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/global.css">
@@ -18,7 +19,7 @@ $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users
     <style>
         body {
             background:
-                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
+                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 75%, rgb(48, 25, 105) 100%),
                 url(<?php echo $pfp ?>) left top no-repeat;
             background-size: cover, 50% 100%;
             background-repeat: no-repeat, no-repeat;

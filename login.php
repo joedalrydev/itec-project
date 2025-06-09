@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("database.php");
 ?>
 
 <!DOCTYPE html>
@@ -28,23 +29,24 @@ session_start();
             $username = $_POST['username'];
             $password = $_POST['password'];
 
-            if (isset($_SESSION['users'])) {
-                $isValid = false;
-                foreach ($_SESSION['users'] as $user) {
-                    if ($user['username'] === $username && $user['password'] === $password) {
-                        $isValid = true;
-                        $_SESSION['username'] = $username;
-                        header("Location: home.php");
-                        exit;
-                    }
-                }
+            $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+            $stmt->bind_param("s", $username);
+            $stmt->execute();
+            $result = $stmt->get_result();
 
-                if (!$isValid) {
+            if ($result->num_rows === 1) {
+                $user = $result->fetch_assoc();
+                if ($user['password'] === $password) {
+                    $_SESSION['username'] = $username;
+                    header("Location: home.php");
+                    exit;
+                } else {
                     echo "<script>alert('Invalid username or password.')</script>";
                 }
             } else {
-                echo "<script>alert('No registered users found. Please register first.')</script>";
+                echo "<script>alert('Invalid username or password.')</script>";
             }
+            $stmt->close();
         }
         ?>
     </div>

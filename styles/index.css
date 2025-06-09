@@ -26,9 +26,9 @@
   padding: 0.5em 2em;
   color: white;
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1.5em;
   background: linear-gradient(to right, #0fb5ce, #6d3ee4);
-  border-radius: 20px;
+  border-radius: 40px;
   text-shadow: 1px 1px 4px #000;
 }
 .hero-content a:hover {
@@ -36,11 +36,11 @@
 }
 #sign-in {
   position: relative;
-  left: 15px;
+  left: 22px;
 }
 #register {
   position: relative;
-  right: 18px;
+  right: 22px;
 }
 
 main {

@@ -52,6 +52,11 @@ $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users
                 $oldUsername = $_POST['username'];
                 $newUsername = $_POST['newUsername'];
 
+                $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? ");
+                $stmt->bind_param("", $oldUsername);
+                $stmt->execute();
+                $result = $stmt->get_result();
+
                 if ($oldUsername === $username) {
                     foreach ($_SESSION['users'] as $user) {
                         if ($user['username'] === $newUsername) {

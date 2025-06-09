@@ -8,9 +8,9 @@ body {
     background: linear-gradient(
         to right,
         rgba(5, 24, 52) 0%,
-        rgba(0, 0, 0) 15%,
+        rgba(0, 0, 0) 45%,
         rgba(0, 0, 0) 50%,
-        rgba(0, 0, 0) 85%,
+        rgba(0, 0, 0) 75%,
         rgb(46, 21, 109) 100%
     );
     font-family: 'Arimo', sans-serif;
@@ -42,9 +42,9 @@ nav {
     background: linear-gradient(
         to right,
         rgba(5, 24, 52) 0%,
-        rgba(0, 0, 0) 15%,
+        rgba(0, 0, 0) 45%,
         rgba(0, 0, 0) 50%,
-        rgba(0, 0, 0) 85%,
+        rgba(0, 0, 0) 75%,
         rgb(46, 21, 109) 100%
     );
     position: relative;
@@ -61,6 +61,7 @@ nav::after {
 }
 nav:hover::after {
     opacity: 1;
+    box-shadow: 0 0 10px white;
 }
 nav #logo {
     width: 50px;
@@ -91,6 +92,7 @@ nav a:hover {
 .avatar img,
 .avatar p {
     cursor: pointer;
+    border-radius: 50%;
 }
 .fa-search {
     background-color: inherit;
@@ -119,7 +121,7 @@ nav a:hover {
 }
 
 footer {
-    padding: 0.3em 2em;
+    padding: 1em 2em;
     background: linear-gradient(to right, #281558, #043a42);
     display: flex;
     justify-content: center;
@@ -130,6 +132,10 @@ footer {
 .logo {
     text-align: center;
     flex-basis: 15%;
+}
+.logo img {
+    width: 50px;
+    height: 50px;
 }
 .footer-content {
     flex-basis: 85%;
@@ -144,9 +150,5 @@ footer {
         font-size: 8px;
         padding: 20px;
         text-align: justify;
-    }
-    .logo img {
-        width: 50px;
-        height: 50px;
     }
 }

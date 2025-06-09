@@ -90,7 +90,7 @@ session_start();
             <div class="content-card">
                 <h2>Reserve tickets and seats</h2>
                 <p>Join discussions, share your thoughts, and get recommendations from fellow fans around the world.</p>
-                <img src="./images/logo.png" alt="checkmark">
+                <img src="./images/poeple.png" alt="checkmark">
             </div>
             <div class="content-card">
                 <h2>Reserve tickets and seats</h2>
@@ -103,7 +103,7 @@ session_start();
 
     <footer>
         <div class="logo">
-            <img src="./images/logo.png" alt="Logo" width="125px" height="125px">
+            <img src="./images/logo.png" alt="Logo">
             <p>&copy; JAJ.AniMate</p>
         </div>
         <div class="footer-content">

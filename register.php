@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("database.php");
 ?>
 
 <!DOCTYPE html>
@@ -28,13 +29,14 @@ session_start();
                 $password = $_POST['password'];
                 $cpassword = $_POST['cpassword'];
 
-                if (isset($_SESSION['users'])) {
-                    foreach ($_SESSION['users'] as $user) {
-                        if ($user['username'] === $username) {
-                            echo "<script>alert('Username is already taken. Please choose another one.')</script>";
-                            exit;
-                        }
-                    }
+                $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+                $stmt->bind_param("s", $username);
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                if ($result->num_rows > 0) {
+                    echo "<script>alert('Username is already taken. Please choose another one.')</script>";
+                    exit;
                 }
 
                 if ($password !== $cpassword) {
@@ -42,17 +44,10 @@ session_start();
                     exit;
                 }
 
-                if (!isset($_SESSION['users'])) {
-                    $_SESSION['users'] = [];
-                }
+                $sql = "INSERT INTO users(username, password)
+                        VALUES ($username, $password)";
 
-                $_SESSION['users'][$username] = [
-                    'username' => $username,
-                    'password' => $password,
-                    'profile' => [
-                        'anime_list' => []
-                    ]
-                ];
+                mysqli_query($conn, $sql);
 
                 echo "<script>alert('Registration successful!')</script>";
                 echo "<script>window.location.href = 'login.php'</script>";

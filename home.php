@@ -105,7 +105,7 @@ $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users
         </div>
 
         <div class="cards">
-            <h2>Check it out!</h2>
+            <h1>Check it out!</h1>
             <div class="card-container">
                 <div class="card">
                     <a href="./animes/a_silent_voice.php"><img src="./images/a_silent_voice.jpg" alt="Poster"></a>
