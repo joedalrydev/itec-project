@@ -94,7 +94,7 @@ form input[type="file"] {
 }
 .text {
     flex-basis: 34%;
-    font-size: 1.2em;
+    font-size: 1.5em;
     line-height: 1.5;
     word-spacing: 0.3em;
 }
@@ -106,5 +106,11 @@ form input[type="file"] {
     }
     .container {
         flex-direction: column;
+    }
+    form {
+        text-align: center;
+    }
+    .text {
+        font-size: 1.2em;
     }
 }

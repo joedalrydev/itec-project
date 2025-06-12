@@ -25,10 +25,13 @@ function displayModal() {
 
 function toggleAvatarHover() {
   const popup = document.getElementById("avatarHover");
+  const avatar = document.getElementById("profilepic");
 
   if (popup.style.display === "none") {
     popup.style.display = "block";
+    profilepic.style.boxshadow = " 0 0 5px #67ebff";
   } else {
     popup.style.display = "none";
+    profilepic.style.boxshadow = "none";
   }
 }

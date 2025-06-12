@@ -25,10 +25,10 @@ main {
   background: linear-gradient(to right, #0fb5ce, #6d3ee4);
   color: white;
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 2em;
   padding: 0.3em 1.5em;
-  border-radius: 20px;
-  text-shadow: 2px 2px 5px black;
+  border-radius: 40px;
+  text-shadow: 0 0 3px white;
 }
 .profile-description a:hover {
   box-shadow: 0 0 10px #67ebff;

@@ -94,11 +94,37 @@ h1 {
     max-width: 100%;
   }
   .container {
-    display: block;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
   }
   .trending {
     display: none;
+  }
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .welcome img {
+    display: block;
+    width: 100px;
+    height: 100px;
+  }
+  .welcome p{
+    display: none;
+  }
+ .welcome h1,
+ .welcome h2 {
+  font-size: 2.8em;
+  }
+  .cards h1 {
+    margin: 1em 0;
+    font-size: 1.5em;
   }
   .card-container {
     grid-template-columns: repeat(3, 1fr);

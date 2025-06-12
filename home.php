@@ -31,7 +31,7 @@ $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users
         </ul>
         <div class="avatar">
             <i class="fa fa-search"></i>
-            <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" onclick="toggleAvatarHover()">
+            <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" onclick="toggleAvatarHover()" id="profilepic">
             <div id="avatarHover">
                 <a href="settings.php">Settings</a>
                 <a href="index.php">Logout</a>
@@ -42,6 +42,7 @@ $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users
     <main>
         <div class="container">
             <div class="welcome">
+                <img src="./images/logo.png" alt="">
                 <h1>Welcome to AniMate, <span class="blue-text"><?php echo $username ?></span>!</h1>
                 <h2 class="purple-text">Your Ultimate Anime & Movie Companion</h2>
 
