@@ -1,154 +1,229 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(
-        to right,
-        rgba(5, 24, 52) 0%,
-        rgba(0, 0, 0) 45%,
-        rgba(0, 0, 0) 50%,
-        rgba(0, 0, 0) 75%,
-        rgb(46, 21, 109) 100%
-    );
-    font-family: 'Arimo', sans-serif;
-    color: white;
-    width: 100vw;
-    overflow-x: hidden;
+  background: linear-gradient(
+    to right,
+    rgba(5, 24, 52) 0%,
+    rgba(0, 0, 0) 45%,
+    rgba(0, 0, 0) 50%,
+    rgba(0, 0, 0) 75%,
+    rgb(46, 21, 109) 100%
+  );
+  font-family: "Arimo", sans-serif;
+  color: white;
+  width: 100vw;
+  overflow-x: hidden;
 }
 h1 {
-    font-size: 3em;
-    text-shadow: 0 0 10px white;
+  font-size: 3em;
+  text-shadow: 0 0 10px white;
 }
 h2 {
-    font-family: 'Anton';
-    font-size: 2em;
-    text-shadow: 2px 2px 4px black;
-    margin-bottom: 0.3em;
+  font-family: "Anton";
+  font-size: 2em;
+  text-shadow: 2px 2px 4px black;
+  margin-bottom: 0.3em;
 }
 .blue-text {
-    color: #67ebff;
+  color: #67ebff;
 }
 #logo {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: linear-gradient(
-        to right,
-        rgba(5, 24, 52) 0%,
-        rgba(0, 0, 0) 45%,
-        rgba(0, 0, 0) 50%,
-        rgba(0, 0, 0) 75%,
-        rgb(46, 21, 109) 100%
-    );
-    position: relative;
-    z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    rgba(5, 24, 52) 0%,
+    rgba(0, 0, 0) 45%,
+    rgba(0, 0, 0) 50%,
+    rgba(0, 0, 0) 75%,
+    rgb(46, 21, 109) 100%
+  );
+  position: relative;
+  z-index: 1;
 }
 nav::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: linear-gradient(to right, #281558, #043a42);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to right, #281558, #043a42);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 nav:hover::after {
-    opacity: 1;
-    box-shadow: 0 0 10px white;
+  opacity: 1;
+  box-shadow: 0 0 10px white;
 }
 nav #logo {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 nav ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 nav a {
-    text-decoration: none;
-    padding: 0.3em 2em;
-    font-size: 1em;
-    font-weight: bold;
+  text-decoration: none;
+  padding: 0.3em 2em;
+  font-size: 1em;
+  font-weight: bold;
 }
 nav a:hover {
-    color: #e5e7ea;
+  color: #e5e7ea;
+}
+#menu {
+  display: none;
+}
+#menu-sidebar {
+  display: none;
 }
 .avatar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 5px;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
+  position: relative;
 }
 
 .avatar img,
 .avatar p {
-    cursor: pointer;
-    border-radius: 50%;
+  cursor: pointer;
+  border-radius: 50%;
 }
 .fa-search {
-    background-color: inherit;
-    border: none;
-    color: #67ebff;
-    cursor: pointer;
+  background-color: inherit;
+  border: none;
+  color: #67ebff;
+  cursor: pointer;
 }
-.fa-search:hover{
-    color: #e5e7ea;
+.fa-search:hover {
+  color: #e5e7ea;
 }
 #avatarHover {
-    display: none;
-    position: absolute;
-    top: 65px;
-    padding: 0.3em 0em;
-    background: linear-gradient(#281558, #043a42);
-    border-radius: 20px;
-    z-index: 100;
+  display: none;
+  position: absolute;
+  top: 65px;
+  padding: 0.3em 0em;
+  background: linear-gradient(#281558, #043a42);
+  border-radius: 20px;
+  z-index: 100;
 }
 #avatarHover a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 #avatarHover a:hover {
-    color: #67ebff;
+  color: #67ebff;
 }
 
 footer {
-    padding: 1em 2em;
-    background: linear-gradient(to right, #281558, #043a42);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8em;
-    line-height: 1.5;
+  padding: 1em 2em;
+  background: linear-gradient(to right, #281558, #043a42);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  line-height: 1.5;
 }
 .logo {
-    text-align: center;
-    flex-basis: 15%;
+  text-align: center;
+  flex-basis: 15%;
 }
 .logo img {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 .footer-content {
-    flex-basis: 85%;
+  flex-basis: 85%;
 }
 
 @media only screen and (max-width: 480px) {
-    nav {
-        display: none;
-    }
-    footer {
-        gap: 20px;
-        font-size: 8px;
-        padding: 20px;
-        text-align: justify;
-    }
+  nav {
+    display: none;
+  }
+  #menu {
+    display: block;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 100;
+    border-radius: 15px;
+    background-color: #af8df4;
+  }
+  #menu .fa-bars {
+    font-size: 3em;
+    color: #043a42;
+    padding: 10px;
+    cursor: pointer;
+  }
+  #menu-sidebar {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .menu-content {
+    position: fixed;
+    left: 60%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #043a42;
+    height: 100%;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #close {
+    font-size: 4em;
+  }
+  .menu-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+  .menu-header h2 {
+    font-size: 2em;
+  }
+  .menu-content img {
+    border-radius: 50%;
+  }
+  .menu-content ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+  .menu-content a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 1em;
+  }
+  .menu-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+  }
+  footer {
+    gap: 20px;
+    font-size: 8px;
+    padding: 20px;
+    text-align: justify;
+  }
 }

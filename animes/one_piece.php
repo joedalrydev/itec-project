@@ -1,15 +1,23 @@
 <?php
 session_start();
+include("../database.php");
 
 $username = $_SESSION['username'];
-$pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : '../images/logo.png';
+$sql = $conn->prepare("SELECT pfp FROM users WHERE username = ?");
+$sql->bind_param("s", $username);
+$sql->execute();
+$result = $sql->get_result();
+$row = $result->fetch_assoc();
+$pfpPath = isset($row['pfp']) && !empty($row['pfp']) ? $row['pfp'] : '../images/logo.png';
+$pfp = ".." . $pfpPath;
 
 $title = 'One Piece';
 $genre = 'Action, Adventure, Comedy, Drama, Fantasy';
+$maxEpisodes = '1132';
 $year = '1999';
 $picture = './images/one_piece.jpg';
 $format = 'tv';
-$pathToReserve = './reserve/one_piece-reserve.php';
+$pathToReserve = './reserve/one-piece-reserve.php';
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +38,21 @@ $pathToReserve = './reserve/one_piece-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+        .poster {
+            background: url(../images/one-piece.jpg) no-repeat center center;
+            background-size: cover;
+            flex-basis: 50%;
+            border-radius: 20px;
+        }
+
+        @media only screen and (max-width: 480px) {
+            body {
+                background:
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
+                    url(../images/one-piece.jpg) center center no-repeat;
+                background-size: cover;
+            }
+        }
     </style>
     <title>One Piece</title>
 </head>
@@ -49,6 +72,30 @@ $pathToReserve = './reserve/one_piece-reserve.php';
             </div>
         </div>
     </nav>
+
+    <div id="menu">
+        <i class="fa fa-bars"></i>
+    </div>
+
+    <div id="menu-sidebar">
+        <div class="menu-content">
+            <div class="menu-header">
+                <span id="close">&times;</span>
+                <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
+                <h2 class="blue-text"><?php echo $username ?></h2>
+            </div>
+            <ul>
+                <li><a href="../home.php">Home</a></li>
+                <li><a href="../profile.php">Profile</a></li>
+                <li><a href="../profile_animeList.php">List</a></li>
+                <li><a href="../browse.php">Reserve</a></li>
+            </ul>
+            <div class="menu-footer">
+                <a href="../settings.php">Settings</a>
+                <a href="../index.php">Logout</a>
+            </div>
+        </div>
+    </div>
 
     <main>
         <div class="banner"></div>
@@ -86,18 +133,17 @@ $pathToReserve = './reserve/one_piece-reserve.php';
                         <label for="score">Score:</label>
                         <input type="number" id="score" name="score" min="1" max="10" placeholder="1-10" required>
                         <br><br>
+                        <label for="episodes">Episodes Watched:</label>
+                        <input type="number" id="episodes" name="episode" min="0" max="<?php echo htmlspecialchars($maxEpisodes); ?>" value="0" required>
+                        <br><br>
                         <input type="hidden" name="title" value="<?php echo htmlspecialchars($title); ?>">
                         <input type="hidden" name="genre" value="<?php echo htmlspecialchars($genre); ?>">
+                        <input type="hidden" name="maxEpisodes" value="<?php echo htmlspecialchars($maxEpisodes); ?>">
                         <input type="hidden" name="year" value="<?php echo htmlspecialchars($year); ?>">
                         <input type="hidden" name="picture" value="<?php echo htmlspecialchars($picture); ?>">
                         <input type="hidden" name="format" value="<?php echo htmlspecialchars($format); ?>">
                         <input type="hidden" name="pathToReserve" value="<?php echo htmlspecialchars($pathToReserve); ?>">
                         <button type="submit">Save</button>
-                        <p>
-                            Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                            The capture and death of Roger by the World Government brought a change throughout the world.
-                            His last words before his death revealed the location of the greatest treasure in the world, One Piece.
-                        </p>
                     </form>
                 </div>
             </div>

@@ -29,10 +29,10 @@ include("database.php");
             $username = $_POST['username'];
             $password = $_POST['password'];
 
-            $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
-            $stmt->bind_param("s", $username);
-            $stmt->execute();
-            $result = $stmt->get_result();
+            $sql = $conn->prepare("SELECT * FROM users WHERE username = ?");
+            $sql->bind_param("s", $username);
+            $sql->execute();
+            $result = $sql->get_result();
 
             if ($result->num_rows === 1) {
                 $user = $result->fetch_assoc();
@@ -46,7 +46,7 @@ include("database.php");
             } else {
                 echo "<script>alert('Invalid username or password.')</script>";
             }
-            $stmt->close();
+            $sql->close();
         }
         ?>
     </div>

@@ -29,10 +29,10 @@ include("database.php");
                 $password = $_POST['password'];
                 $cpassword = $_POST['cpassword'];
 
-                $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
-                $stmt->bind_param("s", $username);
-                $stmt->execute();
-                $result = $stmt->get_result();
+                $sql = $conn->prepare("SELECT * FROM users WHERE username = ?");
+                $sql->bind_param("s", $username);
+                $sql->execute();
+                $result = $sql->get_result();
 
                 if ($result->num_rows > 0) {
                     echo "<script>alert('Username is already taken. Please choose another one.')</script>";

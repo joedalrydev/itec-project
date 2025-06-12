@@ -1,8 +1,15 @@
 <?php
 session_start();
+include("database.php");
 
 $username = $_SESSION['username'];
-$pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : './images/logo.png';
+$sql = $conn->prepare("SELECT pfp FROM users WHERE username = ?");
+$sql->bind_param("s", $username);
+$sql->execute();
+$result = $sql->get_result();
+$row = $result->fetch_assoc();
+$pfpPath = isset($row['pfp']) && !empty($row['pfp']) ? $row['pfp'] : './images/logo.png';
+$pfp = "." . $pfpPath;
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +38,7 @@ $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users
         </ul>
         <div class="avatar">
             <i class="fa fa-search"></i>
-            <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" onclick="toggleAvatarHover()" id="profilepic">
+            <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic">
             <div id="avatarHover">
                 <a href="settings.php">Settings</a>
                 <a href="index.php">Logout</a>
@@ -39,12 +46,38 @@ $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users
         </div>
     </nav>
 
+    <div id="menu">
+        <i class="fa fa-bars"></i>
+    </div>
+
+    <div id="menu-sidebar">
+        <div class="menu-content">
+            <div class="menu-header">
+                <span id="close">&times;</span>
+                <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
+                <h2 class="blue-text"><?php echo $username ?></h2>
+            </div>
+            <ul>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="profile_animeList.php">List</a></li>
+                <li><a href="browse.php">Reserve</a></li>
+            </ul>
+            <div class="menu-footer">
+                <a href="settings.php">Settings</a>
+                <a href="index.php">Logout</a>
+            </div>
+        </div>
+    </div>
+
     <main>
         <div class="container">
             <div class="welcome">
                 <img src="./images/logo.png" alt="">
-                <h1>Welcome to AniMate, <span class="blue-text"><?php echo $username ?></span>!</h1>
+                <h1 class="description">Welcome to AniMate, <span class="blue-text"><?php echo $username ?></span>!</h1>
+                <h1 class="animate">AniMate</h1>
                 <h2 class="purple-text">Your Ultimate Anime & Movie Companion</h2>
+                <a href="#cards"><i class="fa fa-arrow-down"></i></a>
 
                 <p>
                     <span class="blue-text">Track your Anime</span>
@@ -105,7 +138,7 @@ $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users
             </div>
         </div>
 
-        <div class="cards">
+        <div class="cards" id="cards">
             <h1>Check it out!</h1>
             <div class="card-container">
                 <div class="card">

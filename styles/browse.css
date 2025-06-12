@@ -17,7 +17,7 @@ main {
   padding-bottom: 10px;
 }
 .filter {
-    position: relative;
+  position: relative;
 }
 select {
   appearance: none;
@@ -32,23 +32,43 @@ select {
   width: 150px;
 }
 .filter::after {
-    content: '';
-    position: absolute;
-    top: 43px;
-    right: 15px;
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
-    transform: rotate(45deg);
-    z-index: 1;
-    width: 8px;
-    height: 8px;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 43px;
+  right: 15px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg);
+  z-index: 1;
+  width: 8px;
+  height: 8px;
+  pointer-events: none;
 }
 select option {
   background-color: #6d3ee4;
   color: white;
   font-size: 0.8em;
   font-weight: bold;
+}
+#searchBar {
+  align-self: center;
+  margin-bottom: 1em;
+  width: 40%;
+  font-size: 1rem;
+  padding: 10px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(59, 59, 59, 0.4) 15%,
+    rgba(59, 59, 59, 0.4) 50%,
+    rgba(50, 50, 50, 0.4) 100%
+  );
+  border: 1px solid #67ebff;
+  border-radius: 20px;
+  color: white;
+}
+#searchBar::placeholder {
+  color: white;
 }
 #text {
   display: none;
@@ -84,4 +104,61 @@ select option {
   text-decoration: none;
   color: white;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 480px) {
+  main {
+    padding: 0.5em;
+  }
+  .filter-anime {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2em;
+    padding: 1em 0;
+  }
+  .filter {
+    width: 100%;
+    margin-bottom: 0.2em;
+  }
+  select {
+    width: 100%;
+    font-size: 1.1em;
+    padding: 0.5em 1em;
+  }
+  .filter::after {
+    top: 38px;
+    right: 20px;
+  }
+  #searchBar {
+    width: 100%;
+    font-size: 1.1em;
+    padding: 12px;
+    margin-bottom: 1.2em;
+    align-self: stretch;
+  }
+  #text {
+    font-size: 1.2em;
+    align-self: center;
+    margin-bottom: 1em;
+  }
+  #anime-list-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+  .card img {
+    width: 90px;
+    height: 135px;
+  }
+  .card a {
+    font-size: 1em;
+    margin-top: 0.3em;
+  }
+  footer .logo img {
+    width: 50px;
+    height: 50px;
+  }
+  .footer-content {
+    font-size: 0.95em;
+    padding: 0.5em;
+  }
 }

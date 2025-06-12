@@ -1,8 +1,15 @@
 <?php
 session_start();
+include("database.php");
 
 $username = $_SESSION['username'];
-$pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : './images/logo.png';
+$sql = $conn->prepare("SELECT pfp FROM users WHERE username = ?");
+$sql->bind_param("s", $username);
+$sql->execute();
+$result = $sql->get_result();
+$row = $result->fetch_assoc();
+$pfpPath = isset($row['pfp']) && !empty($row['pfp']) ? $row['pfp'] : './images/logo.png';
+$pfp = "." . $pfpPath;
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +20,7 @@ $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Lilita One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/profile.css">
@@ -26,6 +34,35 @@ $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users
             font-family: 'Arimo', sans-serif;
             color: white;
             min-height: 100vh;
+        }
+
+        @media only screen and (max-width: 480px) {
+            body {
+                background:
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 75%, rgb(48, 25, 105) 100%),
+                    url(<?php echo $pfp ?>) center center no-repeat;
+                background-size: cover;
+            }
+            main {
+                flex-direction: column;
+            }
+            .pfp {
+                height: 50%;
+                min-height: 300px;
+            }
+            .profile-description {
+                padding: 2em;
+            }
+            .profile-description h1 {
+                font-size: 2.5em;
+            }
+            .profile-description p {
+                font-size: 1.4em;
+            }
+            .profile-description a {
+                font-size: 1.5em;
+                padding: 0.2em 1em;
+            }
         }
     </style>
     <title>Profile</title>
@@ -42,13 +79,37 @@ $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users
         </ul>
         <div class="avatar">
             <i class="fa fa-search"></i>
-            <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" onclick="toggleAvatarHover()">
+            <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" onclick="toggleAvatarHover()" id="profilepic">
             <div id="avatarHover">
                 <a href="settings.php">Settings</a>
                 <a href="index.php">Logout</a>
             </div>
         </div>
     </nav>
+
+    <div id="menu">
+        <i class="fa fa-bars"></i>
+    </div>
+
+    <div id="menu-sidebar">
+        <div class="menu-content">
+            <div class="menu-header">
+                <span id="close">&times;</span>
+                <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
+                <h2 class="blue-text"><?php echo $username ?></h2>
+            </div>
+            <ul>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="profile_animeList.php">List</a></li>
+                <li><a href="browse.php">Reserve</a></li>
+            </ul>
+            <div class="menu-footer">
+                <a href="settings.php">Settings</a>
+                <a href="index.php">Logout</a>
+            </div>
+        </div>
+    </div>
 
     <main>
         <div class="pfp"></div>
@@ -80,5 +141,8 @@ $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users
             </p>
         </div>
     </footer>
+
+    <script src="./scripts/script.js"></script>
 </body>
+
 </html>

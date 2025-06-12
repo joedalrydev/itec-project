@@ -1,8 +1,27 @@
+main {
+    padding: 1em;
+}
+#searchBar {
+    margin-bottom: 1em;
+    width: 40%;
+    font-size: 1rem;
+    padding: 10px;
+    background: linear-gradient(
+        to right, rgba(255, 255,255, 0.2) 0%,
+        rgba(59, 59, 59, 0.4) 15%,
+        rgba(59, 59, 59, 0.4) 50%,
+        rgba(50, 50, 50, 0.4) 100%);
+    border: 1px solid #67ebff;
+    border-radius: 20px;
+    color: white;
+}
+#searchBar::placeholder {
+    color: white;
+}
 #anime-list {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
     min-height: 100vh;
 }
 .anime-table {
@@ -31,4 +50,75 @@
     transition: all 0.2s ease-in;
     width: 100px;
     height: 100px;
+}
+.episodes-wrapper {
+    height: 100%;
+}
+.episodes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    height: 100%;
+}
+.update-episodes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+.update-episodes i {
+    cursor: pointer;
+}
+.update-episodes i:hover {
+    color: #67ebff;
+}
+
+@media only screen and (max-width: 480px) {
+  #searchBar {
+    width: 90%;
+    font-size: 1.1em;
+    padding: 12px;
+    margin-bottom: 1.5em;
+  }
+  #anime-list {
+    padding: 0;
+    width: 100%;
+    overflow-x: auto;
+  }
+  .anime-table {
+    width: 100%;
+    font-size: 0.95em;
+    border-radius: 10px;
+  }
+  .anime-table th, .anime-table td {
+    padding: 6px 2px;
+    font-size: 0.95em;
+  }
+  .anime-table th:nth-child(5),
+  .anime-table th:nth-child(6),
+  .anime-table tr td:nth-child(5),
+  .anime-table tr td:nth-child(6) {
+    display: none;
+  }
+  .anime-picture {
+    flex-direction: column;
+    gap: 0.3em;
+  }
+  .anime-picture img {
+    width: 40px;
+    height: 40px;
+  }
+  .episodes {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .update-episodes i {
+    font-size: 1em;
+    margin: 2px 0;
+  }
+  main {
+    padding: 0.5em;
+  }
 }

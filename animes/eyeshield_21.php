@@ -1,11 +1,19 @@
 <?php
 session_start();
+include("../database.php");
 
 $username = $_SESSION['username'];
-$pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : '../images/logo.png';
+$sql = $conn->prepare("SELECT pfp FROM users WHERE username = ?");
+$sql->bind_param("s", $username);
+$sql->execute();
+$result = $sql->get_result();
+$row = $result->fetch_assoc();
+$pfpPath = isset($row['pfp']) && !empty($row['pfp']) ? $row['pfp'] : '../images/logo.png';
+$pfp = ".." . $pfpPath;
 
 $title = 'Eyeshield 21';
 $genre = 'Action, Comedy, Sports';
+$maxEpisodes = '145';
 $year = '2005';
 $picture = './images/eyeshield_21.png';
 $format = 'tv';
@@ -30,6 +38,21 @@ $pathToReserve = './reserve/eyeshield_21-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+        .poster {
+            background: url(../images/eyeshield_21.png) no-repeat center center;
+            background-size: cover;
+            flex-basis: 50%;
+            border-radius: 20px;
+        }
+
+        @media only screen and (max-width: 480px) {
+            body {
+                background:
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
+                    url(../images/eyeshield_21.png) center center no-repeat;
+                background-size: cover;
+            }
+        }
     </style>
     <title>Eyeshield 21</title>
 </head>
@@ -49,6 +72,30 @@ $pathToReserve = './reserve/eyeshield_21-reserve.php';
             </div>
         </div>
     </nav>
+
+    <div id="menu">
+        <i class="fa fa-bars"></i>
+    </div>
+
+    <div id="menu-sidebar">
+        <div class="menu-content">
+            <div class="menu-header">
+                <span id="close">&times;</span>
+                <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
+                <h2 class="blue-text"><?php echo $username ?></h2>
+            </div>
+            <ul>
+                <li><a href="../home.php">Home</a></li>
+                <li><a href="../profile.php">Profile</a></li>
+                <li><a href="../profile_animeList.php">List</a></li>
+                <li><a href="../browse.php">Reserve</a></li>
+            </ul>
+            <div class="menu-footer">
+                <a href="../settings.php">Settings</a>
+                <a href="../index.php">Logout</a>
+            </div>
+        </div>
+    </div>
 
     <main>
         <div class="banner"></div>
@@ -86,18 +133,17 @@ $pathToReserve = './reserve/eyeshield_21-reserve.php';
                         <label for="score">Score:</label>
                         <input type="number" id="score" name="score" min="1" max="10" placeholder="1-10" required>
                         <br><br>
+                        <label for="episodes">Episodes Watched:</label>
+                        <input type="number" id="episodes" name="episode" min="0" max="<?php echo htmlspecialchars($maxEpisodes); ?>" value="0" required>
+                        <br><br>
                         <input type="hidden" name="title" value="<?php echo htmlspecialchars($title); ?>">
                         <input type="hidden" name="genre" value="<?php echo htmlspecialchars($genre); ?>">
+                        <input type="hidden" name="maxEpisodes" value="<?php echo htmlspecialchars($maxEpisodes); ?>">
                         <input type="hidden" name="year" value="<?php echo htmlspecialchars($year); ?>">
                         <input type="hidden" name="picture" value="<?php echo htmlspecialchars($picture); ?>">
                         <input type="hidden" name="format" value="<?php echo htmlspecialchars($format); ?>">
                         <input type="hidden" name="pathToReserve" value="<?php echo htmlspecialchars($pathToReserve); ?>">
                         <button type="submit">Save</button>
-                        <p>
-                            Welcome To the Gridiron of the Damned! Huge hulking bodies throw themselves at each other, while a tiny lithe body runs between them for the goal! 
-                            No, it’s not a game of football, it’s Sena Kobayakawa trying to evade the monstrous Ha-Ha brothers down the halls of Deimon High School! 
-                            But wait! Sena’s incredible skills at not getting caught have been spotted by the devilish (possibly actually demonic) captain of the school’s embryonic American style football team, and when Sena asks to be the teams manager, he gets thrust onto the field as a running back instead! 
-                        </p>
                     </form>
                 </div>
             </div>

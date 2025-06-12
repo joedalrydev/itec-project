@@ -1,11 +1,19 @@
 <?php
 session_start();
+include("../database.php");
 
 $username = $_SESSION['username'];
-$pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : '../images/logo.png';
+$sql = $conn->prepare("SELECT pfp FROM users WHERE username = ?");
+$sql->bind_param("s", $username);
+$sql->execute();
+$result = $sql->get_result();
+$row = $result->fetch_assoc();
+$pfpPath = isset($row['pfp']) && !empty($row['pfp']) ? $row['pfp'] : '../images/logo.png';
+$pfp = ".." . $pfpPath;
 
 $title = 'Date A Live';
 $genre = 'Action, Comedy, Ecchi, Fantasy, Mecha, Romance, Sci-Fi';
+$maxEpisodes = '12';
 $year = '2013';
 $picture = './images/date_a_live.jpg';
 $format = 'tv';
@@ -30,6 +38,21 @@ $pathToReserve = './reserve/date_a_live-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+        .poster {
+            background: url(../images/date_a_live.jpg) no-repeat center center;
+            background-size: cover;
+            flex-basis: 50%;
+            border-radius: 20px;
+        }
+
+        @media only screen and (max-width: 480px) {
+            body {
+                background:
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
+                    url(../images/date_a_live.jpg) center center no-repeat;
+                background-size: cover;
+            }
+        }
     </style>
     <title>Date A Live</title>
 </head>
@@ -49,6 +72,30 @@ $pathToReserve = './reserve/date_a_live-reserve.php';
             </div>
         </div>
     </nav>
+
+    <div id="menu">
+        <i class="fa fa-bars"></i>
+    </div>
+
+    <div id="menu-sidebar">
+        <div class="menu-content">
+            <div class="menu-header">
+                <span id="close">&times;</span>
+                <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
+                <h2 class="blue-text"><?php echo $username ?></h2>
+            </div>
+            <ul>
+                <li><a href="../home.php">Home</a></li>
+                <li><a href="../profile.php">Profile</a></li>
+                <li><a href="../profile_animeList.php">List</a></li>
+                <li><a href="../browse.php">Reserve</a></li>
+            </ul>
+            <div class="menu-footer">
+                <a href="../settings.php">Settings</a>
+                <a href="../index.php">Logout</a>
+            </div>
+        </div>
+    </div>
 
     <main>
         <div class="banner"></div>
@@ -85,17 +132,17 @@ $pathToReserve = './reserve/date_a_live-reserve.php';
                         <label for="score">Score:</label>
                         <input type="number" id="score" name="score" min="1" max="10" placeholder="1-10" required>
                         <br><br>
+                        <label for="episodes">Episodes Watched:</label>
+                        <input type="number" id="episodes" name="episode" min="0" max="<?php echo htmlspecialchars($maxEpisodes); ?>" value="0" required>
+                        <br><br>
                         <input type="hidden" name="title" value="<?php echo htmlspecialchars($title); ?>">
                         <input type="hidden" name="genre" value="<?php echo htmlspecialchars($genre); ?>">
+                        <input type="hidden" name="maxEpisodes" value="<?php echo htmlspecialchars($maxEpisodes); ?>">
                         <input type="hidden" name="year" value="<?php echo htmlspecialchars($year); ?>">
                         <input type="hidden" name="picture" value="<?php echo htmlspecialchars($picture); ?>">
                         <input type="hidden" name="format" value="<?php echo htmlspecialchars($format); ?>">
                         <input type="hidden" name="pathToReserve" value="<?php echo htmlspecialchars($pathToReserve); ?>">
                         <button type="submit">Save</button>
-                        <p>
-                            Thirty years before a strange phenomena called a "spacequake" devastated the center of Eurasia, claiming the lives of at least 150 million people. 
-                            Since then, smaller spacequakes plague the world on an irregular basis. 
-                        </p>
                     </form>
                 </div>
             </div>

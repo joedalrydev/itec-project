@@ -1,11 +1,19 @@
 <?php
 session_start();
+include("../database.php");
 
 $username = $_SESSION['username'];
-$pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : '../images/logo.png';
+$sql = $conn->prepare("SELECT pfp FROM users WHERE username = ?");
+$sql->bind_param("s", $username);
+$sql->execute();
+$result = $sql->get_result();
+$row = $result->fetch_assoc();
+$pfpPath = isset($row['pfp']) && !empty($row['pfp']) ? $row['pfp'] : '../images/logo.png';
+$pfp = ".." . $pfpPath;
 
 $title = 'Rent a Girlfriend';
 $genre = 'Comedy, Drama, Romance';
+$maxEpisodes = '12';
 $year = '2020';
 $picture = './images/rent_a_girlfriend.jpg';
 $format = 'tv';
@@ -30,6 +38,21 @@ $pathToReserve = './reserve/rent_a_girlfriend-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+        .poster {
+            background: url(../images/rent_a_girlfriend.jpg) no-repeat center center;
+            background-size: cover;
+            flex-basis: 50%;
+            border-radius: 20px;
+        }
+
+        @media only screen and (max-width: 480px) {
+            body {
+                background:
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
+                    url(../images/rent_a_girlfriend.jpg) center center no-repeat;
+                background-size: cover;
+            }
+        }
     </style>
     <title>Rent a Girlfriend</title>
 </head>
@@ -49,6 +72,30 @@ $pathToReserve = './reserve/rent_a_girlfriend-reserve.php';
             </div>
         </div>
     </nav>
+
+    <div id="menu">
+        <i class="fa fa-bars"></i>
+    </div>
+
+    <div id="menu-sidebar">
+        <div class="menu-content">
+            <div class="menu-header">
+                <span id="close">&times;</span>
+                <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
+                <h2 class="blue-text"><?php echo $username ?></h2>
+            </div>
+            <ul>
+                <li><a href="../home.php">Home</a></li>
+                <li><a href="../profile.php">Profile</a></li>
+                <li><a href="../profile_animeList.php">List</a></li>
+                <li><a href="../browse.php">Reserve</a></li>
+            </ul>
+            <div class="menu-footer">
+                <a href="../settings.php">Settings</a>
+                <a href="../index.php">Logout</a>
+            </div>
+        </div>
+    </div>
 
     <main>
         <div class="banner"></div>
@@ -89,22 +136,17 @@ $pathToReserve = './reserve/rent_a_girlfriend-reserve.php';
                         <label for="score">Score:</label>
                         <input type="number" id="score" name="score" min="1" max="10" placeholder="1-10" required>
                         <br><br>
+                        <label for="episodes">Episodes Watched:</label>
+                        <input type="number" id="episodes" name="episode" min="0" max="<?php echo htmlspecialchars($maxEpisodes); ?>" value="0" required>
+                        <br><br>
                         <input type="hidden" name="title" value="<?php echo htmlspecialchars($title); ?>">
                         <input type="hidden" name="genre" value="<?php echo htmlspecialchars($genre); ?>">
+                        <input type="hidden" name="maxEpisodes" value="<?php echo htmlspecialchars($maxEpisodes); ?>">
                         <input type="hidden" name="year" value="<?php echo htmlspecialchars($year); ?>">
                         <input type="hidden" name="picture" value="<?php echo htmlspecialchars($picture); ?>">
                         <input type="hidden" name="format" value="<?php echo htmlspecialchars($format); ?>">
                         <input type="hidden" name="pathToReserve" value="<?php echo htmlspecialchars($pathToReserve); ?>">
                         <button type="submit">Save</button>
-                        <p>
-                            Kinoshita Kazuya is a 20-year-old failure of a college student. 
-                            He managed to kiss his girlfriend once, but was dumped after a month. 
-                            "Ugh... Damn it. I never want to go through that again."
-
-                            Completely spiteful, Kazuya uses a certain method to date a girl. 
-                            He goes to their meeting place and suddenly hears, "You're Kazuya-kun, right?" A beautiful girl brushing her long, black hair behind her ear was there, smiling at him. 
-                            Her name was Mizuhara Chizuru. 
-                        </p>
                     </form>
                 </div>
             </div>

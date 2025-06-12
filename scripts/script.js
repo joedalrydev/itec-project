@@ -27,11 +27,39 @@ function toggleAvatarHover() {
   const popup = document.getElementById("avatarHover");
   const avatar = document.getElementById("profilepic");
 
-  if (popup.style.display === "none") {
-    popup.style.display = "block";
-    profilepic.style.boxshadow = " 0 0 5px #67ebff";
-  } else {
-    popup.style.display = "none";
-    profilepic.style.boxshadow = "none";
-  }
+  avatar.onclick = function () {
+    if (popup.style.display === "none") {
+      popup.style.display = "block";
+      avatar.style.boxShadow = " 0 0 5px #67ebff";
+    } else {
+      popup.style.display = "none";
+      avatar.style.boxShadow = "none";
+    }
+  };
 }
+
+function displayMenu() {
+  const menuBtn = document.getElementById("menu");
+  const menuSidebar = document.getElementById("menu-sidebar");
+  const closeBtn = document.getElementById("close");
+
+  menuBtn.onclick = function () {
+    menuBtn.style.display = "none";
+    menuSidebar.style.display = "block";
+  };
+  closeBtn.onclick = function () {
+    menuSidebar.style.display = "none";
+    menuBtn.style.display = "block";
+  };
+
+  window.onclick = function (event) {
+    if (event.target === menuSidebar) {
+      menuSidebar.style.display = "none";
+      menuBtn.style.display = "block";
+    }
+  };
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  displayMenu();
+});

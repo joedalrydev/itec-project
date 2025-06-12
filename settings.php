@@ -1,8 +1,15 @@
 <?php
 session_start();
+include("database.php");
 
 $username = $_SESSION['username'];
-$pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : './images/logo.png';
+$sql = $conn->prepare("SELECT pfp FROM users WHERE username = ?");
+$sql->bind_param("s", $username);
+$sql->execute();
+$result = $sql->get_result();
+$row = $result->fetch_assoc();
+$pfpPath = isset($row['pfp']) && !empty($row['pfp']) ? $row['pfp'] : './images/logo.png';
+$pfp = "." . $pfpPath;
 ?>
 
 <!DOCTYPE html>
@@ -52,10 +59,10 @@ $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users
                 $oldUsername = $_POST['username'];
                 $newUsername = $_POST['newUsername'];
 
-                $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? ");
-                $stmt->bind_param("", $oldUsername);
-                $stmt->execute();
-                $result = $stmt->get_result();
+                $sql = $conn->prepare("SELECT * FROM users WHERE username = ? ");
+                $sql->bind_param("s", $oldUsername);
+                $sql->execute();
+                $result = $sql->get_result();
 
                 if ($oldUsername === $username) {
                     foreach ($_SESSION['users'] as $user) {
@@ -64,11 +71,12 @@ $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users
                             exit;
                         }
                     }
-                    $_SESSION['users'][$newUsername] = $_SESSION['users'][$username];
-                    $_SESSION['users'][$newUsername]['username'] = $newUsername;
-                    unset($_SESSION['users'][$username]);
+                    $sql = $conn->prepare("UPDATE users SET username = ? WHERE username = ?");
+                    $sql->bind_param("ss", $newUsername, $oldUsername);
+                    $sql->execute();
                     $_SESSION['username'] = $newUsername;
                     $username = $newUsername;
+                    echo "<script>alert('Username changed successfully!');</script>";
                 } else {
                     echo "<script>alert('Old username is wrong');</script>";
                 }
@@ -100,7 +108,12 @@ $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users
                     $uploadFile = $uploadDir . $filename;
 
                     if (move_uploaded_file($_FILES['pfp']['tmp_name'], $uploadFile)) {
-                        $_SESSION['users'][$username]['profile']['pfp'] = $uploadFile;
+                        $webPath = '/' . $uploadDir . $filename;
+                        $sql = $conn->prepare("UPDATE users SET pfp = ? WHERE username = ?");
+                        $sql->bind_param("ss", $webPath, $username);
+                        $sql->execute();
+
+                        $_SESSION['users'][$username]['pfp'] = $uploadFile;
                         echo "<script>alert('Profile picture updated!')</script>";
                     }
                 } else {

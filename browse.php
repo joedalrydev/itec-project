@@ -1,9 +1,25 @@
 <?php
-    session_start();
+session_start();
+include("database.php");
 
-    $username = $_SESSION['username'];
-    $animeList = $_SESSION['users'][$username]['profile']['anime_list'] ?? [];
-    $pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : './images/logo.png';
+$username = $_SESSION['username'];
+$sql = $conn->prepare("SELECT title, genre, episodes, max_episodes, year, status, score, picture, format, path_to_reserve FROM anime_list WHERE username = ?");
+$sql->bind_param("s", $username);
+$sql->execute();
+$result = $sql->get_result();
+
+$animeList = [];
+while ($row = $result->fetch_assoc()) {
+    $animeList[] = $row;
+}
+
+$sql = $conn->prepare("SELECT pfp FROM users WHERE username = ?");
+$sql->bind_param("s", $username);
+$sql->execute();
+$result = $sql->get_result();
+$row = $result->fetch_assoc();
+$pfpPath = isset($row['pfp']) && !empty($row['pfp']) ? $row['pfp'] : './images/logo.png';
+$pfp = "." . $pfpPath;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,13 +42,37 @@
         </ul>
         <div class="avatar">
             <i class="fa fa-search"></i>
-            <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" onclick="toggleAvatarHover()">
+            <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" onclick="toggleAvatarHover()" id="profilepic">
             <div id="avatarHover">
                 <a href="settings.php">Settings</a>
                 <a href="index.php">Logout</a>
             </div>
         </div>
     </nav>
+
+    <div id="menu">
+        <i class="fa fa-bars"></i>
+    </div>
+
+    <div id="menu-sidebar">
+        <div class="menu-content">
+            <div class="menu-header">
+                <span id="close">&times;</span>
+                <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
+                <h2 class="blue-text"><?php echo $username ?></h2>
+            </div>
+            <ul>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="profile_animeList.php">List</a></li>
+                <li><a href="browse.php">Reserve</a></li>
+            </ul>
+            <div class="menu-footer">
+                <a href="settings.php">Settings</a>
+                <a href="index.php">Logout</a>
+            </div>
+        </div>
+    </div>
 
     <main>
         <div class="filter-anime">
@@ -74,6 +114,8 @@
                 </select>
             </div>
         </div>
+
+        <input type="text" placeholder="Search for title..." id="searchBar">
 
         <h1 id="text">Reserve it now!</h1>
         <div id="anime-list-container">

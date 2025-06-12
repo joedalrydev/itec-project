@@ -18,6 +18,7 @@ main {
 }
 .profile-description p {
   font-size: 1.7em;
+  text-indent: 1em;
   margin-bottom: 3em;
 }
 .profile-description a {

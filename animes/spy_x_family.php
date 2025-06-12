@@ -1,11 +1,19 @@
 <?php
 session_start();
+include("../database.php");
 
 $username = $_SESSION['username'];
-$pfp = isset($_SESSION['users'][$username]['profile']['pfp']) ? $_SESSION['users'][$username]['profile']['pfp'] : '../images/logo.png';
+$sql = $conn->prepare("SELECT pfp FROM users WHERE username = ?");
+$sql->bind_param("s", $username);
+$sql->execute();
+$result = $sql->get_result();
+$row = $result->fetch_assoc();
+$pfpPath = isset($row['pfp']) && !empty($row['pfp']) ? $row['pfp'] : '../images/logo.png';
+$pfp = ".." . $pfpPath;
 
 $title = 'SPY x FAMILY';
 $genre = 'Action, Comedy, Slice of Life, Supernatural';
+$maxEpisodes = '25';
 $year = '2022';
 $picture = './images/spy_x_family.jpg';
 $format = 'tv';
@@ -30,6 +38,21 @@ $pathToReserve = './reserve/spy_x_family-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+        .poster {
+            background: url(../images/spy_x_family.jpg) no-repeat center center;
+            background-size: cover;
+            flex-basis: 50%;
+            border-radius: 20px;
+        }
+        
+        @media only screen and (max-width: 480px) {
+            body {
+                background:
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
+                    url(../images/spy_x_family.jpg) center center no-repeat;
+                background-size: cover;
+            }
+        }
     </style>
     <title>SPY x FAMILY</title>
 </head>
@@ -49,6 +72,30 @@ $pathToReserve = './reserve/spy_x_family-reserve.php';
             </div>
         </div>
     </nav>
+
+    <div id="menu">
+        <i class="fa fa-bars"></i>
+    </div>
+
+    <div id="menu-sidebar">
+        <div class="menu-content">
+            <div class="menu-header">
+                <span id="close">&times;</span>
+                <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
+                <h2 class="blue-text"><?php echo $username ?></h2>
+            </div>
+            <ul>
+                <li><a href="../home.php">Home</a></li>
+                <li><a href="../profile.php">Profile</a></li>
+                <li><a href="../profile_animeList.php">List</a></li>
+                <li><a href="../browse.php">Reserve</a></li>
+            </ul>
+            <div class="menu-footer">
+                <a href="../settings.php">Settings</a>
+                <a href="../index.php">Logout</a>
+            </div>
+        </div>
+    </div>
 
     <main>
         <div class="banner"></div>
@@ -91,18 +138,17 @@ $pathToReserve = './reserve/spy_x_family-reserve.php';
                         <label for="score">Score:</label>
                         <input type="number" id="score" name="score" min="1" max="10" placeholder="1-10" required>
                         <br><br>
+                        <label for="episodes">Episodes Watched:</label>
+                        <input type="number" id="episodes" name="episode" min="0" max="<?php echo htmlspecialchars($maxEpisodes); ?>" value="0" required>
+                        <br><br>
                         <input type="hidden" name="title" value="<?php echo htmlspecialchars($title); ?>">
                         <input type="hidden" name="genre" value="<?php echo htmlspecialchars($genre); ?>">
+                        <input type="hidden" name="maxEpisodes" value="<?php echo htmlspecialchars($maxEpisodes); ?>">
                         <input type="hidden" name="year" value="<?php echo htmlspecialchars($year); ?>">
                         <input type="hidden" name="picture" value="<?php echo htmlspecialchars($picture); ?>">
                         <input type="hidden" name="format" value="<?php echo htmlspecialchars($format); ?>">
                         <input type="hidden" name="pathToReserve" value="<?php echo htmlspecialchars($pathToReserve); ?>">
                         <button type="submit">Save</button>
-                        <p>
-                            Everyone has a part of themselves they cannot show to anyone else.
-                            At a time when all nations of the world were involved in a fierce war of information happening behind closed doors, Ostania and Westalis had been in a state of cold war against one another for decades. 
-                            The Westalis Intelligence Services' Eastern-Focused Division (WISE) sends their most talented spy, "Twilight," on a top-secret mission to investigate the movements of Donovan Desmond, the chairman of Ostania's National Unity Party, who is threatening peace efforts between the two nations.
-                        </p>
                     </form>
                 </div>
             </div>

@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .container {
   display: flex;
   gap: 2em;
@@ -17,8 +20,14 @@ h1 {
 .welcome {
   flex-basis: 50%;
 }
-.welcome h1 {
+.welcome img {
+  display: none;
+}
+.description {
   font-size: 3.6em;
+}
+.animate {
+  display: none;
 }
 .welcome h2 {
   margin-bottom: 1.5em;
@@ -26,12 +35,15 @@ h1 {
   font-family: "Arimo";
   font-size: 1.8em;
 }
+.welcome a {
+  display: none;
+}
 .welcome p {
   margin: 1em 0;
   text-align: justify;
   line-height: 1.5;
   word-spacing: 1.5;
-  font-size: 1.7em;
+  font-size: 1.3em;
 }
 .trending {
   flex-basis: 50%;
@@ -110,6 +122,22 @@ h1 {
     align-items: center;
     text-align: center;
   }
+  .description {
+    display: none;
+  }
+  .animate {
+    display: block;
+    font-size: 2.8em;
+  }
+  .welcome a {
+    display: block;
+    font-size: 4em;
+    text-decoration: none;
+    color: white;
+  }
+  .welcome a:hover {
+    color: #67ebff;
+  }
   .welcome img {
     display: block;
     width: 100px;
@@ -118,9 +146,8 @@ h1 {
   .welcome p{
     display: none;
   }
- .welcome h1,
  .welcome h2 {
-  font-size: 2.8em;
+    font-size: 2.3em;
   }
   .cards h1 {
     margin: 1em 0;
