@@ -30,7 +30,8 @@ include("database.php");
             $username = $_POST['username'];
             $password = $_POST['password'];
             $cpassword = $_POST['cpassword'];
-
+            
+            //tinitingnan kung may kaparehas na username sa database
             $sql = $conn->prepare("SELECT * FROM users WHERE username = ?");
             $sql->bind_param("s", $username);
             $sql->execute();
@@ -41,11 +42,13 @@ include("database.php");
                 exit;
             }
 
+            //tinitingnan kung magkaparehas ang password at confirm password
             if ($password !== $cpassword) {
                 echo "<script>alert('Passwords do not match.')</script>";
                 exit;
             }
 
+            //nilalagay sa database ang login details ng user
             $sql = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
             $sql->bind_param("ss", $username, $password);
             $sql->execute();

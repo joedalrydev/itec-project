@@ -1,13 +1,16 @@
+//kinukuha yung elements sa html
 const animeListContainer = document.getElementById("anime-list");
 const searchBar = document.getElementById("searchBar");
 
-function renderTable(list) {
+function loadTable(list) {
   animeListContainer.innerHTML = "";
   animeListContainer.querySelectorAll("table").forEach(t => t.remove());
   if (list.length > 0) {
+    //gumagawa ng table element
     const table = document.createElement("table");
     table.classList.add("anime-table");
 
+    //gumagawa ng header para sa table
     const headerRow = document.createElement("tr");
     headerRow.innerHTML = `
       <th><h3>Title</h3></th>
@@ -19,6 +22,7 @@ function renderTable(list) {
     `;
     table.appendChild(headerRow);
 
+    //naglalagay ng row para sa bawat anime sa list
     list.forEach((anime) => {
       const row = document.createElement("tr");
       row.innerHTML = `
@@ -42,25 +46,22 @@ function renderTable(list) {
       table.appendChild(row);
     });
 
+    //nilalagay yung table sa container
     animeListContainer.appendChild(table);
   } else {
     animeListContainer.innerHTML = "<p>No anime in your list.</p>";
   }
 }
 
-renderTable(animeList);
+loadTable(animeList);
 
-searchBar.addEventListener("input", function () {
-  const searchTerm = searchBar.value.toLowerCase();
-  const filtered = animeList.filter(anime =>
-    anime.title.toLowerCase().includes(searchTerm)
-  );
-  renderTable(filtered);
-});
+//event listener para sa kada-input sa search bar
+searchBar.addEventListener("input", loadTable);
 
 const addEpisodeBtn = document.querySelectorAll("#addEpisode");
 const removeEpisodeBtn = document.querySelectorAll("#removeEpisode");
 
+//event listener para madagdagan o mabawasan yung episodes
 addEpisodeBtn.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     const episodesElement = btn.closest(".episodes");

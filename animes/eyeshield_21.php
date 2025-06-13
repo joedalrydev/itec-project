@@ -66,6 +66,7 @@ $pathToReserve = './reserve/eyeshield_21-reserve.php';
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic" onclick="toggleAvatarHover()">
             <div id="avatarHover">
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -90,6 +91,7 @@ $pathToReserve = './reserve/eyeshield_21-reserve.php';
                 <li><a href="../browse.php">Reserve</a></li>
             </ul>
             <div class="menu-footer">
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>

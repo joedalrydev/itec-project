@@ -135,7 +135,7 @@ nav a:hover {
   border-radius: 20px;
   z-index: 100;
 }
-#color-toggle {
+.color-toggle {
   border: none;
   background-color: inherit;
   color: white;
@@ -144,12 +144,14 @@ nav a:hover {
   font-size: 1em;
   font-family: 'Arimo', sans-serif;
 }
-#color-toggle:hover {
+.color-toggle:hover {
   color: var(--color-blue);
 }
-#avatarHover a {
+#avatarHover a,
+.color-toggle {
   text-decoration: none;
   color: white;
+  margin: 1em 0;
 }
 #avatarHover a:hover {
   color: var(--color-blue);
@@ -240,7 +242,7 @@ footer {
     flex-direction: column;
     gap: 1em;
   }
-  #color-toggle {
+  .color-toggle {
     font-size: 1.5em;
     font-weight: normal;
     padding: 0.3em;

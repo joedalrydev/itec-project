@@ -1,10 +1,13 @@
+//kinukuha yung elements sa html
 const container = document.getElementById("anime-list-container");
 const text = document.getElementById("text");
 const searchBar = document.getElementById("searchBar");
 
-function renderCards(list) {
+function loadCards(list) {
+  //i-clear yung container bago i-load yung mga cards
   container.innerHTML = "";
 
+  //dini-display yung mga cards kapag may laman yung list
   if (list.length > 0) {
     text.style.display = "block";
     list.forEach((anime) => {
@@ -22,6 +25,7 @@ function renderCards(list) {
   }
 }
 
+//nagre-return ng list ng anime na nagma-match sa mga filters at sa search bar
 function getFilteredAnime() {
   const genre = document.getElementById("genre").value;
   const year = document.getElementById("year").value;
@@ -37,20 +41,15 @@ function getFilteredAnime() {
   });
 }
 
-searchBar.addEventListener("input", function () {
-  const searchTerm = searchBar.value.toLowerCase();
-  const filtered = animeList.filter(anime =>
-    anime.title.toLowerCase().includes(searchTerm)
-  );
-  filterAnime();
-});
-
+//niru-run yung loadCards na function gamit yung list na nakuha sa getFilteredAnime na function
 function filterAnime() {
-  renderCards(getFilteredAnime());
+  loadCards(getFilteredAnime());
 }
 
+//ni-rurun yung filterAnime na function kada enter ng letters sa search bar
 searchBar.addEventListener("input", filterAnime);
 
+//para ma-display yung cards pagka-load ng page habang wala pang filters
 document.addEventListener("DOMContentLoaded", function() {
   filterAnime();
 });

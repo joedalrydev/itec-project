@@ -29,12 +29,14 @@ include("database.php");
             $username = $_POST['username'];
             $password = $_POST['password'];
 
+            //kinukuha yung data sa database
             $sql = $conn->prepare("SELECT * FROM users WHERE username = ?");
             $sql->bind_param("s", $username);
             $sql->execute();
             $result = $sql->get_result();
 
             if ($result->num_rows === 1) {
+                //tinitingnan kung yung password na nilagay ng user ay kaparehas ng password sa database
                 $user = $result->fetch_assoc();
                 if ($user['password'] === $password) {
                     $_SESSION['username'] = $username;

@@ -39,7 +39,7 @@ $pathToReserve = './reserve/kakegurui-reserve.php';
             background-repeat: no-repeat, no-repeat;
         }
         .poster {
-            background: url(../images/rent_a_girlfriend.jpg) no-repeat center center;
+            background: url(../images/kakegurui.jpg) no-repeat center center;
             background-size: cover;
             flex-basis: 50%;
             border-radius: 20px;
@@ -49,7 +49,7 @@ $pathToReserve = './reserve/kakegurui-reserve.php';
             body {
                 background:
                     linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
-                    url(../images/rent_a_girlfriend.jpg) center center no-repeat;
+                    url(../images/kakegurui.jpg) center center no-repeat;
                 background-size: cover;
             }
         }
@@ -66,6 +66,7 @@ $pathToReserve = './reserve/kakegurui-reserve.php';
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic" onclick="toggleAvatarHover()">
             <div id="avatarHover">
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -90,6 +91,7 @@ $pathToReserve = './reserve/kakegurui-reserve.php';
                 <li><a href="../browse.php">Reserve</a></li>
             </ul>
             <div class="menu-footer">
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>

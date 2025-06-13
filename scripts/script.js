@@ -1,26 +1,27 @@
 function displayModal() {
+  //kinukuha yung mga elements sa html
   const modal = document.getElementById("addToListModal");
   const btn = document.getElementById("addToListBtn");
   const closeBtn = document.querySelector(".close");
 
-  if (btn) {
-    btn.onclick = function () {
-      modal.style.display = "block";
-    };
-  }
+  //dini-display yung modal kapag pinindot yung button
+  btn.onclick = function () {
+    modal.style.display = "block";
+  };
 
-  if (closeBtn) {
-    closeBtn.onclick = function () {
-      modal.style.display = "none";
-    };
-  }
+  //ico-close yung modal kapag pinindot yung close button
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  };
 
-  window.addEventListener('click', function (event) {
+  //nawawala yung modal kapag nag click sa labas ng modal
+  window.onclick = function (event) {
     if (event.target === modal) {
       modal.style.display = "none";
     }
-  });
+  };
 
+  //nawawala yung modal kapag nai-submit na yung form
   const form = document.getElementById("addToListForm");
   if (form) {
     form.onsubmit = function (event) {
@@ -30,11 +31,11 @@ function displayModal() {
 }
 
 function toggleAvatarHover() {
+  //kinukuha yung elements sa html
   const popup = document.getElementById("avatarHover");
   const avatar = document.getElementById("profilepic");
 
-  if (!popup || !avatar) return;
-
+  //dini-display o kino-close yung popup kapag pinindot yung avatar
   avatar.onclick = function () {
     if (popup.style.display === "none") {
       popup.style.display = "block";
@@ -47,31 +48,31 @@ function toggleAvatarHover() {
 }
 
 function displayMenu() {
+  //kinukuha yung elements sa html
   const menuBtn = document.getElementById("menu");
   const menuSidebar = document.getElementById("menu-sidebar");
   const closeBtn = document.getElementById("close");
 
-  if (menuBtn) {
-    menuBtn.onclick = function () {
-      menuBtn.style.display = "none";
-      menuSidebar.style.display = "block";
-    };
-  }
-  if (closeBtn) {
-    closeBtn.onclick = function () {
-      menuSidebar.style.display = "none";
-      menuBtn.style.display = "block";
-    };
-  }
+  //dini-display o kino-close yung sidebar kapag pinindot yung menu button o close button
+  menuBtn.onclick = function () {
+    menuBtn.style.display = "none";
+    menuSidebar.style.display = "block";
+  };
+  closeBtn.onclick = function () {
+    menuSidebar.style.display = "none";
+    menuBtn.style.display = "block";
+  };
 
-  window.addEventListener('click', function (event) {
+  //nawawala yung sidebar kapag nag click sa labas ng sidebar
+  window.onclick = function (event) {
     if (event.target === menuSidebar) {
       menuSidebar.style.display = "none";
       menuBtn.style.display = "block";
     }
-  });
+  };
 }
 
+//naka-store yung mga original colors ng website
 const originalColors = {
   '--color-main-bg1': 'rgba(5, 24, 52, 1)',
   '--color-main-bg2': 'rgb(46, 21, 109)',
@@ -86,6 +87,7 @@ const originalColors = {
   '--color-bg-gradient1': '#0a6a79',
   '--color-bg-gradient2': '#3c237c'
 };
+//naka-store yung mga colors na ipapalit kapag pinindot yung toggle button
 const toggledColors = {
   '--color-main-bg1': '#661d1d',
   '--color-main-bg2': '#4e1818',
@@ -101,33 +103,36 @@ const toggledColors = {
   '--color-bg-gradient2': '#692402'
 };
 
+//para malaman kung ang colors na gagamitin ay original or toggle colors
 let isToggled = localStorage.getItem('colorToggled') === 'true';
 
+//ina-apply yung colors sa website, alin man sa original or toggled colors
 function applyColors(colors) {
   for (const [key, value] of Object.entries(colors)) {
     document.documentElement.style.setProperty(key, value);
   }
 }
+//ina-apply yung colors sa website kapag nag load
 applyColors(isToggled ? toggledColors : originalColors);
 
-const colorToggleBtn = document.getElementById('color-toggle');
-if (colorToggleBtn) {
-  colorToggleBtn.addEventListener('click', function() {
+//nag-add ng event listener sa button para gumana siya
+document.querySelectorAll('.color-toggle').forEach(function(btn) {
+  btn.addEventListener('click', function() {
     isToggled = !isToggled;
     applyColors(isToggled ? toggledColors : originalColors);
     localStorage.setItem('colorToggled', isToggled);
   });
-}
+});
 
 function setupTrailerModal() {
-    var trailerBtn = document.getElementById("watchTrailerBtn");
-    var trailerModal = document.getElementById("trailerModal");
-    var closeTrailerModal = document.getElementById("closeTrailerModal");
-    var trailerIframe = document.getElementById("trailerIframe");
+    let trailerBtn = document.getElementById("watchTrailerBtn");
+    let trailerModal = document.getElementById("trailerModal");
+    let closeTrailerModal = document.getElementById("closeTrailerModal");
+    let trailerIframe = document.getElementById("trailerIframe");
 
     if (trailerBtn && trailerModal && trailerIframe) {
         trailerBtn.addEventListener("click", function() {
-            var youtubeLink = trailerBtn.getAttribute("data-youtube");
+            youtubeLink = trailerBtn.getAttribute("data-youtube");
             trailerModal.style.display = "flex";
             trailerIframe.src = youtubeLink;
 
@@ -160,6 +165,7 @@ function setupTrailerModal() {
     });
 }
 
+//ni-rurun yung mga functions pagkatapos i-load yung website para gumana sila sa unang click
 document.addEventListener("DOMContentLoaded", function() {
     toggleAvatarHover();
     displayMenu();

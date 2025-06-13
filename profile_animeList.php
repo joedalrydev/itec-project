@@ -46,7 +46,7 @@ $pfp = "." . $pfpPath;
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic">
             <div id="avatarHover">
-                <button id="color-toggle">Switch Color Scheme</button>
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="settings.php">Settings</a>
                 <a href="index.php">Logout</a>
             </div>
@@ -71,7 +71,7 @@ $pfp = "." . $pfpPath;
                 <li><a href="browse.php">Reserve</a></li>
             </ul>
             <div class="menu-footer">
-                <button id="color-toggle">Switch Color Scheme</button>
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="settings.php">Settings</a>
                 <a href="index.php">Logout</a>
             </div>

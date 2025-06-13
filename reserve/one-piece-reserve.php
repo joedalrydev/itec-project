@@ -36,6 +36,14 @@ $title = 'One Piece';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+        @media only screen and (max-width: 480px) {
+            .top {
+                background:
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
+                    url(../images/one-piece.jpg) center center no-repeat;
+                background-size: cover;
+            }
+        }
     </style>
     <title>One Piece</title>
 </head>

@@ -81,7 +81,7 @@ nav a:hover {
   cursor: pointer;
   border-radius: 50%;
 }
-#color-toggle {
+.color-toggle {
   border: none;
   background-color: none;
   color: white;
@@ -90,7 +90,7 @@ nav a:hover {
   font-size: 1em;
   font-family: 'Arimo', sans-serif;
 }
-#color-toggle:hover {
+.color-toggle:hover {
   color: var(--color-blue);
 }
 .fa-arrow-down {
@@ -339,7 +339,7 @@ select option {
   }
   #menu .fa-bars {
     font-size: 3em;
-    color: var(--color-banner-bg2);
+    color: var(--color-bg2);
     padding: 10px;
     cursor: pointer;
   }
@@ -356,7 +356,7 @@ select option {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: var(--color-banner-bg2);
+    background-color: var(--color-bg2);
     height: 100%;
     padding: 1em;
     text-align: center;
@@ -391,6 +391,15 @@ select option {
     color: var(--color-white);
     font-size: 1.5em;
     padding: 1em;
+  }
+  .color-toggle {
+    font-size: 1.5em;
+    font-weight: normal;
+    padding: 0.3em;
+    color: white;
+    background: none;
+    border: none;
+    font-family: inherit;
   }
   .menu-footer {
     display: flex;

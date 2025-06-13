@@ -107,7 +107,7 @@ nav a:hover {
 #avatarHover a:hover {
   color: var(--color-blue);
 }
-#color-toggle {
+.color-toggle {
   border: none;
   background: none;
   color: white;
@@ -116,7 +116,7 @@ nav a:hover {
   font-size: 1em;
   font-family: 'Arimo', sans-serif;
 }
-#color-toggle:hover {
+.color-toggle:hover {
   color: var(--color-blue);
 }
 #menu,
@@ -147,7 +147,7 @@ h1 {
 .genre {
   display: inline-block;
   padding: 0.2em 2.5em;
-  background-color: var(--color-genre-bg);
+  background-color: var(--color-bg2);
   border-radius: 20px;
   font-weight: bold;
   margin: 2em 0;
@@ -447,9 +447,137 @@ button {
     font-size: 1.5em;
     padding: 1em;
   }
+  .color-toggle {
+    font-size: 1.5em;
+    font-weight: normal;
+    padding: 0.3em;
+    color: white;
+    background: none;
+    border: none;
+    font-family: inherit;
+  }
   .menu-footer {
     display: flex;
     flex-direction: column;
     gap: 0.6em;
+  }
+  main {
+    padding: 0.5em;
+  }
+  .top {
+    height: auto;
+    min-height: 40vh;
+    background-size: cover, 100% 100%;
+    background-position: center center, left top;
+  }
+  .anime {
+    flex-direction: column;
+    align-items: center;
+  }
+  .anime-description {
+    padding: 1em 0.5em;
+    font-size: 1em;
+  }
+  .banner {
+    min-height: 120px;
+  }
+  .info,
+  .select-options {
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: flex-start;
+  }
+  .option {
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 0.5em;
+  }
+  .select-main {
+    border-radius: 20px;
+    padding: 0.5em;
+  }
+  .select-seat {
+    padding: 0.5em 0.2em;
+    border-radius: 20px;
+    gap: 0.5em;
+  }
+  .legend {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  .legend-wrapper {
+    gap: 0.3em;
+  }
+  .legend-seat {
+    width: 40px;
+    height: 40px;
+  }
+  .seats-container {
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+  }
+  .left-side,
+  .right-side {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+    max-width: 220px;
+  }
+  .middle-section {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+    max-width: 440px;
+  }
+  .available-seat,
+  .sold,
+  .user-seat {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9em;
+  }
+  .rows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  #screen {
+    font-size: 1em;
+    padding: 0.3em;
+    border-radius: 15px;
+    margin: 0.5em 0;
+  }
+  .save-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+  }
+  .reserveModal .modal-content {
+    width: 98vw;
+    max-width: 98vw;
+    padding: 0.5em;
+    border-radius: 10px;
+  }
+  .modal-content p {
+    margin: 1em 0;
+    font-size: 1em;
+  }
+  .modal-content span {
+    font-size: 1em;
+    padding: 0.2em 0.5em;
+  }
+  .reserveModal .close {
+    font-size: 1.5em;
+    right: 0.5em;
+    top: 0.2em;
+  }
+  button,
+  .button {
+    font-size: 1em;
+    padding: 0.3em 0.8em;
+    border-radius: 15px;
   }
 }

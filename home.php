@@ -3,12 +3,13 @@ session_start();
 include("database.php");
 
 $username = $_SESSION['username'];
+//kinukuha yung profile picture ng user
 $sql = $conn->prepare("SELECT pfp FROM users WHERE username = ?");
 $sql->bind_param("s", $username);
 $sql->execute();
 $result = $sql->get_result();
 $row = $result->fetch_assoc();
-$pfpPath = isset($row['pfp']) && !empty($row['pfp']) ? $row['pfp'] : './images/logo.png';
+$pfpPath = $row['pfp'];
 $pfp = "." . $pfpPath;
 ?>
 
@@ -39,7 +40,7 @@ $pfp = "." . $pfpPath;
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic">
             <div id="avatarHover">
-                <button id="color-toggle">Switch Color Scheme</button>
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="settings.php">Settings</a>
                 <a href="index.php">Logout</a>
             </div>
@@ -64,7 +65,7 @@ $pfp = "." . $pfpPath;
                 <li><a href="browse.php">Reserve</a></li>
             </ul>
             <div class="menu-footer">
-                <button id="color-toggle">Switch Color Scheme</button>
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="settings.php">Settings</a>
                 <a href="index.php">Logout</a>
             </div>

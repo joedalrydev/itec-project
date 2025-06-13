@@ -8,7 +8,7 @@ $sql->bind_param("s", $username);
 $sql->execute();
 $result = $sql->get_result();
 $row = $result->fetch_assoc();
-$pfpPath = isset($row['pfp']) && !empty($row['pfp']) ? $row['pfp'] : './images/logo.png';
+$pfpPath = $row['pfp'];
 $pfp = "." . $pfpPath;
 ?>
 
@@ -39,7 +39,7 @@ $pfp = "." . $pfpPath;
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic">
             <div id="avatarHover">
-                <button id="color-toggle">Switch Color Scheme</button>
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="settings.php">Settings</a>
                 <a href="index.php">Logout</a>
             </div>
@@ -64,7 +64,7 @@ $pfp = "." . $pfpPath;
                 <li><a href="browse.php">Reserve</a></li>
             </ul>
             <div class="menu-footer">
-                <button id="color-toggle">Switch Color Scheme</button>
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="settings.php">Settings</a>
                 <a href="index.php">Logout</a>
             </div>
@@ -84,18 +84,18 @@ $pfp = "." . $pfpPath;
                 $oldUsername = $_POST['username'];
                 $newUsername = $_POST['newUsername'];
 
-                $sql = $conn->prepare("SELECT * FROM users WHERE username = ? ");
-                $sql->bind_param("s", $oldUsername);
-                $sql->execute();
-                $result = $sql->get_result();
-
                 if ($oldUsername === $username) {
-                    foreach ($_SESSION['users'] as $user) {
-                        if ($user['username'] === $newUsername) {
-                            echo "<script>alert('Username is already taken. Please choose another one.')</script>";
-                            exit;
-                        }
+                    //tinitingnan kung meron nang username sa database na kaparehas ng newUsername
+                    $sql = $conn->prepare("SELECT * FROM users WHERE username = ?");
+                    $sql->bind_param("s", $newUsername);
+                    $sql->execute();
+                    $result = $sql->get_result();
+                    if ($result->num_rows > 0) {
+                        echo "<script>alert('Username is already taken. Please choose another one.')</script>";
+                        exit;
                     }
+
+                    //inu-update ang username sa database
                     $sql = $conn->prepare("UPDATE users SET username = ? WHERE username = ?");
                     $sql->bind_param("ss", $newUsername, $oldUsername);
                     $sql->execute();
@@ -123,22 +123,27 @@ $pfp = "." . $pfpPath;
             </form>
             <?php
             if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['change_pfp'])) {
+                //chine-check kung na-upload yung image nang walang error
                 if (isset($_FILES['pfp']) && $_FILES['pfp']['error'] == 0) {
+                    //kung saang folder ilalagay yung image
                     $uploadDir = 'uploads/';
-                    if (!is_dir($uploadDir)) {
-                        mkdir($uploadDir, 0777, true);
-                    }
+
+                    //kinukuha yung file extension ng image
                     $ext = pathinfo($_FILES['pfp']['name'], PATHINFO_EXTENSION);
+
+                    //gumagawa ng filename gamit ang username ng user
                     $filename = $username . '_pfp.' . $ext;
                     $uploadFile = $uploadDir . $filename;
 
                     if (move_uploaded_file($_FILES['pfp']['tmp_name'], $uploadFile)) {
+                        //path ng image na ilalagay sa database
                         $webPath = '/' . $uploadDir . $filename;
+                        
+                        //inu-update ang profile picture sa database
                         $sql = $conn->prepare("UPDATE users SET pfp = ? WHERE username = ?");
                         $sql->bind_param("ss", $webPath, $username);
                         $sql->execute();
 
-                        $_SESSION['users'][$username]['pfp'] = $uploadFile;
                         echo "<script>alert('Profile picture updated!')</script>";
                     }
                 } else {
@@ -166,4 +171,5 @@ $pfp = "." . $pfpPath;
 
     <script src="./scripts/script.js"></script>
 </body>
+
 </html>
