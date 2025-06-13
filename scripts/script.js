@@ -3,24 +3,30 @@ function displayModal() {
   const btn = document.getElementById("addToListBtn");
   const closeBtn = document.querySelector(".close");
 
-  btn.onclick = function () {
-    modal.style.display = "block";
-  };
+  if (btn) {
+    btn.onclick = function () {
+      modal.style.display = "block";
+    };
+  }
 
-  closeBtn.onclick = function () {
-    modal.style.display = "none";
-  };
+  if (closeBtn) {
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    };
+  }
 
-  window.onclick = function (event) {
+  window.addEventListener('click', function (event) {
     if (event.target === modal) {
       modal.style.display = "none";
     }
-  };
+  });
 
   const form = document.getElementById("addToListForm");
-  form.onsubmit = function (event) {
-    modal.style.display = "none";
-  };
+  if (form) {
+    form.onsubmit = function (event) {
+      modal.style.display = "none";
+    };
+  }
 }
 
 function toggleAvatarHover() {
@@ -45,21 +51,25 @@ function displayMenu() {
   const menuSidebar = document.getElementById("menu-sidebar");
   const closeBtn = document.getElementById("close");
 
-  menuBtn.onclick = function () {
-    menuBtn.style.display = "none";
-    menuSidebar.style.display = "block";
-  };
-  closeBtn.onclick = function () {
-    menuSidebar.style.display = "none";
-    menuBtn.style.display = "block";
-  };
+  if (menuBtn) {
+    menuBtn.onclick = function () {
+      menuBtn.style.display = "none";
+      menuSidebar.style.display = "block";
+    };
+  }
+  if (closeBtn) {
+    closeBtn.onclick = function () {
+      menuSidebar.style.display = "none";
+      menuBtn.style.display = "block";
+    };
+  }
 
-  window.onclick = function (event) {
+  window.addEventListener('click', function (event) {
     if (event.target === menuSidebar) {
       menuSidebar.style.display = "none";
       menuBtn.style.display = "block";
     }
-  };
+  });
 }
 
 const originalColors = {
@@ -100,13 +110,59 @@ function applyColors(colors) {
 }
 applyColors(isToggled ? toggledColors : originalColors);
 
-document.getElementById('color-toggle').addEventListener('click', function() {
-  isToggled = !isToggled;
-  applyColors(isToggled ? toggledColors : originalColors);
-  localStorage.setItem('colorToggled', isToggled);
-});
+const colorToggleBtn = document.getElementById('color-toggle');
+if (colorToggleBtn) {
+  colorToggleBtn.addEventListener('click', function() {
+    isToggled = !isToggled;
+    applyColors(isToggled ? toggledColors : originalColors);
+    localStorage.setItem('colorToggled', isToggled);
+  });
+}
+
+function setupTrailerModal() {
+    var trailerBtn = document.getElementById("watchTrailerBtn");
+    var trailerModal = document.getElementById("trailerModal");
+    var closeTrailerModal = document.getElementById("closeTrailerModal");
+    var trailerIframe = document.getElementById("trailerIframe");
+
+    if (trailerBtn && trailerModal && trailerIframe) {
+        trailerBtn.addEventListener("click", function() {
+            var youtubeLink = trailerBtn.getAttribute("data-youtube");
+            trailerModal.style.display = "flex";
+            trailerIframe.src = youtubeLink;
+
+            setTimeout(function() {
+                if (trailerIframe.requestFullscreen) {
+                    trailerIframe.requestFullscreen();
+                } else if (trailerIframe.mozRequestFullScreen) {
+                    trailerIframe.mozRequestFullScreen();
+                } else if (trailerIframe.webkitRequestFullscreen) {
+                    trailerIframe.webkitRequestFullscreen();
+                } else if (trailerIframe.msRequestFullscreen) {
+                    trailerIframe.msRequestFullscreen();
+                }
+            }, 500);
+        });
+    }
+
+    if (closeTrailerModal && trailerModal && trailerIframe) {
+        closeTrailerModal.addEventListener("click", function() {
+            trailerModal.style.display = "none";
+            trailerIframe.src = "";
+        });
+    }
+
+    window.addEventListener("click", function(event) {
+        if (event.target === trailerModal) {
+            trailerModal.style.display = "none";
+            trailerIframe.src = "";
+        }
+    });
+}
 
 document.addEventListener("DOMContentLoaded", function() {
-  toggleAvatarHover();
-  displayMenu();
+    toggleAvatarHover();
+    displayMenu();
+    displayModal();
+    setupTrailerModal();
 });
