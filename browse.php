@@ -41,9 +41,9 @@ $pfp = "." . $pfpPath;
             <li><a href="browse.php" class="blue-text">Reserve</a></li>
         </ul>
         <div class="avatar">
-            <i class="fa fa-search"></i>
-            <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" onclick="toggleAvatarHover()" id="profilepic">
+            <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic">
             <div id="avatarHover">
+                <button id="color-toggle">Switch Color Scheme</button>
                 <a href="settings.php">Settings</a>
                 <a href="index.php">Logout</a>
             </div>
@@ -68,6 +68,7 @@ $pfp = "." . $pfpPath;
                 <li><a href="browse.php">Reserve</a></li>
             </ul>
             <div class="menu-footer">
+                <button id="color-toggle">Switch Color Scheme</button>
                 <a href="settings.php">Settings</a>
                 <a href="index.php">Logout</a>
             </div>

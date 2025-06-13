@@ -17,22 +17,22 @@ main {
     font-size: 3.6em;
 }
 .profile-description p {
-  font-size: 1.7em;
+  font-size: 1.2em;
   text-indent: 1em;
   margin-bottom: 3em;
 }
 .profile-description a {
   text-decoration: none;
-  background: linear-gradient(to right, #0fb5ce, #6d3ee4);
-  color: white;
+  background: linear-gradient(to right, var(--color-gradient-start), var(--color-gradient-end));
+  color: var(--color-white);
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.6em;
   padding: 0.3em 1.5em;
   border-radius: 40px;
-  text-shadow: 0 0 3px white;
+  text-shadow: 0 0 3px var(--color-white);
 }
 .profile-description a:hover {
-  box-shadow: 0 0 10px #67ebff;
+  box-shadow: 0 0 10px var(--color-blue);
 }
 .change-profile {
   text-align: center;

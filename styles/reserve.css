@@ -1,3 +1,21 @@
+:root {
+  --color-blue: #67ebff;
+  --color-nav-hover: #e5e7ea;
+  --color-arrow: #a0b1c5;
+  --color-bg1: #281558;
+  --color-bg2: #043a42;
+  --color-genre-bg: #051834;
+  --color-gradient-start: #0fb5ce;
+  --color-gradient-end: #6d3ee4;
+  --color-bg-gradient1: #0a6a79;
+  --color-bg-gradient2: #3c237c;
+  --color-user-seat: #8f2828;
+  --color-sold-seat: #9d756e;
+  --color-black: #000000;
+  --color-grey-light: #aaa;
+  --color-text-shadow: #3db4f2;
+  --color-purple-accent: #af8df4;
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,10 +28,10 @@ body {
   font-family: "Arimo", sans-serif;
   color: white;
   min-height: 100vh;
-  background: linear-gradient(to right, #0c3052 0%, black 50%, black 100%);
+  background: linear-gradient(to right, var(--color-bg1) 0%, var(--color-black) 50%, var(--color-bg2) 100%);
 }
 .blue-text {
-  color: #67ebff;
+  color: var(--color-blue);
 }
 nav {
   display: flex;
@@ -29,7 +47,7 @@ nav::after {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(to right, #281558, #043a42);
+  background: linear-gradient(to right, var(--color-bg-gradient1), var(--color-bg-gradient2));
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -48,7 +66,7 @@ nav a {
   font-weight: bold;
 }
 nav a:hover {
-  color: #e5e7ea;
+  color: var(--color-nav-hover);
 }
 .avatar {
   display: flex;
@@ -65,19 +83,10 @@ nav a:hover {
 .avatar p {
   cursor: pointer;
 }
-.fa-search {
-  background-color: inherit;
-  border: none;
-  color: #67ebff;
-  cursor: pointer;
-}
-.fa-search:hover {
-  color: #e5e7ea;
-}
 .fa-arrow-down {
   background-color: inherit;
   border: none;
-  color: #a0b1c5;
+  color: var(--color-arrow);
   font-size: 1em;
   cursor: pointer;
   text-align: center;
@@ -87,7 +96,7 @@ nav a:hover {
   position: absolute;
   top: 65px;
   padding: 0.3em 0em;
-  background: linear-gradient(#281558, #043a42);
+  background: linear-gradient(var(--color-bg1), var(--color-bg2));
   border-radius: 20px;
   z-index: 100;
 }
@@ -96,7 +105,19 @@ nav a:hover {
   color: white;
 }
 #avatarHover a:hover {
-  color: #67ebff;
+  color: var(--color-blue);
+}
+#color-toggle {
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  font-family: 'Arimo', sans-serif;
+}
+#color-toggle:hover {
+  color: var(--color-blue);
 }
 #menu,
 #menu-sidebar {
@@ -126,20 +147,20 @@ h1 {
 .genre {
   display: inline-block;
   padding: 0.2em 2.5em;
-  background-color: #051834;
+  background-color: var(--color-genre-bg);
   border-radius: 20px;
   font-weight: bold;
   margin: 2em 0;
 }
 .button {
   border: none;
-  background: linear-gradient(to right, #0fb5ce, #6d3ee4);
-  color: white;
+  background: linear-gradient(to right, var(--color-gradient-start), var(--color-gradient-end));
+  color: var(--color-white);
   font-weight: bold;
   font-size: 1.3em;
   padding: 0.3em 1.5em;
   border-radius: 20px;
-  text-shadow: 2px 2px 5px black;
+  text-shadow: 2px 2px 5px var(--color-black);
   cursor: pointer;
 }
 .bookTickets {
@@ -148,7 +169,7 @@ h1 {
   margin: 2em 0;
 }
 .button:hover {
-  box-shadow: 0 0 10px #67ebff;
+  box-shadow: 0 0 10px var(--color-blue);
 }
 .fa-arrow-down {
   border: 2px solid white;
@@ -162,7 +183,7 @@ h1 {
 .gradient-text {
   padding: 0.5em 1.2em;
   font-weight: bold;
-  background: linear-gradient(to right, #0fb5ce, #6d3ee4);
+  background: linear-gradient(to right, var(--color-gradient-start), var(--color-gradient-end));
   border-radius: 20px;
 }
 .anime {
@@ -190,7 +211,7 @@ h1 {
 select {
   appearance: none;
   border: none;
-  background: linear-gradient(to right, #0fb5ce, #6d3ee4);
+  background: linear-gradient(to right, var(--color-gradient-start), var(--color-gradient-end));
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -213,13 +234,13 @@ select {
   pointer-events: none;
 }
 select option {
-  background-color: #6d3ee4;
+  background-color: var(--color-gradient-end);
   color: white;
-  font-size: 0.5em;
+  font-size: 1em;
   font-weight: bold;
 }
 .select-main {
-  border-top: 2px solid cyan;
+  border-top: 2px solid var(--color-gradient-start);
   text-align: center;
 }
 .select-main > h2 {
@@ -227,7 +248,7 @@ select option {
   font-size: 2em;
 }
 .select-seat {
-  background: linear-gradient(to right, #0a6a79, #3c237c);
+  background: linear-gradient(to right, var(--color-bg-gradient1), var(--color-bg-gradient2));
   border-radius: 50px;
   padding: 1.5em 2.5em;
   display: flex;
@@ -246,16 +267,16 @@ select option {
   gap: 0.6em;
 }
 .user-seat {
-  background-color: #8f2828;
-  width: 25px;
-  height: 25px;
+  background-color: var(--color-user-seat);
+  width: 35px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   pointer-events: none;
 }
 .available-seat {
-  background: linear-gradient(to right, #0fb5ce, #6d3ee4);
+  background: linear-gradient(to right, var(--color-gradient-start), var(--color-gradient-end));
   width: 35px;
   height: 35px;
   display: flex;
@@ -264,7 +285,7 @@ select option {
   cursor: pointer;
 }
 .sold {
-  background-color: #9d756e;
+  background-color: var(--color-sold-seat);
   width: 35px;
   height: 35px;
   display: flex;
@@ -277,14 +298,14 @@ select option {
   height: 75px;
 }
 .selected {
-  background: #67ebff !important;
+  background: var(--color-blue) !important;
 }
 #screen {
-  background-color: #af8df4;
-  border: 3px solid #8f2828;
+  background-color: var(--color-purple-accent);
+  border: 3px solid var(--color-user-seat);
   padding: 0.6em;
   border-radius: 30px;
-  text-shadow: 0 0 6px black;
+  text-shadow: 0 0 6px var(--color-black);
 }
 .seats-container {
   display: flex;
@@ -315,7 +336,7 @@ select option {
 }
 button {
   border: none;
-  background: linear-gradient(to right, #0fb5ce, #6d3ee4);
+  background: linear-gradient(to right, var(--color-gradient-start), var(--color-gradient-end));
   color: white;
   font-weight: bold;
   font-size: 1.3em;
@@ -323,6 +344,41 @@ button {
   border-radius: 20px;
   cursor: pointer;
 }
+.reserveModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5);
+}
+.reserveModal .modal-content {
+  background: black;
+  margin: 10% auto;
+  padding: 1em;
+  border-radius: 15px;
+  border: 2px solid var(--color-blue);
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+.modal-content p {
+  margin: 1.5em 0;
+}
+.modal-content span {
+  padding: 0.3em 1em;
+  font-size: 1.3em;
+  background: linear-gradient(to right, var(--color-gradient-start), var(--color-gradient-end));
+  border-radius: 20px;
+}
+.reserveModal .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 2em;
+  cursor: pointer;
+  background: none;
+}
+
 @media only screen and (max-width: 480px) {
   nav {
     display: none;
@@ -334,11 +390,11 @@ button {
     right: 5px;
     z-index: 100;
     border-radius: 15px;
-    background-color: #af8df4;
+    background-color: var(--color-purple-accent);
   }
   #menu .fa-bars {
     font-size: 3em;
-    color: #043a42;
+    color: var(--color-bg2);
     padding: 10px;
     cursor: pointer;
   }
@@ -355,7 +411,7 @@ button {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: #043a42;
+    background-color: var(--color-bg2);
     height: 100%;
     padding: 1em;
     text-align: center;

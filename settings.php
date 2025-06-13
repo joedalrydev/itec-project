@@ -37,14 +37,39 @@ $pfp = "." . $pfpPath;
             <li><a href="browse.php" class="blue-text">Reserve</a></li>
         </ul>
         <div class="avatar">
-            <i class="fa fa-search"></i>
-            <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" onclick="toggleAvatarHover()">
+            <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic">
             <div id="avatarHover">
+                <button id="color-toggle">Switch Color Scheme</button>
                 <a href="settings.php">Settings</a>
                 <a href="index.php">Logout</a>
             </div>
         </div>
     </nav>
+
+    <div id="menu">
+        <i class="fa fa-bars"></i>
+    </div>
+
+    <div id="menu-sidebar">
+        <div class="menu-content">
+            <div class="menu-header">
+                <span id="close">&times;</span>
+                <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
+                <h2 class="blue-text"><?php echo $username ?></h2>
+            </div>
+            <ul>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="profile_animeList.php">List</a></li>
+                <li><a href="browse.php">Reserve</a></li>
+            </ul>
+            <div class="menu-footer">
+                <button id="color-toggle">Switch Color Scheme</button>
+                <a href="settings.php">Settings</a>
+                <a href="index.php">Logout</a>
+            </div>
+        </div>
+    </div>
 
     <main>
         <div class="container">

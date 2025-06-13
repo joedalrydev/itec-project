@@ -27,7 +27,7 @@ $pfp = "." . $pfpPath;
     <style>
         body {
             background:
-                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 75%, rgb(48, 25, 105) 100%),
+                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 75%, var(--color-main-bg2) 100%),
                 url(<?php echo $pfp ?>) left top no-repeat;
             background-size: cover, 50% 100%;
             background-repeat: no-repeat, no-repeat;
@@ -39,7 +39,7 @@ $pfp = "." . $pfpPath;
         @media only screen and (max-width: 480px) {
             body {
                 background:
-                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 75%, rgb(48, 25, 105) 100%),
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 75%, var(--color-main-bg2) 100%),
                     url(<?php echo $pfp ?>) center center no-repeat;
                 background-size: cover;
             }
@@ -47,8 +47,7 @@ $pfp = "." . $pfpPath;
                 flex-direction: column;
             }
             .pfp {
-                height: 50%;
-                min-height: 300px;
+                min-height: 500px;
             }
             .profile-description {
                 padding: 2em;
@@ -78,9 +77,9 @@ $pfp = "." . $pfpPath;
             <li><a href="browse.php" class="blue-text">Reserve</a></li>
         </ul>
         <div class="avatar">
-            <i class="fa fa-search"></i>
-            <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" onclick="toggleAvatarHover()" id="profilepic">
+            <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic">
             <div id="avatarHover">
+                <button id="color-toggle">Switch Color Scheme</button>
                 <a href="settings.php">Settings</a>
                 <a href="index.php">Logout</a>
             </div>
@@ -105,6 +104,7 @@ $pfp = "." . $pfpPath;
                 <li><a href="browse.php">Reserve</a></li>
             </ul>
             <div class="menu-footer">
+                <button id="color-toggle">Switch Color Scheme</button>
                 <a href="settings.php">Settings</a>
                 <a href="index.php">Logout</a>
             </div>

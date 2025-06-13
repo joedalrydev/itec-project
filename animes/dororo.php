@@ -32,7 +32,7 @@ $pathToReserve = './reserve/dororo-reserve.php';
     <style>
         body {
             background:
-                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
+                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, var(--color-bg1) 100%),
                 url(../images/dororo.jpg) left top no-repeat;
             background-size: cover, 50% 100%;
             background-position: center center, left top;
@@ -64,8 +64,7 @@ $pathToReserve = './reserve/dororo-reserve.php';
             <li><a href="../profile_animeList.php" class="blue-text">List</a></li>
         </ul>
         <div class="avatar">
-            <i class="fa fa-search"></i>
-            <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" onclick="toggleAvatarHover()">
+            <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic" onclick="toggleAvatarHover()">
             <div id="avatarHover">
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>

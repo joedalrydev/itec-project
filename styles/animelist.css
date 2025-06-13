@@ -7,16 +7,16 @@ main {
     font-size: 1rem;
     padding: 10px;
     background: linear-gradient(
-        to right, rgba(255, 255,255, 0.2) 0%,
-        rgba(59, 59, 59, 0.4) 15%,
-        rgba(59, 59, 59, 0.4) 50%,
-        rgba(50, 50, 50, 0.4) 100%);
-    border: 1px solid #67ebff;
+        to right, var(--color-input-bg) 0%,
+        var(--color-grey-1) 15%,
+        var(--color-grey-1) 50%,
+        var(--color-grey-2) 100%);
+    border: 1px solid var(--color-blue);
     border-radius: 20px;
-    color: white;
+    color: var(--color-white);
 }
 #searchBar::placeholder {
-    color: white;
+    color: var(--color-white);
 }
 #anime-list {
     display: flex;
@@ -25,13 +25,13 @@ main {
     min-height: 100vh;
 }
 .anime-table {
-    background: linear-gradient(to right, #281558, #043a42);
+    background: linear-gradient(to right, var(--color-bg-gradient1), var(--color-bg-gradient2));
     border-collapse: collapse;
     border-radius: 20px;
     width: 100%;
 }
 .anime-table th {
-    color: #67ebff;
+    color: var(--color-blue);
 }
 .anime-table th,
 .anime-table td {
@@ -39,7 +39,7 @@ main {
     text-align: center;
 }
 .anime-table td {
-    border-top: 2px solid white;
+    border-top: 2px solid var(--color-white);
 }
 .anime-picture {
     display: flex;
@@ -72,7 +72,7 @@ main {
     cursor: pointer;
 }
 .update-episodes i:hover {
-    color: #67ebff;
+    color: var(--color-blue);
 }
 
 @media only screen and (max-width: 480px) {

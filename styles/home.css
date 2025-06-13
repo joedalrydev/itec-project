@@ -11,8 +11,8 @@ h1 {
   text-shadow: 0 0 3px white;
 }
 .purple-text {
-  color: #af8df4;
-  text-shadow: 0 0 5px #af8df4;
+  color: var(--color-purple-accent);
+  text-shadow: 0 0 5px var(--color-purple-accent);
 }
 .blue-text {
   font-weight: bold;
@@ -112,6 +112,9 @@ h1 {
     justify-content: center;
     height: 100vh;
   }
+  .purple-text {
+    color: var(--color-blue);
+  }
   .trending {
     display: none;
   }
@@ -136,7 +139,7 @@ h1 {
     color: white;
   }
   .welcome a:hover {
-    color: #67ebff;
+    color: var(--color-blue);
   }
   .welcome img {
     display: block;

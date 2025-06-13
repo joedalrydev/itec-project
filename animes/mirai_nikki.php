@@ -64,7 +64,6 @@ $pathToReserve = './reserve/mirai_nikki-reserve.php';
             <li><a href="../profile_animeList.php" class="blue-text">List</a></li>
         </ul>
         <div class="avatar">
-            <i class="fa fa-search"></i>
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" onclick="toggleAvatarHover()">
             <div id="avatarHover">
                 <a href="../settings.php">Settings</a>
