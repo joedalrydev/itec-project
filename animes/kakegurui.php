@@ -11,13 +11,13 @@ $row = $result->fetch_assoc();
 $pfpPath = isset($row['pfp']) && !empty($row['pfp']) ? $row['pfp'] : '../images/logo.png';
 $pfp = ".." . $pfpPath;
 
-$title = 'Hunter x Hunter (2011)';
-$genre = 'Action, Adventure, Fantasy';
-$maxEpisodes = '148';
-$year = '2011';
-$picture = './images/hunter_x_hunter_2011.png';
+$title = 'Kakegurui';
+$genre = 'Drama, Mystery, Psychological';
+$maxEpisodes = '12';
+$year = '2017';
+$picture = './images/kakegurui.jpg';
 $format = 'tv';
-$pathToReserve = './reserve/hunter_x_hunter_2011-reserve.php';
+$pathToReserve = './reserve/kakegurui-reserve.php';
 ?>
 
 <!DOCTYPE html>
@@ -33,13 +33,13 @@ $pathToReserve = './reserve/hunter_x_hunter_2011-reserve.php';
         body {
             background:
                 linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, var(--color-bg1) 100%),
-                url(../images/hunter_x_hunter_2011.png) left top no-repeat;
+                url(../images/kakegurui.jpg) left top no-repeat;
             background-size: cover, 50% 100%;
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
         .poster {
-            background: url(../images/hunter_x_hunter_2011.png) no-repeat center center;
+            background: url(../images/rent_a_girlfriend.jpg) no-repeat center center;
             background-size: cover;
             flex-basis: 50%;
             border-radius: 20px;
@@ -49,12 +49,12 @@ $pathToReserve = './reserve/hunter_x_hunter_2011-reserve.php';
             body {
                 background:
                     linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
-                    url(../images/hunter_x_hunter_2011.png) center center no-repeat;
+                    url(../images/rent_a_girlfriend.jpg) center center no-repeat;
                 background-size: cover;
             }
         }
     </style>
-    <title>Hunter x Hunter (2011)</title>
+    <title>Kakegurui</title>
 </head>
 
 <body>
@@ -99,21 +99,18 @@ $pathToReserve = './reserve/hunter_x_hunter_2011-reserve.php';
     <main>
         <div class="banner"></div>
         <div class="anime-description">
-            <h1>Hunter x Hunter (2011)</h1>
-            <p class="genre">Action, Adventure, Fantasy</p>
+            <h1>Kakegurui</h1>
+            <p class="genre">Drama, Mystery, Psychological</p>
             <p>
-                A Hunter is one who travels the world doing all sorts of dangerous tasks. 
-                From capturing criminals to searching deep within uncharted lands for any lost treasures. 
-                Gon is a young boy whose father disappeared long ago, being a Hunter. 
-                He believes if he could also follow his father's path, he could one day reunite with him.
-
-                After becoming 12, Gon leaves his home and takes on the task of entering the Hunter exam, notorious for its low success rate and high probability of death to become an official Hunter. 
-                He befriends the revenge-driven Kurapika, the doctor-to-be Leorio and the rebellious ex-assassin Killua in the exam, with their friendship prevailing throughout the many trials and threats they come upon taking on the dangerous career of a Hunter.
+                During daylight hours, an exclusive, elite private school prepares its illustrious students for careers in business, politics, and high society. 
+                But when darkness falls, the halls of this esteemed establishment transform into an underground gambling den where bright-eyed youngsters learn the timeless art of bluffing, backdoor dealings and social manipulation. 
+                In this school for the rich and elite, money is power, and the tyrant of the betting books rules with an iron fist. 
+                So when the beautiful Yumeko Jabami upsets the academy hierarchy with her voracious appetite for the thrill of the gamble, the entire student body mobilizes to send her house of cards tumbling down.
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
             <button id="watchTrailerBtn" class="button" type="button"
-                data-youtube="https://www.youtube.com/embed/d6kBeJjTGnY?autoplay=1&fs=1">
+                data-youtube="https://www.youtube.com/embed/cTlHQiRNVl0?autoplay=1&fs=1">
                 Watch Trailer
             </button>
         </div>

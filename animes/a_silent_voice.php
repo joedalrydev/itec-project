@@ -107,8 +107,12 @@ $pathToReserve = './reserve/a_silent_voice-reserve.php';
                 Shouko transfers and Shouya grows up as an outcast.
                 Alone and depressed, the regretful Shouya finds Shouko to make amends.
             </p>
-            <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
+            <button id="addToListBtn" class="button">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+            <button id="watchTrailerBtn" class="button" type="button"
+                data-youtube="https://www.youtube.com/embed/nfK6UgLra7g?autoplay=1&fs=1">
+                Watch Trailer
+            </button>
         </div>
 
         <div id="addToListModal" class="modal">
@@ -145,8 +149,22 @@ $pathToReserve = './reserve/a_silent_voice-reserve.php';
                 </div>
             </div>
         </div>
+        <div id="trailerModal" class="modal">
+            <div class="modal-content trailer-modal-content">
+                <span class="close" id="closeTrailerModal">&times;</span>
+                <div class="trailer-video-wrapper">
+                    <iframe id="trailerIframe"
+                        width="100%" height="100%" 
+                        src="" 
+                        frameborder="0"
+                        allow="autoplay; encrypted-media; fullscreen"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
     </main>
-
+        
     <script>
         const animeList = <?php echo json_encode($animeList); ?>;
     </script>

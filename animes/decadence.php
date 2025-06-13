@@ -112,6 +112,10 @@ $pathToReserve = './reserve/decadence-reserve.php';
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+            <button id="watchTrailerBtn" class="button" type="button"
+                data-youtube="https://www.youtube.com/embed/1IqvCr1Hohs?autoplay=1&fs=1">
+                Watch Trailer
+            </button>
         </div>
 
         <div id="addToListModal" class="modal">
@@ -145,6 +149,20 @@ $pathToReserve = './reserve/decadence-reserve.php';
                         <input type="hidden" name="pathToReserve" value="<?php echo htmlspecialchars($pathToReserve); ?>">
                         <button type="submit">Save</button>
                     </form>
+                </div>
+            </div>
+        </div>
+        <div id="trailerModal" class="modal">
+            <div class="modal-content trailer-modal-content">
+                <span class="close" id="closeTrailerModal">&times;</span>
+                <div class="trailer-video-wrapper">
+                    <iframe id="trailerIframe"
+                        width="100%" height="100%" 
+                        src="" 
+                        frameborder="0"
+                        allow="autoplay; encrypted-media; fullscreen"
+                        allowfullscreen>
+                    </iframe>
                 </div>
             </div>
         </div>
