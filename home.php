@@ -187,6 +187,10 @@ $pfp = "." . $pfpPath;
                     <a href="./animes/kaguya_sama_love_is_war.php">Kaguya-sama: Love is war</a>
                 </div>
                 <div class="card">
+                    <a href="./animes/kakegurui.php"><img src="./images/kakegurui.jpg" alt="Poster"></a>
+                    <a href="./animes/kakegurui.php">Kakegurui</a>
+                </div>
+                <div class="card">
                     <a href="./animes/kuroko_no_basket.php"><img src="./images/kuroko_no_basket.jpg" alt="Poster"></a>
                     <a href="./animes/kuroko_no_basket.php">Kuroko no Basket</a>
                 </div>
@@ -233,10 +237,6 @@ $pfp = "." . $pfpPath;
                 <div class="card">
                     <a href="./animes/ranking_of_kings.php"><img src="./images/ranking_of_kings.jpg" alt="Poster"></a>
                     <a href="./animes/ranking_of_kings.php">Ranking of Kings</a>
-                </div>
-                <div class="card">
-                    <a href="./animes/rent_a_girlfriend.php"><img src="./images/rent_a_girlfriend.jpg" alt="Poster"></a>
-                    <a href="./animes/rent_a_girlfriend.php">Rent a Girlfriend</a>
                 </div>
                 <div class="card">
                     <a href="./animes/seven_deadly_sins.php"><img src="./images/seven_deadly_sins.jpg" alt="Poster"></a>
