@@ -32,7 +32,7 @@ $pathToReserve = './reserve/hunter_x_hunter_2011-reserve.php';
     <style>
         body {
             background:
-                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, var(--color-bg1) 100%),
+                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
                 url(../images/hunter_x_hunter_2011.png) left top no-repeat;
             background-size: cover, 50% 100%;
             background-position: center center, left top;
@@ -48,13 +48,13 @@ $pathToReserve = './reserve/hunter_x_hunter_2011-reserve.php';
         @media only screen and (max-width: 480px) {
             body {
                 background:
-                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
                     url(../images/hunter_x_hunter_2011.png) center center no-repeat;
                 background-size: cover;
             }
         }
     </style>
-    <title>Hunter x Hunter</title>
+    <title>Hunter x Hunter (2011)</title>
 </head>
 
 <body>
@@ -66,7 +66,9 @@ $pathToReserve = './reserve/hunter_x_hunter_2011-reserve.php';
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic" onclick="toggleAvatarHover()">
             <div id="avatarHover">
-                <button class="color-toggle">Switch Color Scheme</button>
+                <button class="color-toggle original" data-scheme="original"></button>
+                <button class="color-toggle red" data-scheme="red"></button>
+                <button class="color-toggle green" data-scheme="green"></button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -80,20 +82,24 @@ $pathToReserve = './reserve/hunter_x_hunter_2011-reserve.php';
     <div id="menu-sidebar">
         <div class="menu-content">
             <div class="menu-header">
-                <span id="close">&times;</span>
+                <img src="../images/logo.png" alt="Logo" class="logo">
                 <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
-                <h2 class="blue-text"><?php echo $username ?></h2>
+                <h2><?php echo $username ?></h2>
             </div>
             <ul>
-                <li><a href="../home.php">Home</a></li>
-                <li><a href="../profile.php">Profile</a></li>
-                <li><a href="../profile_animeList.php">List</a></li>
-                <li><a href="../browse.php">Reserve</a></li>
+                <li><a href="../home.php"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="../profile.php"><i class="fa fa-user"></i>Profile</a></li>
+                <li><a href="../profile_animeList.php"><i class="fa fa-list"></i>List</a></li>
+                <li><a href="../browse.php"><i class="fa fa-ticket"></i>Reserve</a></li>
             </ul>
             <div class="menu-footer">
-                <button class="color-toggle">Switch Color Scheme</button>
-                <a href="../settings.php">Settings</a>
-                <a href="../index.php">Logout</a>
+                <div class="buttons">
+                    <button class="color-toggle original" data-scheme="original"></button>
+                    <button class="color-toggle red" data-scheme="red"></button>
+                    <button class="color-toggle green" data-scheme="green"></button>
+                </div>
+                <a href="../settings.php"><i class="fa fa-cog"></i>Settings</a>
+                <a href="../index.php"><i class="fa fa-sign-out"></i>Logout</a>
             </div>
         </div>
     </div>
@@ -101,10 +107,13 @@ $pathToReserve = './reserve/hunter_x_hunter_2011-reserve.php';
     <main>
         <div class="banner"></div>
         <div class="anime-description">
-            <h1>Hunter x Hunter</h1>
+            <h1>Hunter x Hunter (2011)</h1>
             <p class="genre">Action, Adventure, Fantasy</p>
             <p>
-                
+                A Hunter is one who travels the world doing all sorts of dangerous tasks. 
+                From capturing criminals to searching deep within uncharted lands for any lost treasures. 
+                Gon is a young boy whose father disappeared long ago, being a Hunter. 
+                He believes if he could also follow his father's path, he could one day reunite with him.
 
                 After becoming 12, Gon leaves his home and takes on the task of entering the Hunter exam, notorious for its low success rate and high probability of death to become an official Hunter. 
                 He befriends the revenge-driven Kurapika, the doctor-to-be Leorio and the rebellious ex-assassin Killua in the exam, with their friendship prevailing throughout the many trials and threats they come upon taking on the dangerous career of a Hunter.

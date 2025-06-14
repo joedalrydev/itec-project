@@ -12,7 +12,7 @@ $pfpPath = isset($row['pfp']) && !empty($row['pfp']) ? $row['pfp'] : '../images/
 $pfp = ".." . $pfpPath;
 
 $title = 'Summer Time Rendering';
-$genre = 'Action, Drama, Mystery';
+$genre = 'Action, Drama, Mystery, Supernatural, Thriller';
 $maxEpisodes = '25';
 $year = '2022';
 $picture = './images/summer_time_rendering.png';
@@ -32,7 +32,7 @@ $pathToReserve = './reserve/summer_time_rendering-reserve.php';
     <style>
         body {
             background:
-                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, var(--color-bg1) 100%),
+                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
                 url(../images/summer_time_rendering.png) left top no-repeat;
             background-size: cover, 50% 100%;
             background-position: center center, left top;
@@ -48,7 +48,7 @@ $pathToReserve = './reserve/summer_time_rendering-reserve.php';
         @media only screen and (max-width: 480px) {
             body {
                 background:
-                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
                     url(../images/summer_time_rendering.png) center center no-repeat;
                 background-size: cover;
             }
@@ -66,7 +66,9 @@ $pathToReserve = './reserve/summer_time_rendering-reserve.php';
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic" onclick="toggleAvatarHover()">
             <div id="avatarHover">
-                <button class="color-toggle">Switch Color Scheme</button>
+                <button class="color-toggle original" data-scheme="original"></button>
+                <button class="color-toggle red" data-scheme="red"></button>
+                <button class="color-toggle green" data-scheme="green"></button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -80,20 +82,24 @@ $pathToReserve = './reserve/summer_time_rendering-reserve.php';
     <div id="menu-sidebar">
         <div class="menu-content">
             <div class="menu-header">
-                <span id="close">&times;</span>
+                <img src="../images/logo.png" alt="Logo" class="logo">
                 <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
-                <h2 class="blue-text"><?php echo $username ?></h2>
+                <h2><?php echo $username ?></h2>
             </div>
             <ul>
-                <li><a href="../home.php">Home</a></li>
-                <li><a href="../profile.php">Profile</a></li>
-                <li><a href="../profile_animeList.php">List</a></li>
-                <li><a href="../browse.php">Reserve</a></li>
+                <li><a href="../home.php"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="../profile.php"><i class="fa fa-user"></i>Profile</a></li>
+                <li><a href="../profile_animeList.php"><i class="fa fa-list"></i>List</a></li>
+                <li><a href="../browse.php"><i class="fa fa-ticket"></i>Reserve</a></li>
             </ul>
             <div class="menu-footer">
-                <button class="color-toggle">Switch Color Scheme</button>
-                <a href="../settings.php">Settings</a>
-                <a href="../index.php">Logout</a>
+                <div class="buttons">
+                    <button class="color-toggle original" data-scheme="original"></button>
+                    <button class="color-toggle red" data-scheme="red"></button>
+                    <button class="color-toggle green" data-scheme="green"></button>
+                </div>
+                <a href="../settings.php"><i class="fa fa-cog"></i>Settings</a>
+                <a href="../index.php"><i class="fa fa-sign-out"></i>Logout</a>
             </div>
         </div>
     </div>
@@ -102,7 +108,7 @@ $pathToReserve = './reserve/summer_time_rendering-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>Summer Time Rendering</h1>
-            <p class="genre">Action, Drama, Mystery</p>
+            <p class="genre">Action, Drama, Mystery, Supernatural, Thriller</p>
             <p>
                 A sci-fi, summer story filled with suspense set on a small island with Shinpei Aijiro, whose childhood friend Ushio Kofune died. 
                 He returns to his hometown for the first time in two years for the funeral. 

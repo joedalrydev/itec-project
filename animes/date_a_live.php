@@ -32,7 +32,7 @@ $pathToReserve = './reserve/date_a_live-reserve.php';
     <style>
         body {
             background:
-                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, var(--color-bg1) 100%),
+                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
                 url(../images/date_a_live.jpg) left top no-repeat;
             background-size: cover, 50% 100%;
             background-position: center center, left top;
@@ -48,7 +48,7 @@ $pathToReserve = './reserve/date_a_live-reserve.php';
         @media only screen and (max-width: 480px) {
             body {
                 background:
-                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
                     url(../images/date_a_live.jpg) center center no-repeat;
                 background-size: cover;
             }
@@ -66,7 +66,9 @@ $pathToReserve = './reserve/date_a_live-reserve.php';
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic" onclick="toggleAvatarHover()">
             <div id="avatarHover">
-                <button class="color-toggle">Switch Color Scheme</button>
+                <button class="color-toggle original" data-scheme="original"></button>
+                <button class="color-toggle red" data-scheme="red"></button>
+                <button class="color-toggle green" data-scheme="green"></button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -80,20 +82,24 @@ $pathToReserve = './reserve/date_a_live-reserve.php';
     <div id="menu-sidebar">
         <div class="menu-content">
             <div class="menu-header">
-                <span id="close">&times;</span>
+                <img src="../images/logo.png" alt="Logo" class="logo">
                 <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
-                <h2 class="blue-text"><?php echo $username ?></h2>
+                <h2><?php echo $username ?></h2>
             </div>
             <ul>
-                <li><a href="../home.php">Home</a></li>
-                <li><a href="../profile.php">Profile</a></li>
-                <li><a href="../profile_animeList.php">List</a></li>
-                <li><a href="../browse.php">Reserve</a></li>
+                <li><a href="../home.php"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="../profile.php"><i class="fa fa-user"></i>Profile</a></li>
+                <li><a href="../profile_animeList.php"><i class="fa fa-list"></i>List</a></li>
+                <li><a href="../browse.php"><i class="fa fa-ticket"></i>Reserve</a></li>
             </ul>
             <div class="menu-footer">
-                <button class="color-toggle">Switch Color Scheme</button>
-                <a href="../settings.php">Settings</a>
-                <a href="../index.php">Logout</a>
+                <div class="buttons">
+                    <button class="color-toggle original" data-scheme="original"></button>
+                    <button class="color-toggle red" data-scheme="red"></button>
+                    <button class="color-toggle green" data-scheme="green"></button>
+                </div>
+                <a href="../settings.php"><i class="fa fa-cog"></i>Settings</a>
+                <a href="../index.php"><i class="fa fa-sign-out"></i>Logout</a>
             </div>
         </div>
     </div>
@@ -102,11 +108,13 @@ $pathToReserve = './reserve/date_a_live-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>Date A Live</h1>
-            <p class="genre">Action, Comedy, Fantasy, Romance, Sci-Fi</p>
+            <p class="genre">Action, Comedy, Ecchi, Fantasy, Mecha, Romance, Sci-Fi</p>
             <p>
                 Thirty years before a strange phenomena called a "spacequake" devastated the center of Eurasia, claiming the lives of at least 150 million people. 
+                Since then, smaller spacequakes plague the world on an irregular basis. 
                 Shidou Itsuka, a seemingly ordinary high schooler comes across a mysterious girl at the ground zero of a spacequake and learns from his sister Kotori she is one of the "Spirits" who are the real cause of the spacequakes that occur when they manifest themselves in the world. 
-                
+                He also learns that Kotori is the captain of the airship Ratatoskr and recruits him to make use of his mysterious ability to seal the Spirits' powers and stop them from being a threat to mankind. 
+                However, there is a catch: to seal a Spirit, he must make her fall in love with him.
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>

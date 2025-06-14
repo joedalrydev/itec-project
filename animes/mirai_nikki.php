@@ -32,7 +32,7 @@ $pathToReserve = './reserve/mirai_nikki-reserve.php';
     <style>
         body {
             background:
-                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
+                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
                 url(../images/mirai_nikki.png) left top no-repeat;
             background-size: cover, 50% 100%;
             background-position: center center, left top;
@@ -48,7 +48,7 @@ $pathToReserve = './reserve/mirai_nikki-reserve.php';
         @media only screen and (max-width: 480px) {
             body {
                 background:
-                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
                     url(../images/mirai_nikki.png) center center no-repeat;
                 background-size: cover;
             }
@@ -66,7 +66,9 @@ $pathToReserve = './reserve/mirai_nikki-reserve.php';
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" onclick="toggleAvatarHover()">
             <div id="avatarHover">
-                <button class="color-toggle">Switch Color Scheme</button>
+                <button class="color-toggle original" data-scheme="original"></button>
+                <button class="color-toggle red" data-scheme="red"></button>
+                <button class="color-toggle green" data-scheme="green"></button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -80,20 +82,24 @@ $pathToReserve = './reserve/mirai_nikki-reserve.php';
     <div id="menu-sidebar">
         <div class="menu-content">
             <div class="menu-header">
-                <span id="close">&times;</span>
+                <img src="../images/logo.png" alt="Logo" class="logo">
                 <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
-                <h2 class="blue-text"><?php echo $username ?></h2>
+                <h2><?php echo $username ?></h2>
             </div>
             <ul>
-                <li><a href="../home.php">Home</a></li>
-                <li><a href="../profile.php">Profile</a></li>
-                <li><a href="../profile_animeList.php">List</a></li>
-                <li><a href="../browse.php">Reserve</a></li>
+                <li><a href="../home.php"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="../profile.php"><i class="fa fa-user"></i>Profile</a></li>
+                <li><a href="../profile_animeList.php"><i class="fa fa-list"></i>List</a></li>
+                <li><a href="../browse.php"><i class="fa fa-ticket"></i>Reserve</a></li>
             </ul>
             <div class="menu-footer">
-                <button class="color-toggle">Switch Color Scheme</button>
-                <a href="../settings.php">Settings</a>
-                <a href="../index.php">Logout</a>
+                <div class="buttons">
+                    <button class="color-toggle original" data-scheme="original"></button>
+                    <button class="color-toggle red" data-scheme="red"></button>
+                    <button class="color-toggle green" data-scheme="green"></button>
+                </div>
+                <a href="../settings.php"><i class="fa fa-cog"></i>Settings</a>
+                <a href="../index.php"><i class="fa fa-sign-out"></i>Logout</a>
             </div>
         </div>
     </div>
@@ -104,7 +110,9 @@ $pathToReserve = './reserve/mirai_nikki-reserve.php';
             <h1>Mirai Nikki</h1>
             <p class="genre">Action, Horror, Mystery, Psychological, Supernatural, Thriller</p>
             <p>
-                
+                This psychological thriller, based on the manga written and illustrated by Sakae Esuno, is about Yuki, a loner who's not very good with people. 
+                He prefers to write a diary on his cell phone and talk to his imaginary friend, Deus Ex Machina – The God of Time and Space. 
+                However, Yuki soon learns that Deus is more than a figment of his imagination when he makes Yuki participate in a battle royale with eleven others. 
                 The contestants are given special diaries that can predict the future, each diary possessing unique features that give it both advantages and disadvantages. 
                 Within the next 90 days, the contestants must try to survive until there is only one left standing. 
                 The winner will become the new God of Time and Space.

@@ -32,14 +32,14 @@ $pathToReserve = './reserve/kakegurui-reserve.php';
     <style>
         body {
             background:
-                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, var(--color-bg1) 100%),
-                url(../images/kake.jpg) left top no-repeat;
+                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
+                url(../images/kakegurui.jpg) left top no-repeat;
             background-size: cover, 50% 100%;
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
         .poster {
-            background: url(../images/kake.jpg) no-repeat center center;
+            background: url(../images/kakegurui.jpg) no-repeat center center;
             background-size: cover;
             flex-basis: 50%;
             border-radius: 20px;
@@ -48,8 +48,8 @@ $pathToReserve = './reserve/kakegurui-reserve.php';
         @media only screen and (max-width: 480px) {
             body {
                 background:
-                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
-                    url(../images/kake.jpg) center center no-repeat;
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
+                    url(../images/kakegurui.jpg) center center no-repeat;
                 background-size: cover;
             }
         }
@@ -66,7 +66,9 @@ $pathToReserve = './reserve/kakegurui-reserve.php';
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic" onclick="toggleAvatarHover()">
             <div id="avatarHover">
-                <button class="color-toggle">Switch Color Scheme</button>
+                <button class="color-toggle original" data-scheme="original"></button>
+                <button class="color-toggle red" data-scheme="red"></button>
+                <button class="color-toggle green" data-scheme="green"></button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -80,20 +82,24 @@ $pathToReserve = './reserve/kakegurui-reserve.php';
     <div id="menu-sidebar">
         <div class="menu-content">
             <div class="menu-header">
-                <span id="close">&times;</span>
+                <img src="../images/logo.png" alt="Logo" class="logo">
                 <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
-                <h2 class="blue-text"><?php echo $username ?></h2>
+                <h2><?php echo $username ?></h2>
             </div>
             <ul>
-                <li><a href="../home.php">Home</a></li>
-                <li><a href="../profile.php">Profile</a></li>
-                <li><a href="../profile_animeList.php">List</a></li>
-                <li><a href="../browse.php">Reserve</a></li>
+                <li><a href="../home.php"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="../profile.php"><i class="fa fa-user"></i>Profile</a></li>
+                <li><a href="../profile_animeList.php"><i class="fa fa-list"></i>List</a></li>
+                <li><a href="../browse.php"><i class="fa fa-ticket"></i>Reserve</a></li>
             </ul>
             <div class="menu-footer">
-                <button class="color-toggle">Switch Color Scheme</button>
-                <a href="../settings.php">Settings</a>
-                <a href="../index.php">Logout</a>
+                <div class="buttons">
+                    <button class="color-toggle original" data-scheme="original"></button>
+                    <button class="color-toggle red" data-scheme="red"></button>
+                    <button class="color-toggle green" data-scheme="green"></button>
+                </div>
+                <a href="../settings.php"><i class="fa fa-cog"></i>Settings</a>
+                <a href="../index.php"><i class="fa fa-sign-out"></i>Logout</a>
             </div>
         </div>
     </div>
@@ -106,6 +112,8 @@ $pathToReserve = './reserve/kakegurui-reserve.php';
             <p>
                 During daylight hours, an exclusive, elite private school prepares its illustrious students for careers in business, politics, and high society. 
                 But when darkness falls, the halls of this esteemed establishment transform into an underground gambling den where bright-eyed youngsters learn the timeless art of bluffing, backdoor dealings and social manipulation. 
+                In this school for the rich and elite, money is power, and the tyrant of the betting books rules with an iron fist. 
+                So when the beautiful Yumeko Jabami upsets the academy hierarchy with her voracious appetite for the thrill of the gamble, the entire student body mobilizes to send her house of cards tumbling down.
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
