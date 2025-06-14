@@ -21,6 +21,7 @@ $pfp = "." . $pfpPath;
     <link href='https://fonts.googleapis.com/css?family=Lilita One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/settings.css">
@@ -138,8 +139,8 @@ $pfp = "." . $pfpPath;
                             $sql->bind_param("s", $username);
                             $sql->execute();
 
-                            session_destroy();
-                            header("Location: index.php");
+                            echo "<script>alert('Account deleted successfully!');</script>";
+                            echo "<script>window.location.href = 'index.php';</script>";
                         }
                         ?>
                     </div>

@@ -67,8 +67,8 @@ include("database.php");
             '--color-gradient-end': '#6d3ee4',
             '--color-bg1': '#281558',
             '--color-bg2': '#043a42',
-            '--color-login-1': '#67ebff',
-            '--color-login-2': '#1e90ff',
+            '--color-login-1': '#275961',
+            '--color-login-2': '#092c4e',
             '--color-purple-accent': '#a259ff',
             '--color-bg-gradient1': '#0a6a79',
             '--color-bg-gradient2': '#3c237c'
@@ -81,8 +81,8 @@ include("database.php");
             '--color-gradient-end': '#ff914d',
             '--color-bg1': '#ff3131',
             '--color-bg2': '#ff914d',
-            '--color-login-1': '#eb3328',
-            '--color-login-2': '#ff864a',
+            '--color-login-1': '#6e1713',
+            '--color-login-2': '#532d19',
             '--color-purple-accent': '#eb3328',
             '--color-bg-gradient1': '#8f2828',
             '--color-bg-gradient2': '#692402'
@@ -95,8 +95,8 @@ include("database.php");
             '--color-gradient-end': '#7ed957',
             '--color-bg1': '#0097b2',
             '--color-bg2': '#7ed957',
-            '--color-login-1': '#5aab70',
-            '--color-login-2': '#7ed957',
+            '--color-login-1': 'rgb(39, 66, 27)',
+            '--color-login-2': '#233b18',
             '--color-purple-accent': '#5aab70',
             '--color-bg-gradient1': '#204d0d',
             '--color-bg-gradient2': '#305a3b'

@@ -18,7 +18,7 @@ $sql->bind_param("s", $username);
 $sql->execute();
 $result = $sql->get_result();
 $row = $result->fetch_assoc();
-$pfpPath = isset($row['pfp']) && !empty($row['pfp']) ? $row['pfp'] : './images/logo.png';
+$pfpPath = $row['pfp'];
 $pfp = "." . $pfpPath;
 ?>
 <!DOCTYPE html>
@@ -28,6 +28,7 @@ $pfp = "." . $pfpPath;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/browse.css">
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Browse</title>
 </head>

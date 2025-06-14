@@ -9,6 +9,7 @@ include("database.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/login.css">
     <title>Login</title>
