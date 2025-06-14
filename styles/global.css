@@ -136,16 +136,20 @@ nav a:hover {
   z-index: 100;
 }
 .color-toggle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   border: none;
-  background-color: inherit;
-  color: white;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 1em;
-  font-family: 'Arimo', sans-serif;
 }
-.color-toggle:hover {
-  color: var(--color-blue);
+.original {
+  background-color: #0fb5ce;
+}
+.red {
+  background-color: #ff3131;
+}
+.green {
+  background-color: #7ed957;
 }
 #avatarHover a,
 .color-toggle {
@@ -166,11 +170,11 @@ footer {
   font-size: 0.8em;
   line-height: 1.5;
 }
-.logo {
+.logo-wrapper {
   text-align: center;
   flex-basis: 15%;
 }
-.logo img {
+.logo{
   width: 50px;
   height: 50px;
 }

@@ -82,16 +82,20 @@ nav a:hover {
   border-radius: 50%;
 }
 .color-toggle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   border: none;
-  background-color: none;
-  color: white;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 1em;
-  font-family: 'Arimo', sans-serif;
 }
-.color-toggle:hover {
-  color: var(--color-blue);
+.original {
+  background-color: #0fb5ce;
+}
+.red {
+  background-color: #ff3131;
+}
+.green {
+  background-color: #7ed957;
 }
 .fa-arrow-down {
   background-color: inherit;
@@ -391,15 +395,6 @@ select option {
     color: var(--color-white);
     font-size: 1.5em;
     padding: 1em;
-  }
-  .color-toggle {
-    font-size: 1.5em;
-    font-weight: normal;
-    padding: 0.3em;
-    color: white;
-    background: none;
-    border: none;
-    font-family: inherit;
   }
   .menu-footer {
     display: flex;

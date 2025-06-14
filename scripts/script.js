@@ -88,7 +88,7 @@ const originalColors = {
   '--color-bg-gradient2': '#3c237c'
 };
 //naka-store yung mga colors na ipapalit kapag pinindot yung toggle button
-const toggledColors = {
+const redColors = {
   '--color-main-bg1': '#661d1d',
   '--color-main-bg2': '#4e1818',
   '--color-blue': '#ff864a',
@@ -102,9 +102,26 @@ const toggledColors = {
   '--color-bg-gradient1': '#8f2828',
   '--color-bg-gradient2': '#692402'
 };
+const greenColors = {
+  '--color-main-bg1': '#1e490b',
+  '--color-main-bg2': '#5aab70',
+  '--color-blue': '#7ed957',
+  '--color-gradient-start': '#0097b2',
+  '--color-gradient-end': '#7ed957',
+  '--color-bg1': '#0097b2',
+  '--color-bg2': '#7ed957',
+  '--color-login-1': '#5aab70',
+  '--color-login-2': '#7ed957',
+  '--color-purple-accent': '#5aab70',
+  '--color-bg-gradient1': '#204d0d',
+  '--color-bg-gradient2': '#305a3b'
+};
 
-//para malaman kung ang colors na gagamitin ay original or toggle colors
-let isToggled = localStorage.getItem('colorToggled') === 'true';
+const colorSchemes = {
+  original: originalColors,
+  red: redColors,
+  green: greenColors
+};
 
 //ina-apply yung colors sa website, alin man sa original or toggled colors
 function applyColors(colors) {
@@ -112,17 +129,25 @@ function applyColors(colors) {
     document.documentElement.style.setProperty(key, value);
   }
 }
-//ina-apply yung colors sa website kapag nag load
-applyColors(isToggled ? toggledColors : originalColors);
 
-//nag-add ng event listener sa button para gumana siya
+let currentScheme = localStorage.getItem('colorScheme') || 'original';
+applyColors(colorSchemes[currentScheme]);
+
+//nag-add ng event listener sa mga buttons para gumana sila
 document.querySelectorAll('.color-toggle').forEach(function(btn) {
   btn.addEventListener('click', function() {
-    isToggled = !isToggled;
-    applyColors(isToggled ? toggledColors : originalColors);
-    localStorage.setItem('colorToggled', isToggled);
+    const scheme = btn.getAttribute('data-scheme');
+    if (colorSchemes[scheme]) {
+      applyColors(colorSchemes[scheme]);
+      localStorage.setItem('colorScheme', scheme);
+      document.getElementById('logo').src = scheme === 'original' ? `./images/logo.png` : `./images/logo-${scheme}.png`;
+      document.querySelectorAll('.logo').forEach(function(logo) {
+        logo.src = scheme === 'original' ? `./images/logo.png` : `./images/logo-${scheme}.png`;
+      });
+    }
   });
 });
+
 
 function setupTrailerModal() {
     let trailerBtn = document.getElementById("watchTrailerBtn");

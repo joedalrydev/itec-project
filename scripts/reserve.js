@@ -29,36 +29,66 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //ginagawang user seats yung mga seat na na-reserve ng current user
   userSeats.forEach(function (seatId) {
-      const seat = document.getElementById(seatId);
-      if (seat) {
-        seat.classList.remove("sold");
-        seat.classList.remove("available-seat");
-        seat.classList.add("user-seat");
-      }
-    });
+    const seat = document.getElementById(seatId);
+    if (seat) {
+      seat.classList.remove("sold");
+      seat.classList.remove("available-seat");
+      seat.classList.add("user-seat");
+    }
+  });
+
+  const bookModal = document.querySelector(".book-modal");
+  const bookBtn = document.getElementById('bookModalBtn');
+  const bookClose = document.querySelector(".book-modal .close");
+  
+  bookBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    //dini-display yung book modal
+    bookModal.style.display = "block";
+  });
+  bookClose.addEventListener("click", function () {
+    //kino-close yung book modal
+    bookModal.style.display = "none";
+  });
+  window.addEventListener("click", function (e) {
+    if (e.target === bookModal) {
+      bookModal.style.display = "none";
+    }
+  });
 
   //kinukuha yung mga elements sa html
-  const saveBtn = document.querySelector('.save-button button[name="reservebtn"]');
-  const modal = document.querySelector('.reserveModal');
-  const closeModal = document.querySelector('.reserveModal .close');
-  const form = document.querySelector('form');
-  const seatDisplay = document.getElementById('seat-id-display');
-  const locationDisplay = document.getElementById('location-display');
-  const dateDisplay = document.getElementById('date-display');
-  const confirmBtn = document.querySelector('.reserveModal button[name="confirmbtn"]');
+  const saveBtn = document.querySelector(
+    '.save-button button[name="reservebtn"]'
+  );
+  const reserveModal = document.querySelector(".reserveModal");
+  const closeModal = document.querySelector(".reserveModal .close");
+  const form = document.querySelector("form");
+  const seatDisplay = document.getElementById("seat-id-display");
+  const locationDisplay = document.getElementById("location-display");
+  const dateDisplay = document.getElementById("date-display");
+  const confirmBtn = document.querySelector(
+    '.reserveModal button[name="confirmbtn"]'
+  );
 
-  saveBtn.addEventListener('click', function(e) {
+  saveBtn.addEventListener("click", function (e) {
     //para hindi mag-refresh yung page kapag pinindot yung save button
     e.preventDefault();
 
     //kinukuha yung elements sa html
-    const seatId = document.getElementById('seat_id').value;
-    const location = document.getElementById('location').options[document.getElementById('location').selectedIndex].text;
-    const date = document.getElementById('date').options[document.getElementById('date').selectedIndex].text;
+    const seatId = document.getElementById("seat_id").value;
+    const location =
+      document.getElementById("location").options[
+        document.getElementById("location").selectedIndex
+      ].text;
+    const date =
+      document.getElementById("date").options[
+        document.getElementById("date").selectedIndex
+      ].text;
 
     //may alert na nalabas kapag wala pang seat na napipili tapos pinindot yung save button
     if (!seatId) {
-      alert('Please select a seat.');
+      alert("Please select a seat.");
       return;
     }
 
@@ -68,23 +98,24 @@ document.addEventListener("DOMContentLoaded", function () {
     dateDisplay.textContent = date;
 
     //dini-display yung modal
-    modal.style.display = 'block';
+    reserveModal.style.display = "block";
   });
 
   //kino-close yung modal
-  closeModal.addEventListener('click', function() {
-    modal.style.display = 'none';
+  closeModal.addEventListener("click", function () {
+    reserveModal.style.display = "none";
   });
 
   //para ma-submit yung form
-  confirmBtn.addEventListener('click', function() {
+  confirmBtn.addEventListener("click", function () {
     form.submit();
   });
 
   //nawawala yung modal kapag nag click sa labas ng modal
-  window.addEventListener('click', function(e) {
-    if (e.target === modal) {
-      modal.style.display = 'none';
+  window.addEventListener("click", function (e) {
+    if (e.target === reserveModal) {
+      reserveModal.style.display = "none";
     }
   });
+
 });

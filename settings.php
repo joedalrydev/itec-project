@@ -39,7 +39,9 @@ $pfp = "." . $pfpPath;
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic">
             <div id="avatarHover">
-                <button class="color-toggle">Switch Color Scheme</button>
+                <button class="color-toggle original" data-scheme="original"></button>
+                <button class="color-toggle red" data-scheme="red"></button>
+                <button class="color-toggle green" data-scheme="green"></button>
                 <a href="settings.php">Settings</a>
                 <a href="index.php">Logout</a>
             </div>
@@ -64,7 +66,9 @@ $pfp = "." . $pfpPath;
                 <li><a href="browse.php">Reserve</a></li>
             </ul>
             <div class="menu-footer">
-                <button class="color-toggle">Switch Color Scheme</button>
+                <button class="color-toggle original" data-scheme="original"></button>
+                <button class="color-toggle red" data-scheme="red"></button>
+                <button class="color-toggle green" data-scheme="green"></button>
                 <a href="settings.php">Settings</a>
                 <a href="index.php">Logout</a>
             </div>
@@ -155,8 +159,8 @@ $pfp = "." . $pfpPath;
     </main>
 
     <footer>
-        <div class="logo">
-            <img src="./images/logo.png" alt="Logo" width="75px" height="75px">
+        <div class="logo-wrapper">
+            <img src="./images/logo.png" alt="Logo" width="75px" height="75px" class="logo">
             <p>&copy; JAJ.AniMate</p>
         </div>
         <div class="footer-content">

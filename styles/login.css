@@ -42,9 +42,9 @@ body {
     padding: 10px;
     background: linear-gradient(
         to right, var(--color-input-bg) 0%,
-        var(--color-grey-1) 15%,
-        var(--color-grey-1) 50%,
-        var(--color-grey-2) 100%);
+        rgba(41, 40, 40) 15%,
+        rgba(41, 40, 40, 0.6) 50%,
+        rgba(58, 57, 57, 0.3) 100%);
     border: 1px solid var(--color-blue);
     border-radius: 20px;
     color: var(--color-white);

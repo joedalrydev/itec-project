@@ -108,16 +108,20 @@ nav a:hover {
   color: var(--color-blue);
 }
 .color-toggle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   border: none;
-  background: none;
-  color: white;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 1em;
-  font-family: 'Arimo', sans-serif;
 }
-.color-toggle:hover {
-  color: var(--color-blue);
+.original {
+  background-color: #0fb5ce;
+}
+.red {
+  background-color: #ff3131;
+}
+.green {
+  background-color: #7ed957;
 }
 #menu,
 #menu-sidebar {
@@ -189,12 +193,30 @@ h1 {
 .anime {
   display: flex;
 }
-#book {
-  min-height: 100vh;
-  padding: 1.5em 2em;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em;
+.book-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5);
+}
+.book-modal .book-modal-content {
+  background: linear-gradient(to right, var(--color-bg1), var(--color-bg2));  
+  margin: 2% auto;
+  padding: 1em;
+  border-radius: 15px;
+  border: 2px solid var(--color-blue);
+  width: 90%;
+  position: relative;
+}
+.book-modal-content .close {
+  background: none;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 2em;
+  cursor: pointer;
+  background: none;
 }
 .info,
 .select-options {
@@ -206,7 +228,7 @@ h1 {
   gap: 1em;
   position: relative;
   align-items: center;
-  margin-bottom: 1em;
+  margin: 1em 0;
 }
 select {
   appearance: none;
@@ -240,16 +262,16 @@ select option {
   font-weight: bold;
 }
 .select-main {
-  border-top: 2px solid var(--color-gradient-start);
   text-align: center;
+  width: 75%;
+  margin: 0 auto;
 }
 .select-main > h2 {
   margin: 1em;
   font-size: 2em;
+  text-shadow: 0 0 10px white;
 }
 .select-seat {
-  background: linear-gradient(to right, var(--color-bg-gradient1), var(--color-bg-gradient2));
-  border-radius: 50px;
   padding: 1.5em 2.5em;
   display: flex;
   flex-direction: column;
@@ -283,6 +305,10 @@ select option {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.available-seat:hover {
+  transform: scale(1.2);
 }
 .sold {
   background-color: var(--color-sold-seat);
@@ -294,8 +320,9 @@ select option {
   pointer-events: none;
 }
 .legend-seat {
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
 }
 .selected {
   background: var(--color-blue) !important;
@@ -371,6 +398,7 @@ button {
   border-radius: 20px;
 }
 .reserveModal .close {
+  background: none;
   position: absolute;
   right: 0;
   top: 0;
@@ -446,15 +474,6 @@ button {
     color: white;
     font-size: 1.5em;
     padding: 1em;
-  }
-  .color-toggle {
-    font-size: 1.5em;
-    font-weight: normal;
-    padding: 0.3em;
-    color: white;
-    background: none;
-    border: none;
-    font-family: inherit;
   }
   .menu-footer {
     display: flex;
