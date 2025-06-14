@@ -112,7 +112,6 @@ $pathToReserve = './reserve/dororo-reserve.php';
             <p>
                 Dororo, a young orphan thief, meets Hyakkimaru, a powerful ronin. 
                 Hyakkimaru's father, a greedy feudal lord, had made a pact with 12 demons, offering his yet-unborn son's body parts in exchange for great power. 
-                Thus, Hyakkimaru - who was born without arms, legs, eyes, ears, a nose or a mouth - was abandoned in a river as a baby. 
                 Rescued and raised by Dr. Honma, who equips him with artificial limbs and teaches him sword-fighting techniques, Hyakkimaru discovers that each time he slays a demon, a piece of his body is restored. 
                 Now, he roams the war-torn countryside in search of demons.
             </p>

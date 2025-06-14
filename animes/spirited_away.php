@@ -114,9 +114,6 @@ $pathToReserve = './reserve/spirited_away-reserve.php';
                 Intrigued, the family investigates the park, though unbeknownst to them, it is secretly inhabited by spirits who sleep by day and appear at night.
                 When Chihiro's mother and father eat food from a restaurant in the street, angry spirits turn them into pigs.
                 Furthermore, a wide sea has appeared between the spirit world and the human one, trapping Chihiro, the sole human, in a land of spirits.
-                Luckily for her though, a mysterious boy named Haku appears, claiming to know her from the past.
-                Under his instructions, Chihiro secures a job in the bathhouse where Haku works.
-                With only her courage and some new found friends to aid her, Chihiro embarks on a journey to turn her parents back to their original forms and return home.
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>

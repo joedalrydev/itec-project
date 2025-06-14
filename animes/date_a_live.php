@@ -111,10 +111,7 @@ $pathToReserve = './reserve/date_a_live-reserve.php';
             <p class="genre">Action, Comedy, Ecchi, Fantasy, Mecha, Romance, Sci-Fi</p>
             <p>
                 Thirty years before a strange phenomena called a "spacequake" devastated the center of Eurasia, claiming the lives of at least 150 million people. 
-                Since then, smaller spacequakes plague the world on an irregular basis. 
                 Shidou Itsuka, a seemingly ordinary high schooler comes across a mysterious girl at the ground zero of a spacequake and learns from his sister Kotori she is one of the "Spirits" who are the real cause of the spacequakes that occur when they manifest themselves in the world. 
-                He also learns that Kotori is the captain of the airship Ratatoskr and recruits him to make use of his mysterious ability to seal the Spirits' powers and stop them from being a threat to mankind. 
-                However, there is a catch: to seal a Spirit, he must make her fall in love with him.
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>

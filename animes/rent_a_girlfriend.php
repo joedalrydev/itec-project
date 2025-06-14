@@ -112,12 +112,9 @@ $pathToReserve = './reserve/rent_a_girlfriend-reserve.php';
             <p>
                 Kinoshita Kazuya is a 20-year-old failure of a college student. 
                 He managed to kiss his girlfriend once, but was dumped after a month. 
-                "Ugh... Damn it. I never want to go through that again."
 
                 Completely spiteful, Kazuya uses a certain method to date a girl. 
-                He goes to their meeting place and suddenly hears, "You're Kazuya-kun, right?" A beautiful girl brushing her long, black hair behind her ear was there, smiling at him. 
-                Her name was Mizuhara Chizuru. 
-                Something real is born after just a single rental! 
+                He goes to their meeting place and suddenly meets Mizuhara Chizuru. 
                 A reckless rom-com filled with love and excitement is about to begin! 
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>

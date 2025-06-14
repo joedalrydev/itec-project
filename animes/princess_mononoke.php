@@ -115,14 +115,6 @@ $pathToReserve = './reserve/princess_mononoke-reserve.php';
                 Ashitaka, a young man and prince of the tribe, engages the creature in an attempt to save his village.
                 During the battle, the boar bites him on the arm, leaving it blackened and cursed.
                 Following his village's traditions, Ashitaka is exiled and becomes a wanderer, looking for a solution to the curse before it engulfs him.
-
-                Iron Town is a fortress under the leadership of Lady Eboshi.
-                Through the clearing of the surrounding forests, Iron Town produces large amounts of Ironsand, used for gunpowder and other machinery.
-                However, because of the forests destruction, nearby animal clans seek revenge led by a human girl of the Wolf clan called San.
-
-                When Ashitaka comes to Iron Town, he discovers the area consumed in battle.
-                Horrified, he attempts to create peace and befriend the Wolf Clan.
-                However, after the forest's eradication and the ongoing war between Human and Beast, will the Spirit of the Forest be forgiving and accept Ashitaka's request to expel his curse?
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>

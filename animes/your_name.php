@@ -115,9 +115,6 @@ $pathToReserve = './reserve/your_name-reserve.php';
 
                 One day, Mitsuha awakens in a room that is not her own and suddenly finds herself living the dream life in Tokyo—but in Taki's body! 
                 Elsewhere, Taki finds himself living Mitsuha's life in the humble countryside. 
-                In pursuit of an answer to this strange phenomenon, they begin to search for one another.
-
-                Kimi no Na wa. revolves around Mitsuha and Taki's actions, which begin to have a dramatic impact on each other's lives, weaving them into a fabric held together by fate and circumstance.
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>

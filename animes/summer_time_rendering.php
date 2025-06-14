@@ -111,7 +111,6 @@ $pathToReserve = './reserve/summer_time_rendering-reserve.php';
             <p class="genre">Action, Drama, Mystery, Supernatural, Thriller</p>
             <p>
                 A sci-fi, summer story filled with suspense set on a small island with Shinpei Aijiro, whose childhood friend Ushio Kofune died. 
-                He returns to his hometown for the first time in two years for the funeral. 
                 Sou Hishigata, his best friend, suspects something's off with Ushio's death, and that someone can die next.
 
                 A sinister omen is heard as an entire family next door suddenly disappears the following day. 

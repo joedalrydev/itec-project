@@ -111,11 +111,9 @@ $pathToReserve = './reserve/one-piece-reserve.php';
             <p class="genre">Action, Adventure, Comedy, Drama, Fantasy</p>
             <p>
                 Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                The capture and death of Roger by the World Government brought a change throughout the world.
                 His last words before his death revealed the location of the greatest treasure in the world, One Piece.
                 It was this revelation that brought about the Grand Age of Pirates,
-                men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame),
-                and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.
+                men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame) and the title of the Pirate King.
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>

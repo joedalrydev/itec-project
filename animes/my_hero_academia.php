@@ -110,11 +110,6 @@ $pathToReserve = './reserve/my_hero_academia-reserve.php';
             <h1>My Hero Academia</h1>
             <p class="genre">Action, Adventure, Comedy</p>
             <p>
-                What would the world be like if 80 percent of the population manifested extraordinary superpowers called “Quirks” at age four? 
-                Heroes and villains would be battling it out everywhere! 
-                Becoming a hero would mean learning to use your power, but where would you go to study? 
-                U.A. High's Hero Program of course! But what would you do if you were one of the 20 percent who were born Quirkless?
-
                 Middle school student Izuku Midoriya wants to be a hero more than anything, but he hasn't got an ounce of power in him. 
                 With no chance of ever getting into the prestigious U.A. High School for budding heroes, his life is looking more and more like a dead end. 
                 Then an encounter with All Might, the greatest hero of them all gives him a chance to change his destiny…

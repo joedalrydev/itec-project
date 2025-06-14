@@ -113,8 +113,6 @@ $pathToReserve = './reserve/seven_deadly_sins-reserve.php';
                 When they were accused of trying to overthrow the monarchy, the feared warriors the Seven Deadly Sins were sent into exile. 
                 Princess Elizabeth discovers the truth - the Sins were framed by the king's guard, the Holy Knights - too late to prevent them from assassinating her father and seizing the throne!
                 Now the princess is on the run, seeking the Sins to help her reclaim the kingdom. 
-                But the first Sin she meets, Meliodas, is a little innkeeper with a talking pig. 
-                He doesn't even have a real sword! Have the legends of the Sins' strength been exaggerated?
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>

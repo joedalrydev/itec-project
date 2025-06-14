@@ -113,9 +113,6 @@ $pathToReserve = './reserve/weathering_with_you-reserve.php';
                 High school student Hodaka leaves his home on an isolated island and moves to Tokyo, but he immediately becomes broke. 
                 He lives his days in isolation, but finally finds a job as a writer for a shady occult magazine. 
                 After he starts his job, the weather has been rainy day after day. 
-                In a corner of the crowded and busy city, Hodaka meets a young woman named Hina. 
-                Due to certain circumstances, Hina and her younger brother live together, but have a cheerful and sturdy life. 
-                Hina also has a certain power: the power to stop the rain and clear the sky. 
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>

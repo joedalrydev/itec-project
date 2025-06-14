@@ -113,10 +113,6 @@ $pathToReserve = './reserve/classroom_of_the_elite-reserve.php';
                 Koudo Ikusei Senior High School is a leading school with state-of-the-art facilities. 
                 The students there have the freedom to wear any hairstyle and bring any personal effects they desire. 
                 Koudo Ikusei is like a utopia, but the truth is that only the most superior students receive favorable treatment.
-
-                Kiyotaka Ayanokouji is a student of D-class, which is where the school dumps its "inferior" students in order to ridicule them. 
-                For a certain reason, Kiyotaka was careless on his entrance examination, and was put in D-class. 
-                After meeting Suzune Horikita and Kikyou Kushida, two other students in his class, Kiyotaka's situation begins to change. 
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>

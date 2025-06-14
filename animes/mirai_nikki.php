@@ -38,6 +38,7 @@ $pathToReserve = './reserve/mirai_nikki-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+
         .poster {
             background: url(../images/mirai_nikki.png) no-repeat center center;
             background-size: cover;
@@ -110,12 +111,10 @@ $pathToReserve = './reserve/mirai_nikki-reserve.php';
             <h1>Mirai Nikki</h1>
             <p class="genre">Action, Horror, Mystery, Psychological, Supernatural, Thriller</p>
             <p>
-                This psychological thriller, based on the manga written and illustrated by Sakae Esuno, is about Yuki, a loner who's not very good with people. 
-                He prefers to write a diary on his cell phone and talk to his imaginary friend, Deus Ex Machina – The God of Time and Space. 
-                However, Yuki soon learns that Deus is more than a figment of his imagination when he makes Yuki participate in a battle royale with eleven others. 
-                The contestants are given special diaries that can predict the future, each diary possessing unique features that give it both advantages and disadvantages. 
-                Within the next 90 days, the contestants must try to survive until there is only one left standing. 
-                The winner will become the new God of Time and Space.
+                Yuki is a loner who's not very good with people.
+                He prefers to write a diary on his cell phone and talk to his imaginary friend, Deus Ex Machina – The God of Time and Space.
+                However, Yuki soon learns that Deus is more than a figment of his imagination when he makes Yuki participate in a battle royale with eleven others.
+                The contestants are given special diaries that can predict the future, each diary possessing unique features that give it both advantages and disadvantages.
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
@@ -164,8 +163,8 @@ $pathToReserve = './reserve/mirai_nikki-reserve.php';
                 <span class="close" id="closeTrailerModal">&times;</span>
                 <div class="trailer-video-wrapper">
                     <iframe id="trailerIframe"
-                        width="100%" height="100%" 
-                        src="" 
+                        width="100%" height="100%"
+                        src=""
                         frameborder="0"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowfullscreen>

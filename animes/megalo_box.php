@@ -113,8 +113,6 @@ $pathToReserve = './reserve/megalo_box-reserve.php';
                 "To be quiet and do as you're told, that's the cowardly choice." 
                 These are the words of Junk Dog, an underground fighter of Megalo Box, an evolution of boxing that utilizes mechanical limbs known as Gear to enhance the speed and power of its users. 
                 Despite the young man's brimming potential as a boxer, the illegal nature of his participation forces him to make a living off of throwing matches as dictated by his boss Gansaku Nanbu. 
-                However, this all changes when the Megalo Box champion Yuuri enters his shabby ring under the guise of just another challenger. 
-                Taken out in a single round, Junk Dog is left with a challenge: "If you're serious about fighting me again, then fight your way up to me and my ring."
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>

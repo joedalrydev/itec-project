@@ -113,8 +113,6 @@ $pathToReserve = './reserve/ya_boy_kongming-reserve.php';
                 Fate and reincarnation deliver brilliant military strategist, Kongming, from warring, ancient China to Japan’s modern party hot spot in Shibuya City, Tokyo. 
                 After a lifetime of battles and military skirmishes, Kongming wished with his last breath to be reborn in a world of peace and prosperity. 
                 It’s nearly two millennia later and he’s finding his way in a very different world than that of his past life. 
-                When he meets Eiko, an amateur musician with big dreams, the unlikely duo strikes up an even unlikelier friendship. 
-                Eiko has street smarts to help Kongming navigate this strange new world, and Kongming will use his strategic mind to help Eiko achieve stardom! 
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
