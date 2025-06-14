@@ -60,9 +60,9 @@ $title = 'One Piece';
                 <div class="avatar">
                     <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic">
                     <div id="avatarHover">
-                        <button class="color-toggle" data-scheme="original"></button>
-                        <button class="color-toggle" data-scheme="original"></button>
-                        <button class="color-toggle" data-scheme="original"></button>
+                        <button class="color-toggle original" data-scheme="original"></button>
+                        <button class="color-toggle red" data-scheme="red"></button>
+                        <button class="color-toggle green" data-scheme="green"></button>
                         <a href="../settings.php">Settings</a>
                         <a href="../index.php">Logout</a>
                     </div>

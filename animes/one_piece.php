@@ -38,6 +38,7 @@ $pathToReserve = './reserve/one-piece-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+
         .poster {
             background: url(../images/one-piece.jpg) no-repeat center center;
             background-size: cover;
@@ -115,12 +116,14 @@ $pathToReserve = './reserve/one-piece-reserve.php';
                 It was this revelation that brought about the Grand Age of Pirates,
                 men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame) and the title of the Pirate King.
             </p>
-            <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-            <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
-            <button id="watchTrailerBtn" class="button" type="button"
-                data-youtube="https://www.youtube.com/embed/MCb13lbVGE0?autoplay=1&fs=1">
-                Watch Trailer
-            </button>
+            <div class="buttons">
+                <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
+                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                <button id="watchTrailerBtn" class="button" type="button"
+                    data-youtube="https://www.youtube.com/embed/MCb13lbVGE0?autoplay=1&fs=1">
+                    Watch Trailer
+                </button>
+            </div>
         </div>
 
         <div id="addToListModal" class="modal">
@@ -162,8 +165,8 @@ $pathToReserve = './reserve/one-piece-reserve.php';
                 <span class="close" id="closeTrailerModal">&times;</span>
                 <div class="trailer-video-wrapper">
                     <iframe id="trailerIframe"
-                        width="100%" height="100%" 
-                        src="" 
+                        width="100%" height="100%"
+                        src=""
                         frameborder="0"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowfullscreen>
