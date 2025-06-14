@@ -119,6 +119,31 @@ $pfp = "." . $pfpPath;
                     To maintain the integrity and security of user accounts, changes to usernames and profile pictures are carefully monitored and recorded.
                     Unauthorized or suspicious attempts to modify these details may result in temporary account restrictions or verification checks.
                 </p>
+                <button type="submit" id="deleteAcc">Delete Account</button>
+
+                <div class="deleteModal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Are you sure you want to delete your account?</h2>
+                        <p style="color: #eb3328;">This action cannot be undone.</p>
+                        <form action="settings.php" method="POST">
+                            <button type="submit" name="confirm" id="confirm">Yes</button>
+                            <button type="button" nmae="cancel" id="cancel">No</button>
+                        </form>
+
+                        <?php
+                        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['confirm'])) {
+                            //ide-delete ang user sa database
+                            $sql = $conn->prepare("DELETE FROM users WHERE username = ?");
+                            $sql->bind_param("s", $username);
+                            $sql->execute();
+
+                            session_destroy();
+                            header("Location: index.php");
+                        }
+                        ?>
+                    </div>
+                </div>
             </div>
 
             <form action="settings.php" method="POST" enctype="multipart/form-data">
@@ -144,7 +169,7 @@ $pfp = "." . $pfpPath;
                     if (move_uploaded_file($_FILES['pfp']['tmp_name'], $uploadFile)) {
                         //path ng image na ilalagay sa database
                         $webPath = '/' . $uploadDir . $filename;
-                        
+
                         //inu-update ang profile picture sa database
                         $sql = $conn->prepare("UPDATE users SET pfp = ? WHERE username = ?");
                         $sql->bind_param("ss", $webPath, $username);
@@ -176,6 +201,32 @@ $pfp = "." . $pfpPath;
     </footer>
 
     <script src="./scripts/script.js"></script>
+    <script>
+        const deleteAccButton = document.getElementById('deleteAcc');
+        const deleteModal = document.querySelector('.deleteModal');
+        const closeModal = document.querySelector('.close');
+        const cancelButton = document.getElementById('cancel');
+
+        deleteAccButton.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            deleteModal.style.display = 'block';
+        });
+
+        closeModal.addEventListener('click', function() {
+            deleteModal.style.display = 'none';
+        });
+
+        cancelButton.addEventListener('click', function() {
+            deleteModal.style.display = 'none';
+        });
+
+        window.onclick = function(event) {
+            if (event.target === deleteModal) {
+                deleteModal.style.display = "none";
+            }
+        };
+    </script>
 </body>
 
 </html>

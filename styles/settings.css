@@ -1,119 +1,197 @@
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 0 7em;
-    background-image: url(../images/background.png);
-    background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 7em;
+  background:
+        linear-gradient(
+        to right,
+        var(--color-bg1) 0%,
+        rgba(0, 0, 0, 0) 15%,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0) 85%,
+        var(--color-bg2) 100%)
+   ,
+        url(../images/background.png);
+  background-size: cover;
 }
 nav {
-    background-color: var(--color-settings-bg);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 10px var(--color-white);
+  background-color: var(--color-settings-bg);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px var(--color-white);
 }
 .container {
-    display: flex;
-    gap: 2em;
-    padding: 2em;
-    text-align: justify;
+  display: flex;
+  gap: 2em;
+  padding: 2em;
+  text-align: justify;
 }
 form {
-    flex-basis: 33%;
-    border-radius: 20px;
-    background-color: var(--color-settings-bg);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 10px var(--color-white);
-    padding: 2em;
-    text-align: center;
+  flex-basis: 33%;
+  border-radius: 20px;
+  background-color: var(--color-settings-bg);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px var(--color-white);
+  padding: 2em;
+  text-align: center;
 }
 form h1 {
-    font-size: 2em;
-    margin-bottom: 1em;
+  font-size: 2em;
+  margin-bottom: 1em;
 }
 form input[type="text"] {
-    width: 90%;
-    margin: 15px 0;
-    font-size: 1rem;
-    padding: 10px;
-    background: linear-gradient(
-        to right, var(--color-input-bg) 0%,
-        var(--color-grey-1) 15%,
-        var(--color-grey-1) 50%,
-        var(--color-grey-2) 100%);
-    border: 1px solid var(--color-blue);
-    color: var(--color-white);
+  width: 90%;
+  margin: 15px 0;
+  font-size: 1rem;
+  padding: 10px;
+  background: linear-gradient(
+    to right,
+    var(--color-input-bg) 0%,
+    var(--color-grey-1) 15%,
+    var(--color-grey-1) 50%,
+    var(--color-grey-2) 100%
+  );
+  border: 1px solid var(--color-blue);
+  color: var(--color-white);
 }
 form input[type="text"]::placeholder {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 form input[type="file"] {
-    display: none;
+  display: none;
 }
 #pfpLabel {
-    display: inline-block;
-    background: linear-gradient(to right, var(--color-gradient-start), var(--color-gradient-end));
-    color: var(--color-white);
-    border: none;
-    padding: 0.7em 1.5em;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-shadow: 0 0 10px var(--color-black);
-    margin-bottom: 1em;
-    transition: background 0.3s;
+  display: inline-block;
+  background: linear-gradient(
+    to right,
+    var(--color-gradient-start),
+    var(--color-gradient-end)
+  );
+  color: var(--color-white);
+  border: none;
+  padding: 0.7em 1.5em;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-shadow: 0 0 10px var(--color-black);
+  margin-bottom: 1em;
+  transition: background 0.3s;
 }
 
 #pfpLabel:hover {
-    background: linear-gradient(to right, var(--color-gradient-end), var(--color-gradient-start));
+  background: linear-gradient(
+    to right,
+    var(--color-gradient-end),
+    var(--color-gradient-start)
+  );
 }
 form button {
-    background: linear-gradient(to right, var(--color-gradient-start), var(--color-gradient-end));
-    color: var(--color-white);
-    border: none;
-    padding: 0.4em;
-    width: 100%;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-shadow: 0 0 10px var(--color-black);
-    margin: 1.5em 0;
+  background: linear-gradient(
+    to right,
+    var(--color-gradient-start),
+    var(--color-gradient-end)
+  );
+  color: var(--color-white);
+  border: none;
+  padding: 0.4em;
+  width: 100%;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 0 0 10px var(--color-black);
+  margin: 1.5em 0;
 }
-#pfpLabel {
-    font-size: 1.3em;
+#deleteAcc {
+  background-color: #eb3328;
+  color: var(--color-white);
+  border: none;
+  padding: 0.4em;
+  width: 100%;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 0 0 10px var(--color-black);
 }
-form input[type="file"] {
-    padding: 0.4em 0;
-    width: 100%;
-    cursor: pointer;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-shadow: 0 0 10px var(--color-black);
+#deleteAcc:hover {
+  box-shadow: 0 0 10px #eb3328;
+}
+.deleteModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  background: black;
+  margin: 5% auto;
+  padding: 20px;
+  width: 50%;
+  border: 1px solid var(--color-purple-accent);
+  border-radius: 20px;
+  text-align: center;
+  overflow-x: hidden;
+}
+.modal-content form {
+    background: none;
+    box-shadow: none;
+}
+.modal-content button {
     margin: 1em 0;
 }
+#confirm {
+    background: #eb3328;
+}
+#cancel {
+    background: var(--color-input-bg);
+}
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#pfpLabel {
+  font-size: 1.3em;
+}
+form input[type="file"] {
+  padding: 0.4em 0;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 0 0 10px var(--color-black);
+  margin: 1em 0;
+}
 .text {
-    flex-basis: 34%;
-    font-size: 1.2em;
-    line-height: 1.5;
-    word-spacing: 0.3em;
-    display: flex;
-    align-items: center;
+  flex-basis: 34%;
+  font-size: 1.2em;
+  line-height: 1.5;
+  word-spacing: 0.3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
 
-@media only screen and (max-width: 480px){
-    main {
-        padding: 1em;
-        height: auto;
-    }
-    .container {
-        flex-direction: column;
-    }
-    form {
-        text-align: center;
-    }
-    .text {
-        font-size: 1.2em;
-    }
+@media only screen and (max-width: 480px) {
+  main {
+    padding: 1em;
+    height: auto;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .text {
+    font-size: 1.2em;
+  }
 }
