@@ -66,9 +66,7 @@ $pathToReserve = './reserve/attack_on_titan-reserve.php';
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic" onclick="toggleAvatarHover()">
             <div id="avatarHover">
-                <button class="color-toggle original" data-scheme="original"></button>
-                <button class="color-toggle red" data-scheme="red"></button>
-                <button class="color-toggle green" data-scheme="green"></button>
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -93,9 +91,7 @@ $pathToReserve = './reserve/attack_on_titan-reserve.php';
                 <li><a href="../browse.php">Reserve</a></li>
             </ul>
             <div class="menu-footer">
-                <button class="color-toggle original" data-scheme="original"></button>
-                <button class="color-toggle red" data-scheme="red"></button>
-                <button class="color-toggle green" data-scheme="green"></button>
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -108,10 +104,6 @@ $pathToReserve = './reserve/attack_on_titan-reserve.php';
             <h1>Attack on Titan</h1>
             <p class="genre">Action, Drama, Fantasy, Mystery</p>
             <p>
-                Several hundred years ago, humans were nearly exterminated by titans. 
-                Titans are typically several stories tall, seem to have no intelligence, devour human beings and, worst of all, seem to do it for the pleasure rather than as a food source. 
-                A small percentage of humanity survived by walling themselves in a city protected by extremely high walls, even taller than the biggest of titans.
-
                 Flash forward to the present and the city has not seen a titan in over 100 years. 
                 Teenage boy Eren and his foster sister Mikasa witness something horrific as the city walls are destroyed by a colossal titan that appears out of thin air. 
                 As the smaller titans flood the city, the two kids watch in horror as their mother is eaten alive. 

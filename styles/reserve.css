@@ -439,13 +439,17 @@ button {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: var(--color-bg2);
+    background: linear-gradient(var(--color-bg1), var(--color-bg2));
     height: 100%;
     padding: 1em;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-size: 1.1em;
+  }
+  .menu-content h2 {
+    text-shadow: 0 0 3px white;
   }
   #close {
     font-size: 4em;
@@ -459,6 +463,7 @@ button {
   }
   .menu-header h2 {
     font-size: 2em;
+    text-shadow: 0 0 3px black;
   }
   .menu-content img {
     border-radius: 50%;
@@ -467,13 +472,38 @@ button {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 1em;
+  }
+  .menu-content ul li a {
+    color: var(--color-blue);
+    text-shadow: 0 0 3px var(--color-blue);
   }
   .menu-content a {
     text-decoration: none;
-    color: white;
     font-size: 1.5em;
-    padding: 1em;
+    padding: 0.3em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .menu-footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .color-toggle {
+    width: 30px;
+    height: 30px;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+  }
+  .menu-footer a {
+    color: var(--color-purple-accent);
+    text-shadow: 0 0 3px var(--color-purple-accent);
   }
   .menu-footer {
     display: flex;

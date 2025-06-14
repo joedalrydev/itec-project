@@ -25,6 +25,7 @@ form {
     backdrop-filter: blur(10px);
     box-shadow: 0 0 10px var(--color-white);
     padding: 2em;
+    text-align: center;
 }
 form h1 {
     font-size: 2em;
@@ -97,6 +98,8 @@ form input[type="file"] {
     font-size: 1.2em;
     line-height: 1.5;
     word-spacing: 0.3em;
+    display: flex;
+    align-items: center;
 }
 
 @media only screen and (max-width: 480px){

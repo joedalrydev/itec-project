@@ -32,7 +32,7 @@ $pathToReserve = './reserve/eyeshield_21-reserve.php';
     <style>
         body {
             background:
-                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
+                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, var(--color-bg1) 100%),
                 url(../images/eyeshield_21.png) left top no-repeat;
             background-size: cover, 50% 100%;
             background-position: center center, left top;
@@ -48,7 +48,7 @@ $pathToReserve = './reserve/eyeshield_21-reserve.php';
         @media only screen and (max-width: 480px) {
             body {
                 background:
-                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
                     url(../images/eyeshield_21.png) center center no-repeat;
                 background-size: cover;
             }
@@ -66,9 +66,7 @@ $pathToReserve = './reserve/eyeshield_21-reserve.php';
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic" onclick="toggleAvatarHover()">
             <div id="avatarHover">
-                <button class="color-toggle original" data-scheme="original"></button>
-                <button class="color-toggle red" data-scheme="red"></button>
-                <button class="color-toggle green" data-scheme="green"></button>
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -93,9 +91,7 @@ $pathToReserve = './reserve/eyeshield_21-reserve.php';
                 <li><a href="../browse.php">Reserve</a></li>
             </ul>
             <div class="menu-footer">
-                <button class="color-toggle original" data-scheme="original"></button>
-                <button class="color-toggle red" data-scheme="red"></button>
-                <button class="color-toggle green" data-scheme="green"></button>
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -110,10 +106,8 @@ $pathToReserve = './reserve/eyeshield_21-reserve.php';
             <p>
                 Welcome To the Gridiron of the Damned! Huge hulking bodies throw themselves at each other, while a tiny lithe body runs between them for the goal! 
                 No, it’s not a game of football, it’s Sena Kobayakawa trying to evade the monstrous Ha-Ha brothers down the halls of Deimon High School! 
-                But wait! Sena’s incredible skills at not getting caught have been spotted by the devilish (possibly actually demonic) captain of the school’s embryonic American style football team, and when Sena asks to be the teams manager, he gets thrust onto the field as a running back instead! 
-                But there are two BIG catches: first, to keep the identity of their new “star” player an absolute secret, Yoichi makes Sena wear an opaque visor on his helmet and gives him the alias of “Eyeshield 21.” 
-                And the second catch? Well, in order to hit his fastest “speed of light” running mode, Sena usually has to be absolutely terrified. 
-                Not that THAT will be a problem with the monstrous players that he’ll soon find himself running from! The insanity hits the streets when the feet meet the cleats in EYESHIELD 21! 
+               
+                And the second catch? Well, in order to hit his fastest “speed of light” running mode, Sena usually has to be absolutely terrified.
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>

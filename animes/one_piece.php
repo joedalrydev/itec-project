@@ -66,9 +66,7 @@ $pathToReserve = './reserve/one-piece-reserve.php';
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic" onclick="toggleAvatarHover()">
             <div id="avatarHover">
-                <button class="color-toggle original" data-scheme="original"></button>
-                <button class="color-toggle red" data-scheme="red"></button>
-                <button class="color-toggle green" data-scheme="green"></button>
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -93,9 +91,7 @@ $pathToReserve = './reserve/one-piece-reserve.php';
                 <li><a href="../browse.php">Reserve</a></li>
             </ul>
             <div class="menu-footer">
-                <button class="color-toggle original" data-scheme="original"></button>
-                <button class="color-toggle red" data-scheme="red"></button>
-                <button class="color-toggle green" data-scheme="green"></button>
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -109,7 +105,7 @@ $pathToReserve = './reserve/one-piece-reserve.php';
             <p class="genre">Action, Adventure, Comedy, Drama, Fantasy</p>
             <p>
                 Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
-                The capture and death of Roger by the World Government brought a change throughout the world.
+               
                 His last words before his death revealed the location of the greatest treasure in the world, One Piece.
                 It was this revelation that brought about the Grand Age of Pirates,
                 men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame),

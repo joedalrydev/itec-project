@@ -304,12 +304,13 @@ select option {
     align-items: center;
     justify-content: center;
     padding: 0;
+    box-shadow: 0 0 5px white;
 }
 .trailer-video-wrapper {
     width: 100%;
     height: 100%;
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     height: 0;
 }
 .trailer-video-wrapper iframe {
@@ -360,13 +361,17 @@ select option {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: var(--color-bg2);
+    background: linear-gradient(var(--color-bg1), var(--color-bg2));
     height: 100%;
     padding: 1em;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-size: 1.1em;
+  }
+  .menu-content h2 {
+    text-shadow: 0 0 3px white;
   }
   #close {
     font-size: 4em;
@@ -380,6 +385,7 @@ select option {
   }
   .menu-header h2 {
     font-size: 2em;
+    text-shadow: 0 0 3px black;
   }
   .menu-content img {
     border-radius: 50%;
@@ -388,13 +394,38 @@ select option {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 1em;
+  }
+  .menu-content ul li a {
+    color: var(--color-blue);
+    text-shadow: 0 0 3px var(--color-blue);
   }
   .menu-content a {
     text-decoration: none;
-    color: var(--color-white);
     font-size: 1.5em;
-    padding: 1em;
+    padding: 0.3em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .menu-footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .color-toggle {
+    width: 30px;
+    height: 30px;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+  }
+  .menu-footer a {
+    color: var(--color-purple-accent);
+    text-shadow: 0 0 3px var(--color-purple-accent);
   }
   .menu-footer {
     display: flex;

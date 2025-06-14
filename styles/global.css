@@ -49,7 +49,6 @@ h1 {
   text-shadow: 0 0 10px white;
 }
 h2 {
-  font-family: "Anton";
   font-size: 2em;
   text-shadow: 2px 2px 4px black;
   margin-bottom: 0.3em;
@@ -214,7 +213,7 @@ footer {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: var(--color-bg1);
+    background: linear-gradient(var(--color-bg1), var(--color-bg2));
     height: 100%;
     padding: 1em;
     text-align: center;
@@ -222,6 +221,9 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     font-size: 1.1em;
+  }
+  .menu-content h2 {
+    text-shadow: 0 0 3px white;
   }
   #close {
     font-size: 4em;
@@ -246,24 +248,36 @@ footer {
     flex-direction: column;
     gap: 1em;
   }
-  .color-toggle {
-    font-size: 1.5em;
-    font-weight: normal;
-    padding: 0.3em;
-    color: white;
-    background: none;
-    border: none;
-    font-family: inherit;
+  .menu-content ul li a {
+    color: var(--color-blue);
+    text-shadow: 0 0 3px var(--color-blue);
   }
   .menu-content a {
     text-decoration: none;
-    color: white;
     font-size: 1.5em;
     padding: 0.3em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
   }
   .menu-footer {
     display: flex;
     flex-direction: column;
+  }
+  .color-toggle {
+    width: 30px;
+    height: 30px;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+  }
+  .menu-footer a {
+    color: var(--color-purple-accent);
+    text-shadow: 0 0 3px var(--color-purple-accent);
   }
   footer {
     gap: 20px;
