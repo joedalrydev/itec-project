@@ -32,7 +32,7 @@ $pathToReserve = './reserve/my_hero_academia-reserve.php';
     <style>
         body {
             background:
-                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
+                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, var(--color-bg1) 100%),
                 url(../images/my_hero_academia.jpg) left top no-repeat;
             background-size: cover, 50% 100%;
             background-position: center center, left top;
@@ -48,7 +48,7 @@ $pathToReserve = './reserve/my_hero_academia-reserve.php';
         @media only screen and (max-width: 480px) {
             body {
                 background:
-                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
                     url(../images/my_hero_academia.jpg) center center no-repeat;
                 background-size: cover;
             }
@@ -66,9 +66,7 @@ $pathToReserve = './reserve/my_hero_academia-reserve.php';
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic" onclick="toggleAvatarHover()">
             <div id="avatarHover">
-                <button class="color-toggle original" data-scheme="original"></button>
-                <button class="color-toggle red" data-scheme="red"></button>
-                <button class="color-toggle green" data-scheme="green"></button>
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -82,24 +80,20 @@ $pathToReserve = './reserve/my_hero_academia-reserve.php';
     <div id="menu-sidebar">
         <div class="menu-content">
             <div class="menu-header">
-                <img src="../images/logo.png" alt="Logo" class="logo">
+                <span id="close">&times;</span>
                 <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
-                <h2><?php echo $username ?></h2>
+                <h2 class="blue-text"><?php echo $username ?></h2>
             </div>
             <ul>
-                <li><a href="../home.php"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="../profile.php"><i class="fa fa-user"></i>Profile</a></li>
-                <li><a href="../profile_animeList.php"><i class="fa fa-list"></i>List</a></li>
-                <li><a href="../browse.php"><i class="fa fa-ticket"></i>Reserve</a></li>
+                <li><a href="../home.php">Home</a></li>
+                <li><a href="../profile.php">Profile</a></li>
+                <li><a href="../profile_animeList.php">List</a></li>
+                <li><a href="../browse.php">Reserve</a></li>
             </ul>
             <div class="menu-footer">
-                <div class="buttons">
-                    <button class="color-toggle original" data-scheme="original"></button>
-                    <button class="color-toggle red" data-scheme="red"></button>
-                    <button class="color-toggle green" data-scheme="green"></button>
-                </div>
-                <a href="../settings.php"><i class="fa fa-cog"></i>Settings</a>
-                <a href="../index.php"><i class="fa fa-sign-out"></i>Logout</a>
+                <button class="color-toggle">Switch Color Scheme</button>
+                <a href="../settings.php">Settings</a>
+                <a href="../index.php">Logout</a>
             </div>
         </div>
     </div>
@@ -110,11 +104,6 @@ $pathToReserve = './reserve/my_hero_academia-reserve.php';
             <h1>My Hero Academia</h1>
             <p class="genre">Action, Adventure, Comedy</p>
             <p>
-                What would the world be like if 80 percent of the population manifested extraordinary superpowers called “Quirks” at age four? 
-                Heroes and villains would be battling it out everywhere! 
-                Becoming a hero would mean learning to use your power, but where would you go to study? 
-                U.A. High's Hero Program of course! But what would you do if you were one of the 20 percent who were born Quirkless?
-
                 Middle school student Izuku Midoriya wants to be a hero more than anything, but he hasn't got an ounce of power in him. 
                 With no chance of ever getting into the prestigious U.A. High School for budding heroes, his life is looking more and more like a dead end. 
                 Then an encounter with All Might, the greatest hero of them all gives him a chance to change his destiny…

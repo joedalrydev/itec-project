@@ -32,7 +32,7 @@ $pathToReserve = './reserve/kuroko_no_basket-reserve.php';
     <style>
         body {
             background:
-                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
+                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, var(--color-bg1) 100%),
                 url(../images/kuroko_no_basket.jpg) left top no-repeat;
             background-size: cover, 50% 100%;
             background-position: center center, left top;
@@ -48,7 +48,7 @@ $pathToReserve = './reserve/kuroko_no_basket-reserve.php';
         @media only screen and (max-width: 480px) {
             body {
                 background:
-                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
                     url(../images/kuroko_no_basket.jpg) center center no-repeat;
                 background-size: cover;
             }
@@ -66,9 +66,7 @@ $pathToReserve = './reserve/kuroko_no_basket-reserve.php';
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic" onclick="toggleAvatarHover()">
             <div id="avatarHover">
-                <button class="color-toggle original" data-scheme="original"></button>
-                <button class="color-toggle red" data-scheme="red"></button>
-                <button class="color-toggle green" data-scheme="green"></button>
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -82,24 +80,20 @@ $pathToReserve = './reserve/kuroko_no_basket-reserve.php';
     <div id="menu-sidebar">
         <div class="menu-content">
             <div class="menu-header">
-                <img src="../images/logo.png" alt="Logo" class="logo">
+                <span id="close">&times;</span>
                 <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
-                <h2><?php echo $username ?></h2>
+                <h2 class="blue-text"><?php echo $username ?></h2>
             </div>
             <ul>
-                <li><a href="../home.php"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="../profile.php"><i class="fa fa-user"></i>Profile</a></li>
-                <li><a href="../profile_animeList.php"><i class="fa fa-list"></i>List</a></li>
-                <li><a href="../browse.php"><i class="fa fa-ticket"></i>Reserve</a></li>
+                <li><a href="../home.php">Home</a></li>
+                <li><a href="../profile.php">Profile</a></li>
+                <li><a href="../profile_animeList.php">List</a></li>
+                <li><a href="../browse.php">Reserve</a></li>
             </ul>
             <div class="menu-footer">
-                <div class="buttons">
-                    <button class="color-toggle original" data-scheme="original"></button>
-                    <button class="color-toggle red" data-scheme="red"></button>
-                    <button class="color-toggle green" data-scheme="green"></button>
-                </div>
-                <a href="../settings.php"><i class="fa fa-cog"></i>Settings</a>
-                <a href="../index.php"><i class="fa fa-sign-out"></i>Logout</a>
+                <button class="color-toggle">Switch Color Scheme</button>
+                <a href="../settings.php">Settings</a>
+                <a href="../index.php">Logout</a>
             </div>
         </div>
     </div>
@@ -112,12 +106,7 @@ $pathToReserve = './reserve/kuroko_no_basket-reserve.php';
             <p>
                 Teikou Junior High School's basketball team is crowned champion three years in a row thanks to five outstanding players who, with their breathtaking and unique skills, leave opponents in despair and fans in admiration. 
                 However, after graduating, these teammates, known as "The Generation of Miracles", go their separate ways and now consider each other as rivals.
-
-                At Seirin High School, two newly recruited freshmen prove that they are not ordinary basketball players: Taiga Kagami, a promising player returning from the US, and Tetsuya Kuroko, a seemingly ordinary student whose lack of presence allows him to move around unnoticed. 
-                Although Kuroko is neither athletic nor able to score any points, he was a member of Teikou's basketball team, where he played as the "Phantom Sixth Man," who easily passed the ball and assisted his teammates.
-
-                Kuroko no Basket follows the journey of Seirin's players as they attempt to become the best Japanese high school team by winning the Interhigh Championship. 
-                To reach their goal, they have to cross pathways with several powerful teams, some of which have one of the five players with godlike abilities, whom Kuroko and Taiga make a pact to defeat. 
+                
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>

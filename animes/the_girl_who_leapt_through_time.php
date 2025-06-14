@@ -32,13 +32,12 @@ $pathToReserve = './reserve/the_girl_who_leapt_through_time-reserve.php';
     <style>
         body {
             background:
-                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
+                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, var(--color-bg1) 100%),
                 url(../images/the_girl_who_leapt_through_time.png) left top no-repeat;
             background-size: cover, 50% 100%;
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
-
         .poster {
             background: url(../images/the_girl_who_leapt_through_time.png) no-repeat center center;
             background-size: cover;
@@ -49,7 +48,7 @@ $pathToReserve = './reserve/the_girl_who_leapt_through_time-reserve.php';
         @media only screen and (max-width: 480px) {
             body {
                 background:
-                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
                     url(../images/the_girl_who_leapt_through_time.png) center center no-repeat;
                 background-size: cover;
             }
@@ -67,9 +66,7 @@ $pathToReserve = './reserve/the_girl_who_leapt_through_time-reserve.php';
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic" onclick="toggleAvatarHover()">
             <div id="avatarHover">
-                <button class="color-toggle original" data-scheme="original"></button>
-                <button class="color-toggle red" data-scheme="red"></button>
-                <button class="color-toggle green" data-scheme="green"></button>
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -79,28 +76,24 @@ $pathToReserve = './reserve/the_girl_who_leapt_through_time-reserve.php';
     <div id="menu">
         <i class="fa fa-bars"></i>
     </div>
-    
+
     <div id="menu-sidebar">
         <div class="menu-content">
             <div class="menu-header">
-                <img src="../images/logo.png" alt="Logo" class="logo">
+                <span id="close">&times;</span>
                 <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
-                <h2><?php echo $username ?></h2>
+                <h2 class="blue-text"><?php echo $username ?></h2>
             </div>
             <ul>
-                <li><a href="../home.php"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="../profile.php"><i class="fa fa-user"></i>Profile</a></li>
-                <li><a href="../profile_animeList.php"><i class="fa fa-list"></i>List</a></li>
-                <li><a href="../browse.php"><i class="fa fa-ticket"></i>Reserve</a></li>
+                <li><a href="../home.php">Home</a></li>
+                <li><a href="../profile.php">Profile</a></li>
+                <li><a href="../profile_animeList.php">List</a></li>
+                <li><a href="../browse.php">Reserve</a></li>
             </ul>
             <div class="menu-footer">
-                <div class="buttons">
-                    <button class="color-toggle original" data-scheme="original"></button>
-                    <button class="color-toggle red" data-scheme="red"></button>
-                    <button class="color-toggle green" data-scheme="green"></button>
-                </div>
-                <a href="../settings.php"><i class="fa fa-cog"></i>Settings</a>
-                <a href="../index.php"><i class="fa fa-sign-out"></i>Logout</a>
+                <button class="color-toggle">Switch Color Scheme</button>
+                <a href="../settings.php">Settings</a>
+                <a href="../index.php">Logout</a>
             </div>
         </div>
     </div>
@@ -164,8 +157,8 @@ $pathToReserve = './reserve/the_girl_who_leapt_through_time-reserve.php';
                 <span class="close" id="closeTrailerModal">&times;</span>
                 <div class="trailer-video-wrapper">
                     <iframe id="trailerIframe"
-                        width="100%" height="100%"
-                        src=""
+                        width="100%" height="100%" 
+                        src="" 
                         frameborder="0"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowfullscreen>

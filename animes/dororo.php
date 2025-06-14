@@ -32,7 +32,7 @@ $pathToReserve = './reserve/dororo-reserve.php';
     <style>
         body {
             background:
-                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
+                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, var(--color-bg1) 100%),
                 url(../images/dororo.jpg) left top no-repeat;
             background-size: cover, 50% 100%;
             background-position: center center, left top;
@@ -48,7 +48,7 @@ $pathToReserve = './reserve/dororo-reserve.php';
         @media only screen and (max-width: 480px) {
             body {
                 background:
-                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
                     url(../images/dororo.jpg) center center no-repeat;
                 background-size: cover;
             }
@@ -66,9 +66,7 @@ $pathToReserve = './reserve/dororo-reserve.php';
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic" onclick="toggleAvatarHover()">
             <div id="avatarHover">
-                <button class="color-toggle original" data-scheme="original"></button>
-                <button class="color-toggle red" data-scheme="red"></button>
-                <button class="color-toggle green" data-scheme="green"></button>
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -82,24 +80,20 @@ $pathToReserve = './reserve/dororo-reserve.php';
     <div id="menu-sidebar">
         <div class="menu-content">
             <div class="menu-header">
-                <img src="../images/logo.png" alt="Logo" class="logo">
+                <span id="close">&times;</span>
                 <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
-                <h2><?php echo $username ?></h2>
+                <h2 class="blue-text"><?php echo $username ?></h2>
             </div>
             <ul>
-                <li><a href="../home.php"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="../profile.php"><i class="fa fa-user"></i>Profile</a></li>
-                <li><a href="../profile_animeList.php"><i class="fa fa-list"></i>List</a></li>
-                <li><a href="../browse.php"><i class="fa fa-ticket"></i>Reserve</a></li>
+                <li><a href="../home.php">Home</a></li>
+                <li><a href="../profile.php">Profile</a></li>
+                <li><a href="../profile_animeList.php">List</a></li>
+                <li><a href="../browse.php">Reserve</a></li>
             </ul>
             <div class="menu-footer">
-                <div class="buttons">
-                    <button class="color-toggle original" data-scheme="original"></button>
-                    <button class="color-toggle red" data-scheme="red"></button>
-                    <button class="color-toggle green" data-scheme="green"></button>
-                </div>
-                <a href="../settings.php"><i class="fa fa-cog"></i>Settings</a>
-                <a href="../index.php"><i class="fa fa-sign-out"></i>Logout</a>
+                <button class="color-toggle">Switch Color Scheme</button>
+                <a href="../settings.php">Settings</a>
+                <a href="../index.php">Logout</a>
             </div>
         </div>
     </div>
@@ -112,7 +106,7 @@ $pathToReserve = './reserve/dororo-reserve.php';
             <p>
                 Dororo, a young orphan thief, meets Hyakkimaru, a powerful ronin. 
                 Hyakkimaru's father, a greedy feudal lord, had made a pact with 12 demons, offering his yet-unborn son's body parts in exchange for great power. 
-                Thus, Hyakkimaru - who was born without arms, legs, eyes, ears, a nose or a mouth - was abandoned in a river as a baby. 
+                
                 Rescued and raised by Dr. Honma, who equips him with artificial limbs and teaches him sword-fighting techniques, Hyakkimaru discovers that each time he slays a demon, a piece of his body is restored. 
                 Now, he roams the war-torn countryside in search of demons.
             </p>

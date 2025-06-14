@@ -32,7 +32,7 @@ $pathToReserve = './reserve/ya_boy_kongming-reserve.php';
     <style>
         body {
             background:
-                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70%, var(--color-bg1) 100%),
+                linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, var(--color-bg1) 100%),
                 url(../images/ya_boy_kongming.jpg) left top no-repeat;
             background-size: cover, 50% 100%;
             background-position: center center, left top;
@@ -48,7 +48,7 @@ $pathToReserve = './reserve/ya_boy_kongming-reserve.php';
         @media only screen and (max-width: 480px) {
             body {
                 background:
-                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 70, var(--color-bg1) 100%),
+                    linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 95%, rgb(21, 1, 6) 100%),
                     url(../images/ya_boy_kongming.jpg) center center no-repeat;
                 background-size: cover;
             }
@@ -66,9 +66,7 @@ $pathToReserve = './reserve/ya_boy_kongming-reserve.php';
         <div class="avatar">
             <img src="<?php echo $pfp; ?>" alt="Logo" width="50px" height="50px" id="profilepic" onclick="toggleAvatarHover()">
             <div id="avatarHover">
-                <button class="color-toggle original" data-scheme="original"></button>
-                <button class="color-toggle red" data-scheme="red"></button>
-                <button class="color-toggle green" data-scheme="green"></button>
+                <button class="color-toggle">Switch Color Scheme</button>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
@@ -82,24 +80,20 @@ $pathToReserve = './reserve/ya_boy_kongming-reserve.php';
     <div id="menu-sidebar">
         <div class="menu-content">
             <div class="menu-header">
-                <img src="../images/logo.png" alt="Logo" class="logo">
+                <span id="close">&times;</span>
                 <img src="<?php echo $pfp; ?>" alt="Logo" width="75px" height="75px">
-                <h2><?php echo $username ?></h2>
+                <h2 class="blue-text"><?php echo $username ?></h2>
             </div>
             <ul>
-                <li><a href="../home.php"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="../profile.php"><i class="fa fa-user"></i>Profile</a></li>
-                <li><a href="../profile_animeList.php"><i class="fa fa-list"></i>List</a></li>
-                <li><a href="../browse.php"><i class="fa fa-ticket"></i>Reserve</a></li>
+                <li><a href="../home.php">Home</a></li>
+                <li><a href="../profile.php">Profile</a></li>
+                <li><a href="../profile_animeList.php">List</a></li>
+                <li><a href="../browse.php">Reserve</a></li>
             </ul>
             <div class="menu-footer">
-                <div class="buttons">
-                    <button class="color-toggle original" data-scheme="original"></button>
-                    <button class="color-toggle red" data-scheme="red"></button>
-                    <button class="color-toggle green" data-scheme="green"></button>
-                </div>
-                <a href="../settings.php"><i class="fa fa-cog"></i>Settings</a>
-                <a href="../index.php"><i class="fa fa-sign-out"></i>Logout</a>
+                <button class="color-toggle">Switch Color Scheme</button>
+                <a href="../settings.php">Settings</a>
+                <a href="../index.php">Logout</a>
             </div>
         </div>
     </div>
@@ -113,8 +107,6 @@ $pathToReserve = './reserve/ya_boy_kongming-reserve.php';
                 Fate and reincarnation deliver brilliant military strategist, Kongming, from warring, ancient China to Japan’s modern party hot spot in Shibuya City, Tokyo. 
                 After a lifetime of battles and military skirmishes, Kongming wished with his last breath to be reborn in a world of peace and prosperity. 
                 It’s nearly two millennia later and he’s finding his way in a very different world than that of his past life. 
-                When he meets Eiko, an amateur musician with big dreams, the unlikely duo strikes up an even unlikelier friendship. 
-                Eiko has street smarts to help Kongming navigate this strange new world, and Kongming will use his strategic mind to help Eiko achieve stardom! 
             </p>
             <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
             <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
