@@ -234,8 +234,8 @@ h1 {
   background: linear-gradient(to right, var(--color-bg1), var(--color-bg2));
   margin: 2% auto;
   padding: 1em;
-  border-radius: 15px;
-  border: 2px solid var(--color-blue);
+  border-radius: 40px;
+  box-shadow: 0 0 10px white;
   width: 90%;
   position: relative;
 }
@@ -366,11 +366,15 @@ select option {
   background: var(--color-blue) !important;
 }
 #screen {
-  background-color: var(--color-purple-accent);
-  border: 3px solid var(--color-user-seat);
+  background: linear-gradient(
+    to right,
+    var(--color-gradient-start),
+    var(--color-gradient-end)
+  );
+  box-shadow: 0 0 7px white;
   padding: 0.6em;
   border-radius: 30px;
-  text-shadow: 0 0 6px var(--color-black);
+  text-shadow: 0 0 6px white;
 }
 .seats-container {
   display: flex;
