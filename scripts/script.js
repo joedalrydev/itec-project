@@ -51,7 +51,7 @@ function displayMenu() {
   //kinukuha yung elements sa html
   const menuBtn = document.getElementById("menu");
   const menuSidebar = document.getElementById("menu-sidebar");
-  const closeBtn = document.getElementById("close");
+  const closeBtn = document.querySelector(".menu-header .logo");
 
   //dini-display o kino-close yung sidebar kapag pinindot yung menu button o close button
   menuBtn.onclick = function () {
