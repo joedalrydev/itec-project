@@ -39,6 +39,7 @@ $pathToReserve = './reserve/howls_moving_castle-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+
         .poster {
             background: url(../images/howls_moving_castle.jpg) no-repeat center center;
             background-size: cover;
@@ -111,16 +112,18 @@ $pathToReserve = './reserve/howls_moving_castle-reserve.php';
             <h1>Howl's Moving Castle</h1>
             <p class="genre">Adventure, Drama, Fantasy, Romance</p>
             <p>
-                Sophie, a quiet girl working in a hat shop, finds her life thrown into turmoil when she is literally swept off her feet by a handsome but mysterious wizard named Howl. 
-                The vain and vengeful Witch of the Waste, jealous of their friendship, puts a spell on Sophie. 
+                Sophie, a quiet girl working in a hat shop, finds her life thrown into turmoil when she is literally swept off her feet by a handsome but mysterious wizard named Howl.
+                The vain and vengeful Witch of the Waste, jealous of their friendship, puts a spell on Sophie.
                 In a life-changing adventure, Sophie climbs aboard Howl's magnificent flying castle and enters a magical world on a quest to break the spell.
             </p>
-            <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-            <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
-            <button id="watchTrailerBtn" class="button" type="button"
-                data-youtube="https://www.youtube.com/embed/iwROgK94zcM?autoplay=1&fs=1">
-                Watch Trailer
-            </button>
+            <div class="buttons">
+                <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
+                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                <button id="watchTrailerBtn" class="button" type="button"
+                    data-youtube="https://www.youtube.com/embed/iwROgK94zcM?autoplay=1&fs=1">
+                    Watch Trailer <i class="fa fa-play"></i>
+                </button>
+            </div>
         </div>
 
         <div id="addToListModal" class="modal">
@@ -162,8 +165,8 @@ $pathToReserve = './reserve/howls_moving_castle-reserve.php';
                 <span class="close" id="closeTrailerModal">&times;</span>
                 <div class="trailer-video-wrapper">
                     <iframe id="trailerIframe"
-                        width="100%" height="100%" 
-                        src="" 
+                        width="100%" height="100%"
+                        src=""
                         frameborder="0"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowfullscreen>

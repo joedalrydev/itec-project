@@ -39,6 +39,7 @@ $pathToReserve = './reserve/kaguya_sama_love_is_war-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+
         .poster {
             background: url(../images/kaguya_sama_love_is_war.jpg) no-repeat center center;
             background-size: cover;
@@ -111,17 +112,19 @@ $pathToReserve = './reserve/kaguya_sama_love_is_war-reserve.php';
             <h1>Kaguya-sama: Love is War</h1>
             <p class="genre">Action</p>
             <p>
-                Known for being both brilliant and powerful, Miyuki Shirogane and Kaguya Shinomiya lead the illustrious Shuchiin Academy as near equals. 
+                Known for being both brilliant and powerful, Miyuki Shirogane and Kaguya Shinomiya lead the illustrious Shuchiin Academy as near equals.
                 And everyone thinks they’d make a great couple.
-                Pride and arrogance are in ample supply, so the only logical move is to trick the other into instigating a date! 
-                Who will come out on top in this psychological war where the first move is the only one that matters? 
+                Pride and arrogance are in ample supply, so the only logical move is to trick the other into instigating a date!
+                Who will come out on top in this psychological war where the first move is the only one that matters?
             </p>
-            <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-            <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
-            <button id="watchTrailerBtn" class="button" type="button"
-                data-youtube="https://www.youtube.com/embed/rZ95aZmQu_8?autoplay=1&fs=1">
-                Watch Trailer
-            </button>
+            <div class="buttons">
+                <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
+                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                <button id="watchTrailerBtn" class="button" type="button"
+                    data-youtube="https://www.youtube.com/embed/rZ95aZmQu_8?autoplay=1&fs=1">
+                    Watch Trailer <i class="fa fa-play"></i>
+                </button>
+            </div>
         </div>
 
         <div id="addToListModal" class="modal">
@@ -163,8 +166,8 @@ $pathToReserve = './reserve/kaguya_sama_love_is_war-reserve.php';
                 <span class="close" id="closeTrailerModal">&times;</span>
                 <div class="trailer-video-wrapper">
                     <iframe id="trailerIframe"
-                        width="100%" height="100%" 
-                        src="" 
+                        width="100%" height="100%"
+                        src=""
                         frameborder="0"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowfullscreen>

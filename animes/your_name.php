@@ -39,6 +39,7 @@ $pathToReserve = './reserve/your_name-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+
         .poster {
             background: url(../images/your_name.png) no-repeat center center;
             background-size: cover;
@@ -111,18 +112,20 @@ $pathToReserve = './reserve/your_name-reserve.php';
             <h1>Your Name.</h1>
             <p class="genre">Drama, Romance, Supernatural</p>
             <p>
-                Mitsuha Miyamizu, a high school girl, yearns to live the life of a boy in the bustling city of Tokyo—a dream that stands in stark contrast to her present life in the countryside. 
+                Mitsuha Miyamizu, a high school girl, yearns to live the life of a boy in the bustling city of Tokyo—a dream that stands in stark contrast to her present life in the countryside.
                 Meanwhile in the city, Taki Tachibana lives a busy life as a high school student while juggling his part-time job and hopes for a future in architecture.
 
-                One day, Mitsuha awakens in a room that is not her own and suddenly finds herself living the dream life in Tokyo—but in Taki's body! 
-                Elsewhere, Taki finds himself living Mitsuha's life in the humble countryside. 
+                One day, Mitsuha awakens in a room that is not her own and suddenly finds herself living the dream life in Tokyo—but in Taki's body!
+                Elsewhere, Taki finds himself living Mitsuha's life in the humble countryside.
             </p>
-            <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-            <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
-            <button id="watchTrailerBtn" class="button" type="button"
-                data-youtube="https://www.youtube.com/embed/NooIc3dMncc?autoplay=1&fs=1">
-                Watch Trailer
-            </button>
+            <div class="buttons">
+                <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
+                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                <button id="watchTrailerBtn" class="button" type="button"
+                    data-youtube="https://www.youtube.com/embed/NooIc3dMncc?autoplay=1&fs=1">
+                    Watch Trailer <i class="fa fa-play"></i>
+                </button>
+            </div>
         </div>
 
         <div id="addToListModal" class="modal">
@@ -164,8 +167,8 @@ $pathToReserve = './reserve/your_name-reserve.php';
                 <span class="close" id="closeTrailerModal">&times;</span>
                 <div class="trailer-video-wrapper">
                     <iframe id="trailerIframe"
-                        width="100%" height="100%" 
-                        src="" 
+                        width="100%" height="100%"
+                        src=""
                         frameborder="0"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowfullscreen>

@@ -39,6 +39,7 @@ $pathToReserve = './reserve/decadence-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+
         .poster {
             background: url(../images/decadence.png) no-repeat center center;
             background-size: cover;
@@ -111,18 +112,20 @@ $pathToReserve = './reserve/decadence-reserve.php';
             <h1>DECA-DENCE</h1>
             <p class="genre">Action, Adventure, Sci-Fi</p>
             <p>
-                Many years have passed since humanity was driven to the brink of extinction by the sudden emergence of the unknown life forms Gadoll. 
+                Many years have passed since humanity was driven to the brink of extinction by the sudden emergence of the unknown life forms Gadoll.
                 Those humans that survived now dwell in a 3000 meter-high mobile fortress Deca-dence built to protect themselves from the Gadoll threat.
 
-                Denizens of Deca-dence fall into two categories: Gears, warriors who fight the Gadoll daily, and Tankers, those without the skills to fight. 
+                Denizens of Deca-dence fall into two categories: Gears, warriors who fight the Gadoll daily, and Tankers, those without the skills to fight.
                 One day, Natsume, a Tanker girl who dreams of becoming a Gear meets surly Kaburagi, an armor repairman of Deca-dence.
             </p>
-            <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-            <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
-            <button id="watchTrailerBtn" class="button" type="button"
-                data-youtube="https://www.youtube.com/embed/1IqvCr1Hohs?autoplay=1&fs=1">
-                Watch Trailer
-            </button>
+            <div class="buttons">
+                <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
+                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                <button id="watchTrailerBtn" class="button" type="button"
+                    data-youtube="https://www.youtube.com/embed/1IqvCr1Hohs?autoplay=1&fs=1">
+                    Watch Trailer <i class="fa fa-play"></i>
+                </button>
+            </div>
         </div>
 
         <div id="addToListModal" class="modal">
@@ -164,8 +167,8 @@ $pathToReserve = './reserve/decadence-reserve.php';
                 <span class="close" id="closeTrailerModal">&times;</span>
                 <div class="trailer-video-wrapper">
                     <iframe id="trailerIframe"
-                        width="100%" height="100%" 
-                        src="" 
+                        width="100%" height="100%"
+                        src=""
                         frameborder="0"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowfullscreen>

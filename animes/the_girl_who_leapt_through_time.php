@@ -80,7 +80,7 @@ $pathToReserve = './reserve/the_girl_who_leapt_through_time-reserve.php';
     <div id="menu">
         <i class="fa fa-bars"></i>
     </div>
-    
+
     <div id="menu-sidebar">
         <div class="menu-content">
             <div class="menu-header">
@@ -118,12 +118,14 @@ $pathToReserve = './reserve/the_girl_who_leapt_through_time-reserve.php';
                 After a fated event, her life takes a turn for the extraordinary.
                 Though she initially uses her power to literally "leap" into the past and change little things in order to make her life easier, she soon has to face the fact that changing the past can have drastic consequences.
             </p>
-            <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-            <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
-            <button id="watchTrailerBtn" class="button" type="button"
-                data-youtube="https://www.youtube.com/embed/eWnTeKEsDlU?autoplay=1&fs=1">
-                Watch Trailer
-            </button>
+            <div class="buttons">
+                <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
+                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                <button id="watchTrailerBtn" class="button" type="button"
+                    data-youtube="https://www.youtube.com/embed/eWnTeKEsDlU?autoplay=1&fs=1">
+                    Watch Trailer <i class="fa fa-play"></i>
+                </button>
+            </div>
         </div>
 
         <div id="addToListModal" class="modal">

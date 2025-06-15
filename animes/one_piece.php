@@ -122,7 +122,7 @@ $pathToReserve = './reserve/one-piece-reserve.php';
                 <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
                 <button id="watchTrailerBtn" class="button" type="button"
                     data-youtube="https://www.youtube.com/embed/MCb13lbVGE0?autoplay=1&fs=1">
-                    Watch Trailer
+                    Watch Trailer <i class="fa fa-play"></i>
                 </button>
             </div>
         </div>

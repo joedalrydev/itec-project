@@ -39,6 +39,7 @@ $pathToReserve = './reserve/attack_on_titan-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+
         .poster {
             background: url(../images/attack_on_titan.jpg) no-repeat center center;
             background-size: cover;
@@ -111,17 +112,19 @@ $pathToReserve = './reserve/attack_on_titan-reserve.php';
             <h1>Attack on Titan</h1>
             <p class="genre">Action, Drama, Fantasy, Mystery</p>
             <p>
-                Flash forward to the present and the city has not seen a titan in over 100 years. 
-                Teenage boy Eren and his foster sister Mikasa witness something horrific as the city walls are destroyed by a colossal titan that appears out of thin air. 
-                As the smaller titans flood the city, the two kids watch in horror as their mother is eaten alive. 
+                Flash forward to the present and the city has not seen a titan in over 100 years.
+                Teenage boy Eren and his foster sister Mikasa witness something horrific as the city walls are destroyed by a colossal titan that appears out of thin air.
+                As the smaller titans flood the city, the two kids watch in horror as their mother is eaten alive.
                 Eren vows that he will murder every single titan and take revenge for all of mankind.
             </p>
-            <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-            <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
-            <button id="watchTrailerBtn" class="button" type="button"
-                data-youtube="https://www.youtube.com/embed/MGRm4IzK1SQ?autoplay=1&fs=1">
-                Watch Trailer
-            </button>
+            <div class="buttons">
+                <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
+                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                <button id="watchTrailerBtn" class="button" type="button"
+                    data-youtube="https://www.youtube.com/embed/MGRm4IzK1SQ?autoplay=1&fs=1">
+                    Watch Trailer <i class="fa fa-play"></i>
+                </button>
+            </div>
         </div>
 
         <div id="addToListModal" class="modal">
@@ -163,8 +166,8 @@ $pathToReserve = './reserve/attack_on_titan-reserve.php';
                 <span class="close" id="closeTrailerModal">&times;</span>
                 <div class="trailer-video-wrapper">
                     <iframe id="trailerIframe"
-                        width="100%" height="100%" 
-                        src="" 
+                        width="100%" height="100%"
+                        src=""
                         frameborder="0"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowfullscreen>

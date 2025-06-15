@@ -39,6 +39,7 @@ $pathToReserve = './reserve/weathering_with_you-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+
         .poster {
             background: url(../images/weathering_with_you.png) no-repeat center center;
             background-size: cover;
@@ -111,16 +112,18 @@ $pathToReserve = './reserve/weathering_with_you-reserve.php';
             <h1>Weathering With You</h1>
             <p class="genre">Drama, Romance Slice of Life, Supernatural</p>
             <p>
-                High school student Hodaka leaves his home on an isolated island and moves to Tokyo, but he immediately becomes broke. 
-                He lives his days in isolation, but finally finds a job as a writer for a shady occult magazine. 
-                After he starts his job, the weather has been rainy day after day. 
+                High school student Hodaka leaves his home on an isolated island and moves to Tokyo, but he immediately becomes broke.
+                He lives his days in isolation, but finally finds a job as a writer for a shady occult magazine.
+                After he starts his job, the weather has been rainy day after day.
             </p>
-            <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-            <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
-            <button id="watchTrailerBtn" class="button" type="button"
-                data-youtube="https://www.youtube.com/embed/Q6iK6DjV_iE?autoplay=1&fs=1">
-                Watch Trailer
-            </button>
+            <div class="buttons">
+                <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
+                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                <button id="watchTrailerBtn" class="button" type="button"
+                    data-youtube="https://www.youtube.com/embed/Q6iK6DjV_iE?autoplay=1&fs=1">
+                    Watch Trailer <i class="fa fa-play"></i>
+                </button>
+            </div>
         </div>
 
         <div id="addToListModal" class="modal">
@@ -162,8 +165,8 @@ $pathToReserve = './reserve/weathering_with_you-reserve.php';
                 <span class="close" id="closeTrailerModal">&times;</span>
                 <div class="trailer-video-wrapper">
                     <iframe id="trailerIframe"
-                        width="100%" height="100%" 
-                        src="" 
+                        width="100%" height="100%"
+                        src=""
                         frameborder="0"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowfullscreen>

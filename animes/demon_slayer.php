@@ -39,6 +39,7 @@ $pathToReserve = './reserve/demon_slayer-reserve-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+
         .poster {
             background: url(../images/demon_slayer.jpg) no-repeat center center;
             background-size: cover;
@@ -111,17 +112,19 @@ $pathToReserve = './reserve/demon_slayer-reserve-reserve.php';
             <h1>Demon Slayer</h1>
             <p class="genre">Action, Adventure, Drama, Fantasy, Supernatural</p>
             <p>
-                It is the Taisho Period in Japan. 
-                Tanjiro, a kindhearted boy who sells charcoal for a living, finds his family slaughtered by a demon. 
-                To make matters worse, his younger sister Nezuko, the sole survivor, has been transformed into a demon herself. 
+                It is the Taisho Period in Japan.
+                Tanjiro, a kindhearted boy who sells charcoal for a living, finds his family slaughtered by a demon.
+                To make matters worse, his younger sister Nezuko, the sole survivor, has been transformed into a demon herself.
                 Though devastated by this grim reality, Tanjiro resolves to become a “demon slayer” so that he can turn his sister back into a human, and kill the demon that massacred his family.
             </p>
-            <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-            <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
-            <button id="watchTrailerBtn" class="button" type="button"
-                data-youtube="https://www.youtube.com/embed/VQGCKyvzIM4?autoplay=1&fs=1">
-                Watch Trailer
-            </button>
+            <div class="buttons">
+                <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
+                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                <button id="watchTrailerBtn" class="button" type="button"
+                    data-youtube="https://www.youtube.com/embed/VQGCKyvzIM4?autoplay=1&fs=1">
+                    Watch Trailer <i class="fa fa-play"></i>
+                </button>
+            </div>
         </div>
 
         <div id="addToListModal" class="modal">
@@ -163,8 +166,8 @@ $pathToReserve = './reserve/demon_slayer-reserve-reserve.php';
                 <span class="close" id="closeTrailerModal">&times;</span>
                 <div class="trailer-video-wrapper">
                     <iframe id="trailerIframe"
-                        width="100%" height="100%" 
-                        src="" 
+                        width="100%" height="100%"
+                        src=""
                         frameborder="0"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowfullscreen>

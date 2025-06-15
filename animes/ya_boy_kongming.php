@@ -39,6 +39,7 @@ $pathToReserve = './reserve/ya_boy_kongming-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+
         .poster {
             background: url(../images/ya_boy_kongming.jpg) no-repeat center center;
             background-size: cover;
@@ -111,16 +112,18 @@ $pathToReserve = './reserve/ya_boy_kongming-reserve.php';
             <h1>Ya Boy Kongming!</h1>
             <p class="genre">Comedy, Drama, Music, Supernatural</p>
             <p>
-                Fate and reincarnation deliver brilliant military strategist, Kongming, from warring, ancient China to Japan’s modern party hot spot in Shibuya City, Tokyo. 
-                After a lifetime of battles and military skirmishes, Kongming wished with his last breath to be reborn in a world of peace and prosperity. 
-                It’s nearly two millennia later and he’s finding his way in a very different world than that of his past life. 
+                Fate and reincarnation deliver brilliant military strategist, Kongming, from warring, ancient China to Japan’s modern party hot spot in Shibuya City, Tokyo.
+                After a lifetime of battles and military skirmishes, Kongming wished with his last breath to be reborn in a world of peace and prosperity.
+                It’s nearly two millennia later and he’s finding his way in a very different world than that of his past life.
             </p>
-            <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-            <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
-            <button id="watchTrailerBtn" class="button" type="button"
-                data-youtube="https://www.youtube.com/embed/gNn9NxZH2Vo?autoplay=1&fs=1">
-                Watch Trailer
-            </button>
+            <div class="buttons">
+                <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
+                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                <button id="watchTrailerBtn" class="button" type="button"
+                    data-youtube="https://www.youtube.com/embed/gNn9NxZH2Vo?autoplay=1&fs=1">
+                    Watch Trailer <i class="fa fa-play"></i>
+                </button>
+            </div>
         </div>
 
         <div id="addToListModal" class="modal">
@@ -162,8 +165,8 @@ $pathToReserve = './reserve/ya_boy_kongming-reserve.php';
                 <span class="close" id="closeTrailerModal">&times;</span>
                 <div class="trailer-video-wrapper">
                     <iframe id="trailerIframe"
-                        width="100%" height="100%" 
-                        src="" 
+                        width="100%" height="100%"
+                        src=""
                         frameborder="0"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowfullscreen>

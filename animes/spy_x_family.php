@@ -39,13 +39,14 @@ $pathToReserve = './reserve/spy_x_family-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+
         .poster {
             background: url(../images/spy_x_family.jpg) no-repeat center center;
             background-size: cover;
             flex-basis: 50%;
             border-radius: 20px;
         }
-        
+
         @media only screen and (max-width: 480px) {
             body {
                 background:
@@ -112,16 +113,18 @@ $pathToReserve = './reserve/spy_x_family-reserve.php';
             <p class="genre">Action, Comedy, Slice of Life, Supernatural</p>
             <p>
                 Everyone has a part of themselves they cannot show to anyone else.
-                "Twilight" takes on the identity of psychiatrist Loid Forger and starts looking for family members. 
-                But Anya, the daughter he adopts, turns out to have the ability to read people's minds, while his wife, Yor, is an assassin! 
+                "Twilight" takes on the identity of psychiatrist Loid Forger and starts looking for family members.
+                But Anya, the daughter he adopts, turns out to have the ability to read people's minds, while his wife, Yor, is an assassin!
                 With it being in each of their own interests to keep these facts hidden, they start living together while concealing their true identities from one another.
             </p>
-            <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-            <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
-            <button id="watchTrailerBtn" class="button" type="button"
-                data-youtube="https://www.youtube.com/embed/Oqd2C3oZkBU?autoplay=1&fs=1">
-                Watch Trailer
-            </button>
+            <div class="buttons">
+                <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
+                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                <button id="watchTrailerBtn" class="button" type="button"
+                    data-youtube="https://www.youtube.com/embed/Oqd2C3oZkBU?autoplay=1&fs=1">
+                    Watch Trailer <i class="fa fa-play"></i>
+                </button>
+            </div>
         </div>
 
         <div id="addToListModal" class="modal">
@@ -163,8 +166,8 @@ $pathToReserve = './reserve/spy_x_family-reserve.php';
                 <span class="close" id="closeTrailerModal">&times;</span>
                 <div class="trailer-video-wrapper">
                     <iframe id="trailerIframe"
-                        width="100%" height="100%" 
-                        src="" 
+                        width="100%" height="100%"
+                        src=""
                         frameborder="0"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowfullscreen>

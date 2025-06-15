@@ -97,7 +97,7 @@ nav a:hover {
 .green {
   background-color: #7ed957;
 }
-.fa-arrow-down {
+.fa {
   background-color: inherit;
   border: none;
   color: var(--color-arrow);
@@ -185,10 +185,10 @@ h1 {
   box-shadow: 0 0 10px var(--color-blue);
 }
 .fa-arrow-down,
-.fa-arrow-right {
+.fa-arrow-right,
+.fa-play {
   border: 2px solid var(--color-white);
   padding: 0.2em;
-  margin-left: 1em;
   color: var(--color-white);
   border-radius: 50%;
   text-align: center;

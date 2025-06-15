@@ -39,6 +39,7 @@ $pathToReserve = './reserve/made_in_abyss-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+
         .poster {
             background: url(../images/made_in_abyss.jpg) no-repeat center center;
             background-size: cover;
@@ -111,19 +112,21 @@ $pathToReserve = './reserve/made_in_abyss-reserve.php';
             <h1>Made in Abyss</h1>
             <p class="genre">Adventure, Drama, Fantasy, Horror, Mystery, Sci-Fi</p>
             <p>
-                The "Abyss" is the last unexplored place in the world. 
-                Strange and wonderful creatures roam within, and it is full of precious relics that present humans can't recreate. 
-                Those that dare to explore the depths are known as "Cave Raiders." 
-                An orphan girl named Riko lives on the rim. 
-                Her dream is to become a Cave Raider like her mother and solve the mysteries of the cave system. 
+                The "Abyss" is the last unexplored place in the world.
+                Strange and wonderful creatures roam within, and it is full of precious relics that present humans can't recreate.
+                Those that dare to explore the depths are known as "Cave Raiders."
+                An orphan girl named Riko lives on the rim.
+                Her dream is to become a Cave Raider like her mother and solve the mysteries of the cave system.
                 One day, Riko starts exploring the caves and discovers a robot who resembles a human boy.
             </p>
-            <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-            <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
-            <button id="watchTrailerBtn" class="button" type="button"
-                data-youtube="https://www.youtube.com/embed/kqBNQEUI8dM?autoplay=1&fs=1">
-                Watch Trailer
-            </button>
+            <div class="buttons">
+                <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
+                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                <button id="watchTrailerBtn" class="button" type="button"
+                    data-youtube="https://www.youtube.com/embed/kqBNQEUI8dM?autoplay=1&fs=1">
+                    Watch Trailer <i class="fa fa-play"></i>
+                </button>
+            </div>
         </div>
 
         <div id="addToListModal" class="modal">
@@ -165,8 +168,8 @@ $pathToReserve = './reserve/made_in_abyss-reserve.php';
                 <span class="close" id="closeTrailerModal">&times;</span>
                 <div class="trailer-video-wrapper">
                     <iframe id="trailerIframe"
-                        width="100%" height="100%" 
-                        src="" 
+                        width="100%" height="100%"
+                        src=""
                         frameborder="0"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowfullscreen>

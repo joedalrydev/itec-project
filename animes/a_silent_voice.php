@@ -39,6 +39,7 @@ $pathToReserve = './reserve/a_silent_voice-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+
         .poster {
             background: url(../images/a_silent_voice.jpg) no-repeat center center;
             background-size: cover;
@@ -116,12 +117,14 @@ $pathToReserve = './reserve/a_silent_voice-reserve.php';
                 Shouko transfers and Shouya grows up as an outcast.
                 Alone and depressed, the regretful Shouya finds Shouko to make amends.
             </p>
-            <button id="addToListBtn" class="button">Add to List <i class="fa fa-arrow-down"></i></button>
-            <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
-            <button id="watchTrailerBtn" class="button" type="button"
-                data-youtube="https://www.youtube.com/embed/nfK6UgLra7g?autoplay=1&fs=1">
-                Watch Trailer
-            </button>
+            <div class="buttons">
+                <button id="addToListBtn" class="button">Add to List <i class="fa fa-arrow-down"></i></button>
+                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                <button id="watchTrailerBtn" class="button" type="button"
+                    data-youtube="https://www.youtube.com/embed/nfK6UgLra7g?autoplay=1&fs=1">
+                    Watch Trailer <i class="fa fa-play"></i>
+                </button>
+            </div>
         </div>
 
         <div id="addToListModal" class="modal">
@@ -163,8 +166,8 @@ $pathToReserve = './reserve/a_silent_voice-reserve.php';
                 <span class="close" id="closeTrailerModal">&times;</span>
                 <div class="trailer-video-wrapper">
                     <iframe id="trailerIframe"
-                        width="100%" height="100%" 
-                        src="" 
+                        width="100%" height="100%"
+                        src=""
                         frameborder="0"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowfullscreen>
@@ -173,7 +176,7 @@ $pathToReserve = './reserve/a_silent_voice-reserve.php';
             </div>
         </div>
     </main>
-        
+
     <script>
         const animeList = <?php echo json_encode($animeList); ?>;
     </script>

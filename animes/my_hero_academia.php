@@ -39,6 +39,7 @@ $pathToReserve = './reserve/my_hero_academia-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+
         .poster {
             background: url(../images/my_hero_academia.jpg) no-repeat center center;
             background-size: cover;
@@ -111,16 +112,18 @@ $pathToReserve = './reserve/my_hero_academia-reserve.php';
             <h1>My Hero Academia</h1>
             <p class="genre">Action, Adventure, Comedy</p>
             <p>
-                Middle school student Izuku Midoriya wants to be a hero more than anything, but he hasn't got an ounce of power in him. 
-                With no chance of ever getting into the prestigious U.A. High School for budding heroes, his life is looking more and more like a dead end. 
+                Middle school student Izuku Midoriya wants to be a hero more than anything, but he hasn't got an ounce of power in him.
+                With no chance of ever getting into the prestigious U.A. High School for budding heroes, his life is looking more and more like a dead end.
                 Then an encounter with All Might, the greatest hero of them all gives him a chance to change his destiny…
             </p>
-            <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-            <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
-            <button id="watchTrailerBtn" class="button" type="button"
-                data-youtube="https://www.youtube.com/embed/EPVkcwyLQQ8?autoplay=1&fs=1">
-                Watch Trailer
-            </button>
+            <div class="buttons">
+                <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
+                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                <button id="watchTrailerBtn" class="button" type="button"
+                    data-youtube="https://www.youtube.com/embed/EPVkcwyLQQ8?autoplay=1&fs=1">
+                    Watch Trailer <i class="fa fa-play"></i>
+                </button>
+            </div>
         </div>
 
         <div id="addToListModal" class="modal">
@@ -162,8 +165,8 @@ $pathToReserve = './reserve/my_hero_academia-reserve.php';
                 <span class="close" id="closeTrailerModal">&times;</span>
                 <div class="trailer-video-wrapper">
                     <iframe id="trailerIframe"
-                        width="100%" height="100%" 
-                        src="" 
+                        width="100%" height="100%"
+                        src=""
                         frameborder="0"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowfullscreen>

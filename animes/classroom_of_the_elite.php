@@ -39,6 +39,7 @@ $pathToReserve = './reserve/classroom_of_the_elite-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+
         .poster {
             background: url(../images/classroom_of_the_elite.jpg) no-repeat center center;
             background-size: cover;
@@ -111,16 +112,18 @@ $pathToReserve = './reserve/classroom_of_the_elite-reserve.php';
             <h1>Classroom of the Elite</h1>
             <p class="genre">Drama, Psychological</p>
             <p>
-                Koudo Ikusei Senior High School is a leading school with state-of-the-art facilities. 
-                The students there have the freedom to wear any hairstyle and bring any personal effects they desire. 
+                Koudo Ikusei Senior High School is a leading school with state-of-the-art facilities.
+                The students there have the freedom to wear any hairstyle and bring any personal effects they desire.
                 Koudo Ikusei is like a utopia, but the truth is that only the most superior students receive favorable treatment.
             </p>
-            <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-            <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
-            <button id="watchTrailerBtn" class="button" type="button"
-                data-youtube="https://www.youtube.com/embed/F_-y2LkkUjg?autoplay=1&fs=1">
-                Watch Trailer
-            </button>
+            <div class="buttons">
+                <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
+                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                <button id="watchTrailerBtn" class="button" type="button"
+                    data-youtube="https://www.youtube.com/embed/F_-y2LkkUjg?autoplay=1&fs=1">
+                    Watch Trailer <i class="fa fa-play"></i>
+                </button>
+            </div>
         </div>
 
         <div id="addToListModal" class="modal">
@@ -162,8 +165,8 @@ $pathToReserve = './reserve/classroom_of_the_elite-reserve.php';
                 <span class="close" id="closeTrailerModal">&times;</span>
                 <div class="trailer-video-wrapper">
                     <iframe id="trailerIframe"
-                        width="100%" height="100%" 
-                        src="" 
+                        width="100%" height="100%"
+                        src=""
                         frameborder="0"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowfullscreen>

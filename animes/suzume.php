@@ -13,7 +13,7 @@ $pfp = ".." . $pfpPath;
 
 $title = 'Suzume';
 $genre = 'Adventure, Fantasy, Mystery, Supernatural';
-$maxEpisodes = '1'; 
+$maxEpisodes = '1';
 $year = '2022';
 $picture = './images/suzume.jpg';
 $format = 'movie';
@@ -39,6 +39,7 @@ $pathToReserve = './reserve/suzume-reserve.php';
             background-position: center center, left top;
             background-repeat: no-repeat, no-repeat;
         }
+
         .poster {
             background: url(../images/suzume.jpg) no-repeat center center;
             background-size: cover;
@@ -111,17 +112,19 @@ $pathToReserve = './reserve/suzume-reserve.php';
             <h1>Suzume</h1>
             <p class="genre">Adventure, Fantasy, Mystery, Supernatural</p>
             <p>
-                The story follows Suzume, a 17-year-old girl from a quiet Kyushu town who meets a young man looking for a door. 
-                They find a door within ruins in the mountain, and Suzume opens it. 
-                Soon, more doors begin to open around Japan, bringing disasters from the other side. 
+                The story follows Suzume, a 17-year-old girl from a quiet Kyushu town who meets a young man looking for a door.
+                They find a door within ruins in the mountain, and Suzume opens it.
+                Soon, more doors begin to open around Japan, bringing disasters from the other side.
                 The film depicts Suzume's liberation and growth, as she closes the doors that are causing disaster.
             </p>
-            <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-            <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
-            <button id="watchTrailerBtn" class="button" type="button"
-                data-youtube="https://www.youtube.com/embed/5pTcio2hTSw?autoplay=1&fs=1">
-                Watch Trailer
-            </button>
+            <div class="buttons">
+                <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
+                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                <button id="watchTrailerBtn" class="button" type="button"
+                    data-youtube="https://www.youtube.com/embed/5pTcio2hTSw?autoplay=1&fs=1">
+                    Watch Trailer <i class="fa fa-play"></i>
+                </button>
+            </div>
         </div>
 
         <div id="addToListModal" class="modal">
@@ -163,8 +166,8 @@ $pathToReserve = './reserve/suzume-reserve.php';
                 <span class="close" id="closeTrailerModal">&times;</span>
                 <div class="trailer-video-wrapper">
                     <iframe id="trailerIframe"
-                        width="100%" height="100%" 
-                        src="" 
+                        width="100%" height="100%"
+                        src=""
                         frameborder="0"
                         allow="autoplay; encrypted-media; fullscreen"
                         allowfullscreen>
