@@ -110,7 +110,9 @@ $pathToReserve = './reserve/mirai_nikki-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>Mirai Nikki</h1>
-            <p class="genre">Action, Horror, Mystery, Psychological, Supernatural, Thriller</p>
+            <div class="genre-wrapper">
+                <p class="genre">Action, Horror, Mystery, Psychological, Supernatural, Thriller</p>
+            </div>
             <p>
                 Yuki is a loner who's not very good with people.
                 He prefers to write a diary on his cell phone and talk to his imaginary friend, Deus Ex Machina – The God of Time and Space.

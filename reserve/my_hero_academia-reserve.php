@@ -103,7 +103,9 @@ $title = 'My Hero Academia';
                 <div class="banner"></div>
                 <div class="anime-description">
                     <h1>My Hero Academia</h1>
-                    <p class="genre">Action, Adventure, Comedy</p>
+                    <div class="genre-wrapper">
+                        <p class="genre">Action, Adventure, Comedy</p>
+                    </div>
                     <p>
                         Middle school student Izuku Midoriya wants to be a hero more than anything, but he hasn't got an ounce of power in him.
                         With no chance of ever getting into the prestigious U.A. High School for budding heroes, his life is looking more and more like a dead end.

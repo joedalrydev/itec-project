@@ -110,7 +110,9 @@ $pathToReserve = './reserve/weathering_with_you-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>Weathering With You</h1>
-            <p class="genre">Drama, Romance Slice of Life, Supernatural</p>
+            <div class="genre-wrapper">
+                <p class="genre">Drama, Romance Slice of Life, Supernatural</p>
+            </div>
             <p>
                 High school student Hodaka leaves his home on an isolated island and moves to Tokyo, but he immediately becomes broke.
                 He lives his days in isolation, but finally finds a job as a writer for a shady occult magazine.

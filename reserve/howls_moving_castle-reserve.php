@@ -103,7 +103,9 @@ $title = 'Howls Moving Castle';
                 <div class="banner"></div>
                 <div class="anime-description">
                     <h1>Howl's Moving Castle</h1>
-                    <p class="genre">Adventure, Drama, Fantasy, Romance</p>
+                    <div class="genre-wrapper">
+                        <p class="genre">Adventure, Drama, Fantasy, Romance</p>
+                    </div>
                     <p>
                         Sophie, a quiet girl working in a hat shop, finds her life thrown into turmoil when she is literally swept off her feet by a handsome but mysterious wizard named Howl.
                         The vain and vengeful Witch of the Waste, jealous of their friendship, puts a spell on Sophie.

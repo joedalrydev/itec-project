@@ -110,7 +110,9 @@ $pathToReserve = './reserve/attack_on_titan-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>Attack on Titan</h1>
-            <p class="genre">Action, Drama, Fantasy, Mystery</p>
+            <div class="genre-wrapper">
+                <p class="genre">Action, Drama, Fantasy, Mystery</p>
+            </div>
             <p>
                 Flash forward to the present and the city has not seen a titan in over 100 years.
                 Teenage boy Eren and his foster sister Mikasa witness something horrific as the city walls are destroyed by a colossal titan that appears out of thin air.

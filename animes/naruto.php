@@ -110,7 +110,9 @@ $pathToReserve = './reserve/naruto-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>Naruto</h1>
-            <p class="genre">Action, Adventure, Comedy, Drama, Fantasy, Supernatural</p>
+            <div class="genre-wrapper">
+                <p class="genre">Action, Adventure, Comedy, Drama, Fantasy, Supernatural</p>
+            </div>
             <p>
                 Naruto Uzumaki, a hyperactive and knuckle-headed ninja, lives in Konohagakure, the Hidden Leaf village.
                 Moments prior to his birth, a huge demon known as the Kyuubi, the Nine-tailed Fox, attacked Konohagakure and wreaked havoc.

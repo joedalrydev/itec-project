@@ -103,7 +103,9 @@ $title = 'Kakegurui';
                 <div class="banner"></div>
                 <div class="anime-description">
                     <h1>Kakegurui</h1>
-                    <p class="genre">Drama, Mystery, Psychological</p>
+                    <div class="genre-wrapper">
+                        <p class="genre">Drama, Mystery, Psychological</p>
+                    </div>
                     <p>
                         During daylight hours, an exclusive, elite private school prepares its illustrious students for careers in business, politics, and high society.
                         But when darkness falls, the halls of this esteemed establishment transform into an underground gambling den where bright-eyed youngsters learn the timeless art of bluffing, backdoor dealings and social manipulation.

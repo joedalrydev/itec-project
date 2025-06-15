@@ -109,7 +109,9 @@ $pathToReserve = './reserve/overlord-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>Overlord</h1>
-            <p class="genre">Action, Adventure, Fantasy</p>
+            <div class="genre-wrapper">
+                <p class="genre">Action, Adventure, Fantasy</p>
+            </div>
             <p>
                 Yggdrasil, a popular online game is quietly shut down one day.
                 However, the protagonist Momonga decides to not log out.

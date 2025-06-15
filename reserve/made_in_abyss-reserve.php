@@ -103,7 +103,9 @@ $title = 'Made in Abyss';
                 <div class="banner"></div>
                 <div class="anime-description">
                     <h1>Made in Abyss</h1>
-                    <p class="genre">Adventure, Drama, Fantasy, Horror, Mystery, Sci-Fi</p>
+                    <div class="genre-wrapper">
+                        <p class="genre">Adventure, Drama, Fantasy, Horror, Mystery, Sci-Fi</p>
+                    </div>
                     <p>
                         The "Abyss" is the last unexplored place in the world.
                         Strange and wonderful creatures roam within, and it is full of precious relics that present humans can't recreate.

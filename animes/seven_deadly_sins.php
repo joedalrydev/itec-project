@@ -110,7 +110,9 @@ $pathToReserve = './reserve/seven_deadly_sins-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>Seven Deadly Sins</h1>
-            <p class="genre">Action, Adventure, Comedy, Ecchi, Fantasy, Supernatural</p>
+            <div class="genre-wrapper">
+                <p class="genre">Action, Adventure, Comedy, Ecchi, Fantasy, Supernatural</p>
+            </div>
             <p>
                 When they were accused of trying to overthrow the monarchy, the feared warriors the Seven Deadly Sins were sent into exile.
                 Princess Elizabeth discovers the truth - the Sins were framed by the king's guard, the Holy Knights - too late to prevent them from assassinating her father and seizing the throne!

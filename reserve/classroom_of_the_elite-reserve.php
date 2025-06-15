@@ -103,7 +103,9 @@ $title = 'Classroom of the Elite';
                 <div class="banner"></div>
                 <div class="anime-description">
                     <h1>Classroom of the Elite</h1>
-                    <p class="genre">Drama, Psychological</p>
+                    <div class="genre-wrapper">
+                        <p class="genre">Drama, Psychological</p>
+                    </div>
                     <p>
                         Koudo Ikusei Senior High School is a leading school with state-of-the-art facilities.
                         The students there have the freedom to wear any hairstyle and bring any personal effects they desire.

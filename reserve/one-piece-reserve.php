@@ -103,7 +103,9 @@ $title = 'One Piece';
                 <div class="banner"></div>
                 <div class="anime-description">
                     <h1>One Piece</h1>
-                    <p class="genre">Action</p>
+                    <div class="genre-wrapper">
+                        <p class="genre">Action</p>
+                    </div>
                     <p>
                         Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
                         The capture and death of Roger by the World Government brought a change throughout the world.

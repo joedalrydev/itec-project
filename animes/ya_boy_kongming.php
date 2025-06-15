@@ -110,7 +110,9 @@ $pathToReserve = './reserve/ya_boy_kongming-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>Ya Boy Kongming!</h1>
-            <p class="genre">Comedy, Drama, Music, Supernatural</p>
+            <div class="genre-wrapper">
+                <p class="genre">Comedy, Drama, Music, Supernatural</p>
+            </div>
             <p>
                 Fate and reincarnation deliver brilliant military strategist, Kongming, from warring, ancient China to Japan’s modern party hot spot in Shibuya City, Tokyo.
                 After a lifetime of battles and military skirmishes, Kongming wished with his last breath to be reborn in a world of peace and prosperity.

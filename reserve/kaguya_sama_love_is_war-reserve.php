@@ -103,7 +103,9 @@ $title = 'Kaguya-sama: Love is War';
                 <div class="banner"></div>
                 <div class="anime-description">
                     <h1>Kaguya-sama: Love is War</h1>
-                    <p class="genre">Action</p>
+                    <div class="genre-wrapper">
+                        <p class="genre">Action</p>
+                    </div>
                     <p>
                         Known for being both brilliant and powerful, Miyuki Shirogane and Kaguya Shinomiya lead the illustrious Shuchiin Academy as near equals.
                         And everyone thinks they’d make a great couple.

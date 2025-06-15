@@ -110,7 +110,9 @@ $pathToReserve = './reserve/summer_time_rendering-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>Summer Time Rendering</h1>
-            <p class="genre">Action, Drama, Mystery, Supernatural, Thriller</p>
+            <div class="genre-wrapper">
+                <p class="genre">Action, Drama, Mystery, Supernatural, Thriller</p>
+            </div>
             <p>
                 A sci-fi, summer story filled with suspense set on a small island with Shinpei Aijiro, whose childhood friend Ushio Kofune died.
                 Sou Hishigata, his best friend, suspects something's off with Ushio's death, and that someone can die next.

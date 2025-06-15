@@ -110,7 +110,9 @@ $pathToReserve = './reserve/suzume-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>Suzume</h1>
-            <p class="genre">Adventure, Fantasy, Mystery, Supernatural</p>
+            <div class="genre-wrapper">
+                <p class="genre">Adventure, Fantasy, Mystery, Supernatural</p>
+            </div>
             <p>
                 The story follows Suzume, a 17-year-old girl from a quiet Kyushu town who meets a young man looking for a door.
                 They find a door within ruins in the mountain, and Suzume opens it.

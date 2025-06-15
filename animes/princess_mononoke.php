@@ -110,7 +110,9 @@ $pathToReserve = './reserve/princess_mononoke-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>Princess Mononoke</h1>
-            <p class="genre">Action, Adventure, Drama, Fantasy</p>
+            <div class="genre-wrapper">
+                <p class="genre">Action, Adventure, Drama, Fantasy</p>
+            </div>
             <p>
                 A calm village residing in the mountains comes under attack from a demon-possessed boar one day.
 

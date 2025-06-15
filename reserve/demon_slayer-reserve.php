@@ -103,7 +103,9 @@ $title = 'Demon Slayer';
                 <div class="banner"></div>
                 <div class="anime-description">
                     <h1>Demon Slayer</h1>
-                    <p class="genre">Action, Adventure, Drama, Fantasy, Supernatural</p>
+                    <div class="genre-wrapper">
+                        <p class="genre">Action, Adventure, Drama, Fantasy, Supernatural</p>
+                    </div>
                     <p>
                         It is the Taisho Period in Japan.
                         Tanjiro, a kindhearted boy who sells charcoal for a living, finds his family slaughtered by a demon.

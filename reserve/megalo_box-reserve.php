@@ -103,7 +103,9 @@ $title = 'Megalo Box';
                 <div class="banner"></div>
                 <div class="anime-description">
                     <h1>Megalo Box</h1>
-                    <p class="genre">Action, Drama, Sci-Fi, Sports</p>
+                    <div class="genre-wrapper">
+                        <p class="genre">Action, Drama, Sci-Fi, Sports</p>
+                    </div>
                     <p>
                         "To be quiet and do as you're told, that's the cowardly choice."
                         These are the words of Junk Dog, an underground fighter of Megalo Box, an evolution of boxing that utilizes mechanical limbs known as Gear to enhance the speed and power of its users.

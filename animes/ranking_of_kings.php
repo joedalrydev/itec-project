@@ -110,7 +110,9 @@ $pathToReserve = './reserve/ranking_of_kings-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>Ranking of Kings</h1>
-            <p class="genre">Action, Adventure, Drama, Fantasy</p>
+            <div class="genre-wrapper">
+                <p class="genre">Action, Adventure, Drama, Fantasy</p>
+            </div>
             <p>
                 Unable to hear, speak, or wield a sword, Prince Bojji doesn’t seem like a typical heir to the throne—and his kingdom agrees.
                 But his fateful encounter with Kage, a shadow on the ground, gives him his first true friend.

@@ -110,7 +110,9 @@ $pathToReserve = './reserve/my_neighbor_totoro-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>My Neighbor Totoro</h1>
-            <p class="genre">Adventure, Fantasy, Slice of Life, Supernatural</p>
+            <div class="genre-wrapper">
+                <p class="genre">Adventure, Fantasy, Slice of Life, Supernatural</p>
+            </div>
             <p>
                 Follow the adventures of Satsuki and her four-year-old sister Mei when they move into a new home in the countryside.
                 To their delight they discover that their new neighbor is a mysterious forest spirit called Totoro who can be seen only through the eyes of a child.

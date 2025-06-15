@@ -103,7 +103,9 @@ $title = 'Spirited Away';
                 <div class="banner"></div>
                 <div class="anime-description">
                     <h1>Spirited Away</h1>
-                    <p class="genre">Adventure, Drama, Fantasy, Supernatural</p>
+                    <div class="genre-wrapper">
+                        <p class="genre">Adventure, Drama, Fantasy, Supernatural</p>
+                    </div>
                     <p>
                         On the way to their new home, 10-year-old Chihiro Ogino's family stumbles upon a deserted theme park.
                         Intrigued, the family investigates the park, though unbeknownst to them, it is secretly inhabited by spirits who sleep by day and appear at night.

@@ -110,7 +110,9 @@ $pathToReserve = './reserve/decadence-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>DECA-DENCE</h1>
-            <p class="genre">Action, Adventure, Sci-Fi</p>
+            <div class="genre-wrapper">
+                <p class="genre">Action, Adventure, Sci-Fi</p>
+            </div>
             <p>
                 Many years have passed since humanity was driven to the brink of extinction by the sudden emergence of the unknown life forms Gadoll.
                 Those humans that survived now dwell in a 3000 meter-high mobile fortress Deca-dence built to protect themselves from the Gadoll threat.

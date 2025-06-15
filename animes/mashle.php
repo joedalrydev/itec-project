@@ -110,7 +110,9 @@ $pathToReserve = './reserve/mashle-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>MASHLE</h1>
-            <p class="genre">Action, Comedy, Fantasy</p>
+            <div class="genre-wrapper">
+                <p class="genre">Action, Comedy, Fantasy</p>
+            </div>
             <p>
                 This is a world of magic. This is a world in which magic is casually used by everyone.
 

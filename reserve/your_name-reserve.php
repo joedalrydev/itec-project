@@ -103,7 +103,9 @@ $title = 'Your Name.';
                 <div class="banner"></div>
                 <div class="anime-description">
                     <h1>Your Name.</h1>
-                    <p class="genre">Drama, Romance, Supernatural</p>
+                    <div class="genre-wrapper">
+                        <p class="genre">Drama, Romance, Supernatural</p>
+                    </div>
                     <p>
                         Mitsuha Miyamizu, a high school girl, yearns to live the life of a boy in the bustling city of Tokyo—a dream that stands in stark contrast to her present life in the countryside.
                         Meanwhile in the city, Taki Tachibana lives a busy life as a high school student while juggling his part-time job and hopes for a future in architecture.

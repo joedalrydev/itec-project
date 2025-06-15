@@ -103,7 +103,9 @@ $title = 'Steins;Gate';
                 <div class="banner"></div>
                 <div class="anime-description">
                     <h1>Steins;Gate</h1>
-                    <p class="genre">Drama, Psychological, Sci-Fi, Thriller</p>
+                    <div class="genre-wrapper">
+                        <p class="genre">Drama, Psychological, Sci-Fi, Thriller</p>
+                    </div>
                     <p>
                         Self-proclaimed mad scientist Okabe Rintarou lives in a small room in Akihabara, where he invents "future gadgets" with fellow lab members Shiina Mayuri, his air-headed childhood friend, and Hashida Itaru, an otaku hacker.
                         The three pass the time by tinkering with their latest creation, a "Phone Microwave" that can be controlled through text messages.

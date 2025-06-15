@@ -110,7 +110,9 @@ $pathToReserve = './reserve/dororo-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>Dororo</h1>
-            <p class="genre">Action, Adventure, Drama, Supernatural</p>
+            <div class="genre-wrapper">
+                <p class="genre">Action, Adventure, Drama, Supernatural</p>
+            </div>
             <p>
                 Dororo, a young orphan thief, meets Hyakkimaru, a powerful ronin.
                 Hyakkimaru's father, a greedy feudal lord, had made a pact with 12 demons, offering his yet-unborn son's body parts in exchange for great power.

@@ -103,7 +103,9 @@ $title = 'Rent a Girlfriend';
                 <div class="banner"></div>
                 <div class="anime-description">
                     <h1>Rent a Girlfriend</h1>
-                    <p class="genre">Comedy, Drama, Romance</p>
+                    <div class="genre-wrapper">
+                        <p class="genre">Comedy, Drama, Romance</p>
+                    </div>
                     <p>
                         Kinoshita Kazuya is a 20-year-old failure of a college student.
                         He managed to kiss his girlfriend once, but was dumped after a month.

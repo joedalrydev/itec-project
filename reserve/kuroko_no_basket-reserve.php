@@ -103,7 +103,9 @@ $title = 'Kuroko no Basket';
                 <div class="banner"></div>
                 <div class="anime-description">
                     <h1>Kuroko no Basket</h1>
-                    <p class="genre">Comedy, Sports</p>
+                    <div class="genre-wrapper">
+                        <p class="genre">Comedy, Sports</p>
+                    </div>
                     <p>
                         Teikou Junior High School's basketball team is crowned champion three years in a row thanks to five outstanding players who, with their breathtaking and unique skills, leave opponents in despair and fans in admiration.
                         However, after graduating, these teammates, known as "The Generation of Miracles", go their separate ways and now consider each other as rivals.

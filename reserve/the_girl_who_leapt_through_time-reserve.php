@@ -103,7 +103,9 @@ $title = 'The Girl Who Leapt Through Time';
                 <div class="banner"></div>
                 <div class="anime-description">
                     <h1>The Girl Who Leapt Through Time</h1>
-                    <p class="genre">Drama, Romance, Sci-Fi</p>
+                    <div class="genre-wrapper">
+                        <p class="genre">Drama, Romance, Sci-Fi</p>
+                    </div>
                     <p>
                         The power to travel through time... It can be used for the good of humanity, or just selfishly abused.
                         While many may fantasize about obtaining such a power, it has become nothing less than reality for otherwise-normal schoolgirl Konno Makoto.

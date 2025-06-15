@@ -110,7 +110,9 @@ $pathToReserve = './reserve/date_a_live-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>Date A Live</h1>
-            <p class="genre">Action, Comedy, Ecchi, Fantasy, Mecha, Romance, Sci-Fi</p>
+            <div class="genre-wrapper">
+                <p class="genre">Action, Comedy, Ecchi, Fantasy, Mecha, Romance, Sci-Fi</p>
+            </div>
             <p>
                 Thirty years before a strange phenomena called a "spacequake" devastated the center of Eurasia, claiming the lives of at least 150 million people.
                 Shidou Itsuka, a seemingly ordinary high schooler comes across a mysterious girl at the ground zero of a spacequake and learns from his sister Kotori she is one of the "Spirits" who are the real cause of the spacequakes that occur when they manifest themselves in the world.

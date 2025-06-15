@@ -103,7 +103,9 @@ $title = 'SPY x FAMILY';
                 <div class="banner"></div>
                 <div class="anime-description">
                     <h1>SPY x FAMILY</h1>
-                    <p class="genre">Action, Comedy, Slice of Life, Supernatural</p>
+                    <div class="genre-wrapper">
+                        <p class="genre">Action, Comedy, Slice of Life, Supernatural</p>
+                    </div>
                     <p>
                         Everyone has a part of themselves they cannot show to anyone else.
                         "Twilight" takes on the identity of psychiatrist Loid Forger and starts looking for family members.

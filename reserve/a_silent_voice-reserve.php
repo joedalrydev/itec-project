@@ -103,7 +103,9 @@ $title = 'A Silent Voice';
                 <div class="banner"></div>
                 <div class="anime-description">
                     <h1>A Silent Voice</h1>
-                    <p class="genre">Drama, Romance, Slice of Life</p>
+                    <div class="genre-wrapper">
+                        <p class="genre">Drama, Romance, Slice of Life</p>
+                    </div>
                     <p>
                         After transferring into a new school, a deaf girl, Shouko Nishimiya, is bullied by the popular Shouya Ishida.
                         As Shouya continues to bully Shouko, the class turns its back on him.

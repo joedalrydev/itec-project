@@ -110,7 +110,9 @@ $pathToReserve = './reserve/eyeshield_21-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>Eyeshield 21</h1>
-            <p class="genre">Action, Comedy, Sports</p>
+            <div class="genre-wrapper">
+                <p class="genre">Action, Comedy, Sports</p>
+            </div>
             <p>
                 Welcome To the Gridiron of the Damned! Huge hulking bodies throw themselves at each other, while a tiny lithe body runs between them for the goal!
                 No, it’s not a game of football, it’s Sena Kobayakawa trying to evade the monstrous Ha-Ha brothers down the halls of Deimon High School!

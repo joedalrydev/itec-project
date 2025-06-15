@@ -110,7 +110,9 @@ $pathToReserve = './reserve/vinland_saga-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>Vinland Saga</h1>
-            <p class="genre">Action, Adventure, Drama</p>
+            <div class="genre-wrapper">
+                <p class="genre">Action, Adventure, Drama</p>
+            </div>
             <p>
                 Thorfinn is son to one of the Vikings' greatest warriors, but when his father is killed in battle by the mercenary leader Askeladd, he swears to have his revenge.
                 Thorfinn joins Askeladd's band in order to challenge him to a duel, and ends up caught in the middle of a war for the crown of England.

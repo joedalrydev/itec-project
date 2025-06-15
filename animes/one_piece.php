@@ -110,7 +110,9 @@ $pathToReserve = './reserve/one-piece-reserve.php';
         <div class="banner"></div>
         <div class="anime-description">
             <h1>One Piece</h1>
-            <p class="genre">Action, Adventure, Comedy, Drama, Fantasy</p>
+            <div class="genre-wrapper">
+                <p class="genre">Action, Adventure, Comedy, Drama, Fantasy</p>
+            </div>
             <p>
                 Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line.
                 His last words before his death revealed the location of the greatest treasure in the world, One Piece.
