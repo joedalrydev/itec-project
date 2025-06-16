@@ -110,7 +110,9 @@ $title = 'Date A Live';
                         Thirty years before a strange phenomena called a "spacequake" devastated the center of Eurasia, claiming the lives of at least 150 million people.
                         Shidou Itsuka, a seemingly ordinary high schooler comes across a mysterious girl at the ground zero of a spacequake and learns from his sister Kotori she is one of the "Spirits" who are the real cause of the spacequakes that occur when they manifest themselves in the world.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

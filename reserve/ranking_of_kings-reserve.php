@@ -111,7 +111,9 @@ $title = 'Ranking of Kings';
                         But his fateful encounter with Kage, a shadow on the ground, gives him his first true friend.
                         The two set off on a grand adventure and, together, form a bond that can overcome any obstacle...even being king.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

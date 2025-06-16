@@ -113,7 +113,9 @@ $title = 'Your Name.';
                         One day, Mitsuha awakens in a room that is not her own and suddenly finds herself living the dream life in Tokyo—but in Taki's body!
                         Elsewhere, Taki finds himself living Mitsuha's life in the humble countryside.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

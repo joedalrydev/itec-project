@@ -112,7 +112,9 @@ $title = 'Mirai Nikki';
                         However, Yuki soon learns that Deus is more than a figment of his imagination when he makes Yuki participate in a battle royale with eleven others.
                         The contestants are given special diaries that can predict the future, each diary possessing unique features that give it both advantages and disadvantages.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

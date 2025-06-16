@@ -112,7 +112,9 @@ $title = 'Suzume';
                         Soon, more doors begin to open around Japan, bringing disasters from the other side.
                         The film depicts Suzume's liberation and growth, as she closes the doors that are causing disaster.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

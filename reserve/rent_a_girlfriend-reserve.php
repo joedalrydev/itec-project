@@ -114,7 +114,9 @@ $title = 'Rent a Girlfriend';
                         He goes to their meeting place and suddenly meets Mizuhara Chizuru.
                         A reckless rom-com filled with love and excitement is about to begin!
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

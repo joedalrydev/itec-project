@@ -114,7 +114,9 @@ $title = 'One Piece';
                         men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame),
                         and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -114,7 +114,9 @@ $title = 'Made in Abyss';
                         Her dream is to become a Cave Raider like her mother and solve the mysteries of the cave system.
                         One day, Riko starts exploring the caves and discovers a robot who resembles a human boy.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

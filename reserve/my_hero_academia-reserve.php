@@ -111,7 +111,9 @@ $title = 'My Hero Academia';
                         With no chance of ever getting into the prestigious U.A. High School for budding heroes, his life is looking more and more like a dead end.
                         Then an encounter with All Might, the greatest hero of them all gives him a chance to change his destiny…
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

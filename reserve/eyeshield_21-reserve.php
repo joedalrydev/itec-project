@@ -112,7 +112,9 @@ $title = 'Dororo';
                         But there are two BIG catches: first, to keep the identity of their new “star” player an absolute secret, Yoichi makes Sena wear an opaque visor on his helmet and gives him the alias of “Eyeshield 21.”
                         And the second catch? Well, in order to hit his fastest “speed of light” running mode, Sena usually has to be absolutely terrified.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

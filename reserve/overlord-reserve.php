@@ -112,7 +112,9 @@ $title = 'Overlord';
                         Momonga is then transformed into the image of a skeleton as "the most powerful wizard."
                         The world continues to change, with non-player characters (NPCs) beginning to feel emotion.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

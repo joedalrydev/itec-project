@@ -111,7 +111,9 @@ $title = 'Classroom of the Elite';
                         The students there have the freedom to wear any hairstyle and bring any personal effects they desire.
                         Koudo Ikusei is like a utopia, but the truth is that only the most superior students receive favorable treatment.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

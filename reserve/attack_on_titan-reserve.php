@@ -112,7 +112,9 @@ $title = 'Attack on Titan';
                         As the smaller titans flood the city, the two kids watch in horror as their mother is eaten alive.
                         Eren vows that he will murder every single titan and take revenge for all of mankind.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

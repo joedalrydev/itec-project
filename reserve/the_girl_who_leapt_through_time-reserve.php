@@ -113,7 +113,9 @@ $title = 'The Girl Who Leapt Through Time';
                         After a fated event, her life takes a turn for the extraordinary.
                         Though she initially uses her power to literally "leap" into the past and change little things in order to make her life easier, she soon has to face the fact that changing the past can have drastic consequences.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

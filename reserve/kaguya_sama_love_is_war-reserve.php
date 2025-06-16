@@ -112,7 +112,9 @@ $title = 'Kaguya-sama: Love is War';
                         Pride and arrogance are in ample supply, so the only logical move is to trick the other into instigating a date!
                         Who will come out on top in this psychological war where the first move is the only one that matters?
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

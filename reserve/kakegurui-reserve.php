@@ -112,7 +112,9 @@ $title = 'Kakegurui';
                         In this school for the rich and elite, money is power, and the tyrant of the betting books rules with an iron fist.
                         So when the beautiful Yumeko Jabami upsets the academy hierarchy with her voracious appetite for the thrill of the gamble, the entire student body mobilizes to send her house of cards tumbling down.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

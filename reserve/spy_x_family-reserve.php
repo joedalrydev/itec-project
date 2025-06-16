@@ -112,7 +112,9 @@ $title = 'SPY x FAMILY';
                         But Anya, the daughter he adopts, turns out to have the ability to read people's minds, while his wife, Yor, is an assassin!
                         With it being in each of their own interests to keep these facts hidden, they start living together while concealing their true identities from one another.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

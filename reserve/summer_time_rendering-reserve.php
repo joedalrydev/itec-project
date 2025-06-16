@@ -113,7 +113,9 @@ $title = 'Summer Time Rendering';
                         A sinister omen is heard as an entire family next door suddenly disappears the following day.
                         Furthermore, Mio implicates a "shadow" three days before Ushio's death.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

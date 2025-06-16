@@ -111,7 +111,9 @@ $title = 'Ya Boy Kongming!';
                         After a lifetime of battles and military skirmishes, Kongming wished with his last breath to be reborn in a world of peace and prosperity.
                         It’s nearly two millennia later and he’s finding his way in a very different world than that of his past life.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

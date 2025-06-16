@@ -111,7 +111,9 @@ $title = 'Weathering With You';
                         He lives his days in isolation, but finally finds a job as a writer for a shady occult magazine.
                         After he starts his job, the weather has been rainy day after day.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
