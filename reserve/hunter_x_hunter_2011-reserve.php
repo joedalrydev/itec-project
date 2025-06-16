@@ -11,7 +11,7 @@ $row = $result->fetch_assoc();
 $pfpPath = $row['pfp'];
 $pfp = ".." . $pfpPath;
 
-$title = 'Hunter x Hunter (2011)';
+$title = 'Hunter x Hunter';
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +47,7 @@ $title = 'Hunter x Hunter (2011)';
             }
         }
     </style>
-    <title>Hunter x Hunter (2011)</title>
+    <title>Hunter x Hunter</title>
 </head>
 
 <body>
@@ -102,7 +102,7 @@ $title = 'Hunter x Hunter (2011)';
             <div class="anime">
                 <div class="banner"></div>
                 <div class="anime-description">
-                    <h1>Hunter x Hunter (2011)</h1>
+                    <h1>Hunter x Hunter</h1>
                     <div class="genre-wrapper">
                         <p class="genre">Action, Adventure, Fantasy</p>
                     </div>
