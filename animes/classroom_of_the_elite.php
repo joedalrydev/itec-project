@@ -120,7 +120,7 @@ $pathToReserve = './reserve/classroom_of_the_elite-reserve.php';
             </p>
             <div class="buttons">
                 <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                
                 <button id="watchTrailerBtn" class="button" type="button"
                     data-youtube="https://www.youtube.com/embed/F_-y2LkkUjg?autoplay=1&fs=1">
                     Watch Trailer <i class="fa fa-play"></i>

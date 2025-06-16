@@ -27,6 +27,7 @@ $pathToReserve = './reserve/a_silent_voice-reserve.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/anime.css">
@@ -121,7 +122,7 @@ $pathToReserve = './reserve/a_silent_voice-reserve.php';
             </p>
             <div class="buttons">
                 <button id="addToListBtn" class="button">Add to List <i class="fa fa-arrow-down"></i></button>
-                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+
                 <button id="watchTrailerBtn" class="button" type="button"
                     data-youtube="https://www.youtube.com/embed/nfK6UgLra7g?autoplay=1&fs=1">
                     Watch Trailer <i class="fa fa-play"></i>
@@ -136,21 +137,25 @@ $pathToReserve = './reserve/a_silent_voice-reserve.php';
                     <span class="close">&times;</span>
                     <h2>Add to Your Anime List</h2>
                     <form id="addToListForm" action="addToList.php" method="POST">
-                        <label for="status">Status:</label>
-                        <select id="status" name="status" required>
-                            <option value="Watching">Watching</option>
-                            <option value="Completed">Completed</option>
-                            <option value="On-hold">On Hold</option>
-                            <option value="Dropped">Dropped</option>
-                            <option value="Plan-to-Watch">Plan to Watch</option>
-                        </select>
-                        <br><br>
-                        <label for="score">Score:</label>
-                        <input type="number" id="score" name="score" min="1" max="10" placeholder="1-10" required>
-                        <br><br>
-                        <label for="episodes">Episodes Watched:</label>
-                        <input type="number" id="episodes" name="episode" min="0" max="<?php echo htmlspecialchars($maxEpisodes); ?>" value="0" required>
-                        <br><br>
+                        <div class="form-wrapper">
+                            <div class="label-wrapper">
+                                <label for="status">Status:</label>
+                                <label for="score">Score:</label>
+                                <label for="episodes">Episodes:</label>
+                            </div>
+                            <div class="input-wrapper">
+                                <select id="status" name="status" required>
+                                    <option value="Watching">Watching</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="On-hold">On Hold</option>
+                                    <option value="Dropped">Dropped</option>
+                                    <option value="Plan-to-Watch">Plan to Watch</option>
+                                </select>
+                                <input type="number" id="score" name="score" min="1" max="10" placeholder="1-10" required>
+                                <input type="number" id="episodes" name="episode" min="0" max="<?php echo htmlspecialchars($maxEpisodes); ?>" value="0" required>
+                            </div>
+                        </div>
+                        <br>
                         <input type="hidden" name="title" value="<?php echo htmlspecialchars($title); ?>">
                         <input type="hidden" name="genre" value="<?php echo htmlspecialchars($genre); ?>">
                         <input type="hidden" name="maxEpisodes" value="<?php echo htmlspecialchars($maxEpisodes); ?>">
@@ -158,7 +163,9 @@ $pathToReserve = './reserve/a_silent_voice-reserve.php';
                         <input type="hidden" name="picture" value="<?php echo htmlspecialchars($picture); ?>">
                         <input type="hidden" name="format" value="<?php echo htmlspecialchars($format); ?>">
                         <input type="hidden" name="pathToReserve" value="<?php echo htmlspecialchars($pathToReserve); ?>">
-                        <button type="submit">Save</button>
+                        <div class="save-wrapper">
+                            <button type="submit">Save</button>
+                        </div>
                     </form>
                 </div>
             </div>

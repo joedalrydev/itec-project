@@ -11,7 +11,7 @@ $row = $result->fetch_assoc();
 $pfpPath = $row['pfp'];
 $pfp = ".." . $pfpPath;
 
-$title = 'Hunter x Hunter (2011)';
+$title = 'Hunter x Hunter';
 $genre = 'Action, Adventure, Fantasy';
 $maxEpisodes = '148';
 $year = '2011';
@@ -46,7 +46,7 @@ $pathToReserve = './reserve/hunter_x_hunter_2011-reserve.php';
             flex-basis: 50%;
             border-radius: 20px;
         }
-
+        
         @media only screen and (max-width: 480px) {
             body {
                 background:
@@ -56,7 +56,7 @@ $pathToReserve = './reserve/hunter_x_hunter_2011-reserve.php';
             }
         }
     </style>
-    <title>Hunter x Hunter (2011)</title>
+    <title>Hunter x Hunter</title>
 </head>
 
 <body>
@@ -109,7 +109,7 @@ $pathToReserve = './reserve/hunter_x_hunter_2011-reserve.php';
     <main>
         <div class="banner"></div>
         <div class="anime-description">
-            <h1>Hunter x Hunter (2011)</h1>
+            <h1>Hunter x Hunter</h1>
             <div class="genre-wrapper">
                 <p class="genre">Action, Adventure, Fantasy</p>
             </div>
@@ -119,7 +119,7 @@ $pathToReserve = './reserve/hunter_x_hunter_2011-reserve.php';
             </p>
             <div class="buttons">
                 <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+                
                 <button id="watchTrailerBtn" class="button" type="button"
                     data-youtube="https://www.youtube.com/embed/d6kBeJjTGnY?autoplay=1&fs=1">
                     Watch Trailer <i class="fa fa-play"></i>

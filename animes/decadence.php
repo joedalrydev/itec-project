@@ -122,7 +122,7 @@ $pathToReserve = './reserve/decadence-reserve.php';
             </p>
             <div class="buttons">
                 <button id="addToListBtn" class="button" onclick="displayModal()">Add to List <i class="fa fa-arrow-down"></i></button>
-                <a href="#" class="button bookTickets">Book Tickets <i class="fa fa-arrow-right"></i></a>
+               
                 <button id="watchTrailerBtn" class="button" type="button"
                     data-youtube="https://www.youtube.com/embed/1IqvCr1Hohs?autoplay=1&fs=1">
                     Watch Trailer <i class="fa fa-play"></i>
