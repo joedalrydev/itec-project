@@ -55,8 +55,16 @@ function loadTable(list) {
 
 loadTable(animeList);
 
-//event listener para sa kada-input sa search bar
-searchBar.addEventListener("input", loadTable);
+//function para sa functionality ng search bar
+function filterAnimeList() {
+  const query = searchBar.value.toLowerCase();
+  const filtered = animeList.filter(anime =>
+    anime.title.toLowerCase().includes(query)
+  );
+  loadTable(filtered);
+}
+//event listener para sa search bar
+searchBar.addEventListener("input", filterAnimeList);
 
 const addEpisodeBtn = document.querySelectorAll("#addEpisode");
 const removeEpisodeBtn = document.querySelectorAll("#removeEpisode");
