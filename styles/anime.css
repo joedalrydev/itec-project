@@ -112,6 +112,9 @@ nav a:hover {
 }
 #avatarHover {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 65px;
   padding: 0.3em 0em;

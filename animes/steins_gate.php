@@ -67,9 +67,11 @@ $pathToReserve = './reserve/steins_gate-reserve.php';
         </ul>
         <div class="avatar">
             <div id="avatarHover">
-                <button class="color-toggle original" data-scheme="original"></button>
-                <button class="color-toggle red" data-scheme="red"></button>
-                <button class="color-toggle green" data-scheme="green"></button>
+                <div class="buttons">
+                    <button class="color-toggle original" data-scheme="original"></button>
+                    <button class="color-toggle red" data-scheme="red"></button>
+                    <button class="color-toggle green" data-scheme="green"></button>
+                </div>
                 <a href="../settings.php">Settings</a>
                 <a href="../index.php">Logout</a>
             </div>
