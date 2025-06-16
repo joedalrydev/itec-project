@@ -4,6 +4,8 @@ function displayModal() {
   const btn = document.getElementById("addToListBtn");
   const closeBtn = document.querySelector(".close");
 
+  if (!modal || !btn || !closeBtn) return;
+
   //dini-display yung modal kapag pinindot yung button
   btn.onclick = function () {
     modal.style.display = "block";
@@ -83,7 +85,7 @@ const originalColors = {
   '--color-bg2': '#043a42',
   '--color-login-1': '#67ebff',
   '--color-login-2': '#1e90ff',
-  '--color-purple-accent': '#a259ff',
+  '--color-purple-accent': '#af8df4',
   '--color-bg-gradient1': '#0a6a79',
   '--color-bg-gradient2': '#3c237c'
 };
