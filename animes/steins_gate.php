@@ -134,6 +134,7 @@ $pathToReserve = './reserve/steins_gate-reserve.php';
                 <div class="setContent">
                     <span class="close">&times;</span>
                     <h2>Add to Your Anime List</h2>
+                    <form id="addToListForm" action="addToList.php" method="POST">
                     <div class="form-wrapper">
                             <div class="label-wrapper">
                                 <label for="status">Status:</label>
