@@ -112,7 +112,9 @@ $title = 'A Silent Voice';
                         Shouko transfers and Shouya grows up as an outcast.
                         Alone and depressed, the regretful Shouya finds Shouko to make amends.
                     </p>
-                    <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    <div class="button-wrapper">
+                        <button type="submit" id="bookModalBtn" name="bookbtn" class="button bookTickets">Book Tickets <i class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
