@@ -32,6 +32,7 @@
   text-shadow: 1px 1px 4px var(--color-black);
 }
 .hero-content a:hover {
+  transition: all 0.3s;
   box-shadow: 0 0 10px var(--color-blue);
 }
 #sign-in {
