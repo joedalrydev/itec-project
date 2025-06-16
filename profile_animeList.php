@@ -120,6 +120,9 @@ $pfp = "." . $pfpPath;
         const searchBtn = document.querySelector('.searchBtn');
         const searchBar2 = document.getElementById('searchBar');
 
+        if (animeList.length === 0) {
+            searchBtn.style.display = "none";
+        }
         searchBtn.onclick = function () {
             searchBar2.style.display = "block";
             searchBtn.style.display = "none";

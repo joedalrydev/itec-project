@@ -120,10 +120,6 @@ $pfp = "." . $pfpPath;
                         </p>
                     </div>
                 </div>
-
-                <div class="carousel-wrapper">
-                    <p>asasyudguwgyua</p>
-                </div>
             </div>
 
             <!-- <div class="trending">
