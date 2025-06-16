@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Lexend';
+  src: url(../fonts/Lexend-VariableFont_wght.ttf);
+}
+
 :root {
   --color-blue: #67ebff;
   --color-nav-hover: #e5e7ea;
@@ -25,6 +30,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  font-family: 'Lexend';
   color: white;
   min-height: 100vh;
   background: linear-gradient(
