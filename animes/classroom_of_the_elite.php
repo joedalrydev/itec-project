@@ -134,22 +134,25 @@ $pathToReserve = './reserve/classroom_of_the_elite-reserve.php';
                 <div class="setContent">
                     <span class="close">&times;</span>
                     <h2>Add to Your Anime List</h2>
-                    <form id="addToListForm" action="addToList.php" method="POST">
-                        <label for="status">Status:</label>
-                        <select id="status" name="status" required>
-                            <option value="Watching">Watching</option>
-                            <option value="Completed">Completed</option>
-                            <option value="On-hold">On Hold</option>
-                            <option value="Dropped">Dropped</option>
-                            <option value="Plan-to-Watch">Plan to Watch</option>
-                        </select>
-                        <br><br>
-                        <label for="score">Score:</label>
-                        <input type="number" id="score" name="score" min="1" max="10" placeholder="1-10" required>
-                        <br><br>
-                        <label for="episodes">Episodes Watched:</label>
-                        <input type="number" id="episodes" name="episode" min="0" max="<?php echo htmlspecialchars($maxEpisodes); ?>" value="0" required>
-                        <br><br>
+                    <div class="form-wrapper">
+                            <div class="label-wrapper">
+                                <label for="status">Status:</label>
+                                <label for="score">Score:</label>
+                                <label for="episodes">Episodes:</label>
+                            </div>
+                            <div class="input-wrapper">
+                                <select id="status" name="status" required>
+                                    <option value="Watching">Watching</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="On-hold">On Hold</option>
+                                    <option value="Dropped">Dropped</option>
+                                    <option value="Plan-to-Watch">Plan to Watch</option>
+                                </select>
+                                <input type="number" id="score" name="score" min="1" max="10" placeholder="1-10" required>
+                                <input type="number" id="episodes" name="episode" min="0" max="<?php echo htmlspecialchars($maxEpisodes); ?>" value="0" required>
+                            </div>
+                        </div>
+                        <br>
                         <input type="hidden" name="title" value="<?php echo htmlspecialchars($title); ?>">
                         <input type="hidden" name="genre" value="<?php echo htmlspecialchars($genre); ?>">
                         <input type="hidden" name="maxEpisodes" value="<?php echo htmlspecialchars($maxEpisodes); ?>">
@@ -157,7 +160,9 @@ $pathToReserve = './reserve/classroom_of_the_elite-reserve.php';
                         <input type="hidden" name="picture" value="<?php echo htmlspecialchars($picture); ?>">
                         <input type="hidden" name="format" value="<?php echo htmlspecialchars($format); ?>">
                         <input type="hidden" name="pathToReserve" value="<?php echo htmlspecialchars($pathToReserve); ?>">
-                        <button type="submit">Save</button>
+                        <div class="save-wrapper">
+                            <button type="submit">Save</button>
+                        </div>
                     </form>
                 </div>
             </div>
