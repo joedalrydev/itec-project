@@ -40,8 +40,8 @@ function toggleAvatarHover() {
   //dini-display o kino-close yung popup kapag pinindot yung avatar
   avatar.onclick = function () {
     if (popup.style.display === "none") {
-      popup.style.display = "block";
-      avatar.style.boxShadow = " 0 0 5px #67ebff";
+      popup.style.display = "flex";
+      avatar.style.boxShadow = " 0 0 5px var(--color-blue)";
     } else {
       popup.style.display = "none";
       avatar.style.boxShadow = "none";
