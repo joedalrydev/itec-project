@@ -87,9 +87,6 @@ h1 {
 .info-card p + p {
   font-size: 0.9em;
 }
-.carousel-wrapper {
-  flex-basis: 50%;
-}
 .trending {
   flex-basis: 50%;
   text-align: center;
@@ -222,7 +219,9 @@ h1 {
   .welcome h2 {
     font-size: 2.3em;
   }
-
+  .trending {
+    display: none;
+  }
   .cards h1 {
     margin: 1em 0;
     font-size: 1.5em;

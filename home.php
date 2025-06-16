@@ -120,45 +120,44 @@ $pfp = "." . $pfpPath;
                         </p>
                     </div>
                 </div>
-            </div>
-
-            <!-- <div class="trending">
-                <h2>Trending</h2>
-                <div class="trending-cards">
-                    <div class="card">
-                        <a href="./animes/one_piece.php"><img src="./images/one-piece.jpg" alt="Poster"></a>
-                        <a href="./animes/one_piece.php">One Piece</a>
-                    </div>
-                    <div class="card">
-                        <a href="./animes/attack_on_titan.php"><img src="./images/attack_on_titan.jpg" alt="Poster"></a>
-                        <a href="./animes/attack_on_titan.php">Attack on Titan</a>
-                    </div>
-                    <div class="card">
-                        <a href="./animes/a_silent_voice.php"><img src="./images/a_silent_voice.jpg" alt="Poster"></a>
-                        <a href="./animes/a_silent_voice.php">A Silent Voice</a>
-                    </div>
-                    <div class="card">
-                        <a href="./animes/demon_slayer.php"><img src="./images/demon_slayer.jpg" alt="Poster"></a>
-                        <a href="./animes/demon_slayer.php">Demon Slayer</a>
-                    </div>
-                    <div class="card">
-                        <a href="./animes/hunter_x_hunter_2011.php"><img src="./images/hunter_x_hunter_2011.png" alt="Poster"></a>
-                        <a href="./animes/hunter_x_hunter_2011.php">Hunter x Hunter 2011</a>
-                    </div>
-                    <div class="card">
-                        <a href="./animes/kaguya_sama_love_is_war.php"><img src="./images/kaguya_sama_love_is_war.jpg" alt="Poster"></a>
-                        <a href="./animes/kaguya_sama_love_is_war.php">Kaguya-sama: Love is war</a>
-                    </div>
-                    <div class="card">
-                        <a href="./animes/my_hero_academia.php"><img src="./images/my_hero_academia.jpg" alt="Poster"></a>
-                        <a href="./animes/my_hero_academia.php">My Hero Academia</a>
-                    </div>
-                    <div class="card">
-                        <a href="./animes/your_name.php"><img src="./images/your_name.png" alt="Poster"></a>
-                        <a href="./animes/your_name.php">Your Name</a>
+                <div class="trending">
+                    <h2>Trending</h2>
+                    <div class="trending-cards">
+                        <div class="card">
+                            <a href="./animes/one_piece.php"><img src="./images/one-piece.jpg" alt="Poster"></a>
+                            <a href="./animes/one_piece.php">One Piece</a>
+                        </div>
+                        <div class="card">
+                            <a href="./animes/attack_on_titan.php"><img src="./images/attack_on_titan.jpg" alt="Poster"></a>
+                            <a href="./animes/attack_on_titan.php">Attack on Titan</a>
+                        </div>
+                        <div class="card">
+                            <a href="./animes/a_silent_voice.php"><img src="./images/a_silent_voice.jpg" alt="Poster"></a>
+                            <a href="./animes/a_silent_voice.php">A Silent Voice</a>
+                        </div>
+                        <div class="card">
+                            <a href="./animes/demon_slayer.php"><img src="./images/demon_slayer.jpg" alt="Poster"></a>
+                            <a href="./animes/demon_slayer.php">Demon Slayer</a>
+                        </div>
+                        <div class="card">
+                            <a href="./animes/hunter_x_hunter_2011.php"><img src="./images/hunter_x_hunter_2011.png" alt="Poster"></a>
+                            <a href="./animes/hunter_x_hunter_2011.php">Hunter x Hunter 2011</a>
+                        </div>
+                        <div class="card">
+                            <a href="./animes/kaguya_sama_love_is_war.php"><img src="./images/kaguya_sama_love_is_war.jpg" alt="Poster"></a>
+                            <a href="./animes/kaguya_sama_love_is_war.php">Kaguya-sama: Love is war</a>
+                        </div>
+                        <div class="card">
+                            <a href="./animes/my_hero_academia.php"><img src="./images/my_hero_academia.jpg" alt="Poster"></a>
+                            <a href="./animes/my_hero_academia.php">My Hero Academia</a>
+                        </div>
+                        <div class="card">
+                            <a href="./animes/your_name.php"><img src="./images/your_name.png" alt="Poster"></a>
+                            <a href="./animes/your_name.php">Your Name</a>
+                        </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
 
         <div class="cards" id="cards">
