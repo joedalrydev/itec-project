@@ -32,7 +32,6 @@ $pfp = "." . $pfpPath;
                 url(<?php echo $pfp ?>) left top no-repeat;
             background-size: cover, 50% 100%;
             background-repeat: no-repeat, no-repeat;
-            font-family: 'Arimo', sans-serif;
             color: white;
             min-height: 100vh;
         }

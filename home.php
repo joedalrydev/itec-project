@@ -82,33 +82,49 @@ $pfp = "." . $pfpPath;
     <main>
         <div class="container">
             <div class="welcome">
-                <img src="./images/logo.png" alt="">
+                <img src="./images/logo.png" class="logo">
                 <h1 class="description">Welcome to AniMate, <span class="blue-text"><?php echo $username ?></span>!</h1>
                 <h1 class="animate">AniMate</h1>
                 <h2 class="purple-text">Your Ultimate Anime & Movie Companion</h2>
                 <a href="#cards"><i class="fa fa-arrow-down"></i></a>
-
-                <p>
-                    <span class="blue-text">Track your Anime</span>
-                    - Continue watching your favorite series or start a new one.
-                    Add movies, rate it, and build your personal anime library.
-                </p>
-                <p>
-                    <span class="blue-text">Manage your Movie List</span>
-                    - Keep tabs on anime films you've watched or plan to watch.
-                </p>
-                <p>
-                    <span class="blue-text">Book Tickets with Ease</span>
-                    - Browse upcoming anime screenings in cinemas and theatres near you.
-                    Reserve your seat in just a few clicks!
-                </p>
-                <p>
-                    <span class="blue-text">Favorites in One Place</span>
-                    - Access your customized list of favorite series and movies anytime.
-                </p>
             </div>
 
-            <div class="trending">
+            <div class="bottom-part">
+                <div class="info-wrapper">
+                    <div class="info-card">
+                        <p class="blue-text">Track your Anime</p>
+                        <p>
+                            Continue watching your favorite series or start a new one.
+                            Add animes, rate it, and build your personal anime library.
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <p class="blue-text">Manage your Movie List</p>
+                        <p>
+                            Keep tabs on anime films you've watched or plan to watch.
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <p class="blue-text">Book Tickets with Ease</p>
+                        <p>
+                            Browse upcoming anime screenings in cinemas and theatres near you.
+                            Reserve your seat in just a few clicks!
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <p class="blue-text">Favorites in One Place</p>
+                        <p>
+                            Access your customized list of favorite series and movies anytime.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <p>asasyudguwgyua</p>
+                </div>
+            </div>
+
+            <!-- <div class="trending">
                 <h2>Trending</h2>
                 <div class="trending-cards">
                     <div class="card">
@@ -144,7 +160,7 @@ $pfp = "." . $pfpPath;
                         <a href="./animes/your_name.php">Your Name</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div class="cards" id="cards">
@@ -188,7 +204,7 @@ $pfp = "." . $pfpPath;
                 </div>
                 <div class="card">
                     <a href="./animes/hunter_x_hunter_2011.php"><img src="./images/hunter_x_hunter_2011.png" alt="Poster"></a>
-                    <a href="./animes/hunter_x_hunter_2011.php">Hunter x Hunter 2011</a>
+                    <a href="./animes/hunter_x_hunter_2011.php">Hunter x Hunter</a>
                 </div>
                 <div class="card">
                     <a href="./animes/kaguya_sama_love_is_war.php"><img src="./images/kaguya_sama_love_is_war.jpg" alt="Poster"></a>

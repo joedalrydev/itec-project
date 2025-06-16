@@ -86,6 +86,7 @@ $pfp = "." . $pfpPath;
     </div>
 
     <main>
+        <p class="searchBtn">Search <i class="fa fa-search"></i></p>
         <input type="text" placeholder="Search for title..." id="searchBar">
         <div id="anime-list">
            
@@ -113,5 +114,14 @@ $pfp = "." . $pfpPath;
     </script>
     <script src="./scripts/animeList.js"></script>
     <script src="./scripts/script.js"></script>
+    <script>
+        const searchBtn = document.querySelector('.searchBtn');
+        const searchBar2 = document.getElementById('searchBar');
+
+        searchBtn.onclick = function () {
+            searchBar2.style.display = "block";
+            searchBtn.style.display = "none";
+        }
+    </script>
 </body>
 </html>
