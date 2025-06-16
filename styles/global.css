@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Lexend';
+  src: url(../fonts/Lexend-VariableFont_wght.ttf);
+}
+
 :root {
   --color-blue: #67ebff;
   --color-gradient-start: #0fb5ce;
@@ -39,7 +44,7 @@ body {
     var(--color-black) 75%,
     var(--color-main-bg2) 100%
   );
-  font-family: "Arimo", sans-serif;
+  font-family: 'Lexend', sans-serif;
   color: white;
   width: 100vw;
   overflow-x: hidden;
@@ -258,7 +263,7 @@ footer {
     padding: 0.3em;
     font-weight: bold;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 5px;
   }
@@ -272,7 +277,6 @@ footer {
   }
   .buttons {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1em;
@@ -284,7 +288,10 @@ footer {
   footer {
     gap: 20px;
     font-size: 8px;
-    padding: 20px;
+    padding: 10px;
     text-align: justify;
+  }
+  .footer-content {
+    display: none;
   }
 }

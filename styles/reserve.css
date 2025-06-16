@@ -9,8 +9,8 @@
   --color-gradient-end: #6d3ee4;
   --color-bg-gradient1: #0a6a79;
   --color-bg-gradient2: #3c237c;
-  --color-user-seat: #8f2828;
-  --color-sold-seat: #9d756e;
+  --color-user-seat: #9d756e; 
+  --color-sold-seat: #8f2828;
   --color-black: #000000;
   --color-grey-light: #aaa;
   --color-text-shadow: #3db4f2;
@@ -25,7 +25,6 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Arimo", sans-serif;
   color: white;
   min-height: 100vh;
   background: linear-gradient(
@@ -156,6 +155,7 @@ main {
 .anime-description div + p {
   text-indent: 1em;
   margin-bottom: 1em;
+  font-size: 1.3em;
 }
 h1 {
   font-size: 3em;
@@ -186,8 +186,8 @@ h1 {
   font-weight: bold;
   font-size: 1.3em;
   padding: 0.3em 1.5em;
-  border-radius: 20px;
-  text-shadow: 2px 2px 5px var(--color-black);
+  border-radius: 30px;
+  text-shadow: 0 0 2px white;
   cursor: pointer;
 }
 .bookTickets {
@@ -197,6 +197,7 @@ h1 {
 }
 .button:hover {
   box-shadow: 0 0 10px var(--color-blue);
+  transition: all 0.3s ease;
 }
 .fa-arrow-down {
   border: 2px solid white;
@@ -234,6 +235,7 @@ h1 {
   background: linear-gradient(to right, var(--color-bg1), var(--color-bg2));
   margin: 2% auto;
   padding: 1em;
+  padding-top: 2em;
   border-radius: 40px;
   box-shadow: 0 0 10px white;
   width: 90%;
@@ -242,16 +244,20 @@ h1 {
 .book-modal-content .close {
   background: none;
   position: absolute;
-  right: 10px;
-  top: 0;
+  right: 20px;
+  top: 7px;
   font-size: 2em;
   cursor: pointer;
   background: none;
 }
-.info,
-.select-options {
+.info {
   display: flex;
   justify-content: space-around;
+  text-shadow: 0 0 2px white;
+}
+.select-options {
+  display: flex;
+  justify-content: space-evenly;
 }
 .option {
   display: flex;
@@ -326,6 +332,7 @@ select option {
   background-color: var(--color-user-seat);
   width: 35px;
   height: 35px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -339,6 +346,7 @@ select option {
   );
   width: 35px;
   height: 35px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -346,12 +354,14 @@ select option {
   transition: transform 0.3s ease;
 }
 .available-seat:hover {
-  transform: scale(1.2);
+  transform: scale(1.4);
+  box-shadow: 0 0 10px rgb(117, 0, 0);
 }
 .sold {
   background-color: var(--color-sold-seat);
   width: 35px;
   height: 35px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -360,6 +370,7 @@ select option {
 .legend-seat {
   width: 50px;
   height: 50px;
+  border-radius: 10px;
   pointer-events: none;
 }
 .selected {
@@ -411,6 +422,7 @@ button {
     var(--color-gradient-end)
   );
   color: white;
+  text-shadow: 0 0 2px white;
   font-weight: bold;
   font-size: 1.3em;
   padding: 0.3em 1.2em;
@@ -549,11 +561,13 @@ button {
     width: 30px;
     height: 30px;
   }
-  .buttons {
+  .menu-footer .buttons {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
     gap: 1em;
-  }
+  } 
   .menu-footer a {
     color: var(--color-purple-accent);
     text-shadow: 0 0 3px var(--color-purple-accent);
@@ -577,7 +591,7 @@ button {
     align-items: center;
   }
   .anime-description {
-    padding: 1em 0.5em;
+    padding: 2em;
     font-size: 1em;
     display: flex;
     flex-direction: column;
@@ -644,10 +658,10 @@ button {
     display: none;
   }
   .seats-container {
-    flex-direction: column;
     gap: 0.5em;
     align-items: center;
     justify-content: center;
+    overflow-x: scroll;
   }
   .left-side,
   .right-side {

@@ -1,42 +1,54 @@
 html {
   scroll-behavior: smooth;
 }
+
 .container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 2em;
   padding: 2em;
+  height: 100vh;
 }
+
 h1 {
   text-shadow: 0 0 3px white;
 }
+
 .purple-text {
   color: var(--color-purple-accent);
   text-shadow: 0 0 5px var(--color-purple-accent);
 }
+
 .blue-text {
   font-weight: bold;
 }
+
 .welcome {
-  flex-basis: 50%;
+  text-align: center;
 }
 .welcome img {
   display: none;
 }
+
 .description {
   font-size: 3.6em;
 }
+
 .animate {
   display: none;
 }
+
 .welcome h2 {
   margin-bottom: 1.5em;
   margin-top: 0.6em;
-  font-family: "Arimo";
   font-size: 1.8em;
 }
+
 .welcome a {
   display: none;
 }
+
 .welcome p {
   margin: 1em 0;
   text-align: justify;
@@ -44,43 +56,92 @@ h1 {
   word-spacing: 1.5;
   font-size: 1.3em;
 }
+
+.bottom-part {
+  display: flex;
+  gap: 2em;
+}
+.info-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  flex-basis: 50%;
+}
+.info-card {
+  font-size: 1.3em;
+  padding: 1em;
+  background-color: var(--color-input-bg2);
+  border-radius: 15px;
+  border: 1px solid var(--color-gradient-start);
+  box-shadow: 0 0 10px var(--color-gradient-start);
+  text-shadow: 0 0 5px white;
+  border-radius: 15px;
+  aspect-ratio: 1.6/1;
+}
+.info-card .blue-text {
+  margin-bottom: 0.3em;
+  text-shadow: 0 0 10px var(--color-blue);
+  margin-bottom: 1em;
+}
+.info-card p + p {
+  font-size: 0.9em;
+}
+.carousel-wrapper {
+  flex-basis: 50%;
+}
 .trending {
   flex-basis: 50%;
   text-align: center;
 }
+
 .trending-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  row-gap: 1em;
 }
+
 .cards h1 {
   margin: 0.5em 0.8em;
 }
+
 .card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-shadow: 0 0 5px white;
 }
+
+.card:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.05);
+}
+
 .card img {
   flex-basis: 90%;
 }
+
+.card img:hover {
+  box-shadow: 0 0 100px var(--color-gradient-start);
+}
+
 .card a {
   flex: 10%;
 }
+
 .card img {
   width: 150px;
   height: 250px;
   border-radius: 20px;
 }
+
 .card a {
   text-decoration: none;
   color: white;
   font-weight: bold;
 }
+
 .trending h2,
 .cards h2 {
-  font-family: "Arimo";
   color: white;
   text-shadow: 0 0 5px white;
   font-size: 2em;
@@ -89,12 +150,14 @@ h1 {
 .cards {
   padding: 2em;
 }
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 2em 0;
   text-align: center;
 }
+
 .card-container .card img {
   width: 225px;
   height: 350px;
@@ -104,6 +167,7 @@ h1 {
   * {
     max-width: 100%;
   }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -111,12 +175,11 @@ h1 {
     justify-content: center;
     height: 100vh;
   }
-  .purple-text {
-    color: var(--color-blue);
-  }
-  .trending {
+
+  .bottom-part {
     display: none;
   }
+
   .welcome {
     display: flex;
     flex-direction: column;
@@ -124,49 +187,61 @@ h1 {
     align-items: center;
     text-align: center;
   }
+
   .description {
     display: none;
   }
+
   .animate {
     display: block;
     font-size: 2.8em;
   }
+
   .welcome a {
     display: block;
     font-size: 4em;
     text-decoration: none;
     color: white;
   }
+
   .welcome a:hover {
     color: var(--color-blue);
   }
+
   .welcome img {
     display: block;
     width: 100px;
     height: 100px;
   }
-  .welcome p{
+
+  .welcome p {
     display: none;
   }
- .welcome h2 {
+
+  .welcome h2 {
     font-size: 2.3em;
   }
+
   .cards h1 {
     margin: 1em 0;
     font-size: 1.5em;
   }
+
   .card-container {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     font-size: 13px;
   }
+
   .card-container .card img {
     width: 175px;
     height: 175px;
   }
+
   .card img {
     flex-basis: 90%;
   }
+
   .card a {
     flex: 10%;
   }
